@@ -1,0 +1,1127 @@
+411152012001|창룡대로|Changnyong-daero|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411152012001|창룡대로|Changnyong-daero|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로1가|Paldallo 1(il)-ga|1|120|0||||
+411152012001|창룡대로|Changnyong-daero|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411152012001|창룡대로|Changnyong-daero|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매향동|Maehyang-dong|1|128|0||||
+411152012001|창룡대로|Changnyong-daero|04|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411152012001|창룡대로|Changnyong-daero|05|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411152012008|경수대로|Gyeongsu-daero|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411152012008|경수대로|Gyeongsu-daero|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411152012008|경수대로|Gyeongsu-daero|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411152012008|경수대로|Gyeongsu-daero|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411152012012|중부대로|Jungbu-daero|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411152012012|중부대로|Jungbu-daero|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411152012012|중부대로|Jungbu-daero|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411152012012|중부대로|Jungbu-daero|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|중동|Jung-dong|1|125|0||||
+411152012012|중부대로|Jungbu-daero|04|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|구천동|Gucheon-dong|1|126|0||||
+411152012012|중부대로|Jungbu-daero|05|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411152012012|중부대로|Jungbu-daero|06|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411152012012|중부대로|Jungbu-daero|07|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411153000064|수인로|Suin-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153012001|덕영대로|Deogyeong-daero|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153012001|덕영대로|Deogyeong-daero|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411153012001|덕영대로|Deogyeong-daero|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411153012001|덕영대로|Deogyeong-daero|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411153012006|정조로|Jeongjo-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153012006|정조로|Jeongjo-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로1가|Paldallo 1(il)-ga|1|120|0||||
+411153012006|정조로|Jeongjo-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로2가|Paldallo 2(i)-ga|1|121|0||||
+411153012006|정조로|Jeongjo-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411153012006|정조로|Jeongjo-ro|04|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남창동|Namchang-dong|1|123|0||||
+411153012006|정조로|Jeongjo-ro|05|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|중동|Jung-dong|1|125|0||||
+411153012006|정조로|Jeongjo-ro|06|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411153012006|정조로|Jeongjo-ro|07|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411153012006|정조로|Jeongjo-ro|08|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|장안동|Jangan-dong|1|131|0||||
+411153012006|정조로|Jeongjo-ro|09|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411153174017|화서문로|Hwaseomun-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153174017|화서문로|Hwaseomun-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411153174017|화서문로|Hwaseomun-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411153174017|화서문로|Hwaseomun-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|장안동|Jangan-dong|1|131|0||||
+411153175001|갓매산로|Ganmaesan-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153175001|갓매산로|Ganmaesan-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411153175001|갓매산로|Ganmaesan-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411153175001|갓매산로|Ganmaesan-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411153175001|갓매산로|Ganmaesan-ro|04|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411153175009|권광로|Gwongwang-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153175009|권광로|Gwongwang-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411153175009|권광로|Gwongwang-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411153175010|권선로|Gwonseon-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153175010|권선로|Gwonseon-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411153175010|권선로|Gwonseon-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411153175016|동수원로|Dongsuwon-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153175016|동수원로|Dongsuwon-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411153175030|세류로|Seryu-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153175030|세류로|Seryu-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411153175030|세류로|Seryu-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411153175031|세지로|Seji-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153175031|세지로|Seji-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411153175031|세지로|Seji-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411153175031|세지로|Seji-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411153175034|수성로|Suseong-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153175034|수성로|Suseong-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411153175035|수원천로|Suwoncheon-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153175035|수원천로|Suwoncheon-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로2가|Paldallo 2(i)-ga|1|121|0||||
+411153175035|수원천로|Suwoncheon-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411153175035|수원천로|Suwoncheon-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|구천동|Gucheon-dong|1|126|0||||
+411153175035|수원천로|Suwoncheon-ro|04|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411153175035|수원천로|Suwoncheon-ro|05|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매향동|Maehyang-dong|1|128|0||||
+411153175035|수원천로|Suwoncheon-ro|06|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411153175035|수원천로|Suwoncheon-ro|07|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411153175035|수원천로|Suwoncheon-ro|08|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411153175035|수원천로|Suwoncheon-ro|09|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411153175040|일월로|Irwol-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153175040|일월로|Irwol-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411153175043|장다리로|Jangdari-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153175043|장다리로|Jangdari-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411153176001|고등로|Godeung-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176001|고등로|Godeung-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411153176002|고매로|Gomae-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176002|고매로|Gomae-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411153176003|고화로|Gohwa-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176003|고화로|Gohwa-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411153176003|고화로|Gohwa-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411153176003|고화로|Gohwa-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411153176003|고화로|Gohwa-ro|04|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411153176005|대평로|Daepyeong-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176005|대평로|Daepyeong-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411153176006|동말로|Dongmal-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176006|동말로|Dongmal-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411153176006|동말로|Dongmal-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411153176007|매산로|Maesan-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176007|매산로|Maesan-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|중동|Jung-dong|1|125|0||||
+411153176007|매산로|Maesan-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|구천동|Gucheon-dong|1|126|0||||
+411153176007|매산로|Maesan-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411153176007|매산로|Maesan-ro|04|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411153176007|매산로|Maesan-ro|05|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411153176007|매산로|Maesan-ro|06|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411153176008|신풍로|Sinpung-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176008|신풍로|Sinpung-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411153176008|신풍로|Sinpung-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|장안동|Jangan-dong|1|131|0||||
+411153176009|아주로|Aju-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176009|아주로|Aju-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411153176010|인계로|Ingye-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176010|인계로|Ingye-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411153176010|인계로|Ingye-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411153176011|장안로|Jangan-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176011|장안로|Jangan-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411153176013|창룡문로|Changnyongmun-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176013|창룡문로|Changnyongmun-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411153176014|팔달로|Paldal-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176014|팔달로|Paldal-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411153176014|팔달로|Paldal-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411153176014|팔달로|Paldal-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411153176015|팔달문로|Paldalmun-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176015|팔달문로|Paldalmun-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로2가|Paldallo 2(i)-ga|1|121|0||||
+411153176015|팔달문로|Paldalmun-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411153176015|팔달문로|Paldalmun-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411153176015|팔달문로|Paldalmun-ro|04|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411153176015|팔달문로|Paldalmun-ro|05|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411153176016|팔달산로|Paldalsan-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176016|팔달산로|Paldalsan-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남창동|Namchang-dong|1|123|0||||
+411153176016|팔달산로|Paldalsan-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411153176016|팔달산로|Paldalsan-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411153176016|팔달산로|Paldalsan-ro|04|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411153176016|팔달산로|Paldalsan-ro|05|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411153176017|행궁로|Haenggung-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176017|행궁로|Haenggung-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로2가|Paldallo 2(i)-ga|1|121|0||||
+411153176017|행궁로|Haenggung-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411153176017|행궁로|Haenggung-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남창동|Namchang-dong|1|123|0||||
+411153176017|행궁로|Haenggung-ro|04|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|중동|Jung-dong|1|125|0||||
+411153176017|행궁로|Haenggung-ro|05|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411153176018|향교로|Hyanggyo-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176018|향교로|Hyanggyo-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|중동|Jung-dong|1|125|0||||
+411153176018|향교로|Hyanggyo-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411153176018|향교로|Hyanggyo-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411153176018|향교로|Hyanggyo-ro|04|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411153176018|향교로|Hyanggyo-ro|05|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411153176019|화산로|Hwasan-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176019|화산로|Hwasan-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411153176020|화양로|Hwayang-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176020|화양로|Hwayang-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411153176021|효원로|Hyowon-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176021|효원로|Hyowon-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411153176021|효원로|Hyowon-ro|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411153176021|효원로|Hyowon-ro|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411153176021|효원로|Hyowon-ro|04|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411153176021|효원로|Hyowon-ro|05|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411153176023|권중로|Gwonjung-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153176026|정자천로|Jeongjacheon-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153177012|월드컵로|World cup-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153177012|월드컵로|World cup-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411153177021|광교로|Gwanggyo-ro|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411153177021|광교로|Gwanggyo-ro|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154322141|수성로244번길|Suseong-ro 244beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154322141|수성로244번길|Suseong-ro 244beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154322143|수성로258번길|Suseong-ro 258beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154322143|수성로258번길|Suseong-ro 258beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154322168|수원천로392번길|Suwoncheon-ro 392beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154322168|수원천로392번길|Suwoncheon-ro 392beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매향동|Maehyang-dong|1|128|0||||
+411154322282|장안로5번길|Jangan-ro 5beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154322282|장안로5번길|Jangan-ro 5beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154322287|장안로7번길|Jangan-ro 7beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154322287|장안로7번길|Jangan-ro 7beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154325332|세류로61번길|Seryu-ro 61beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154325332|세류로61번길|Seryu-ro 61beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154325332|세류로61번길|Seryu-ro 61beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154325447|정조로623번길|Jeongjo-ro 623beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154325447|정조로623번길|Jeongjo-ro 623beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154325486|효원로165번길|Hyowon-ro 165beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154325486|효원로165번길|Hyowon-ro 165beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154325486|효원로165번길|Hyowon-ro 165beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154325488|효원로167번길|Hyowon-ro 167beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154325488|효원로167번길|Hyowon-ro 167beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154325488|효원로167번길|Hyowon-ro 167beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154325489|효원로71번길|Hyowon-ro 71beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154325489|효원로71번길|Hyowon-ro 71beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154325491|효원로85번길|Hyowon-ro 85beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154325491|효원로85번길|Hyowon-ro 85beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154325493|효원로89번길|Hyowon-ro 89beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154325493|효원로89번길|Hyowon-ro 89beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154325493|효원로89번길|Hyowon-ro 89beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154325514|효원로73번길|Hyowon-ro 73beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154325514|효원로73번길|Hyowon-ro 73beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154328001|갓매산로19번길|Ganmaesan-ro 19beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328001|갓매산로19번길|Ganmaesan-ro 19beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328001|갓매산로19번길|Ganmaesan-ro 19beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328002|갓매산로1번길|Ganmaesan-ro 1beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328002|갓매산로1번길|Ganmaesan-ro 1beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328003|갓매산로21번길|Ganmaesan-ro 21beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328003|갓매산로21번길|Ganmaesan-ro 21beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328004|갓매산로25번길|Ganmaesan-ro 25beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328004|갓매산로25번길|Ganmaesan-ro 25beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328005|갓매산로26번길|Ganmaesan-ro 26beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328005|갓매산로26번길|Ganmaesan-ro 26beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328005|갓매산로26번길|Ganmaesan-ro 26beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328006|갓매산로52번길|Ganmaesan-ro 52beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328006|갓매산로52번길|Ganmaesan-ro 52beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328007|갓매산로55번길|Ganmaesan-ro 55beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328007|갓매산로55번길|Ganmaesan-ro 55beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328008|갓매산로56번길|Ganmaesan-ro 56beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328008|갓매산로56번길|Ganmaesan-ro 56beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328008|갓매산로56번길|Ganmaesan-ro 56beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328009|갓매산로70번길|Ganmaesan-ro 70beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328009|갓매산로70번길|Ganmaesan-ro 70beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328010|갓매산로71번길|Ganmaesan-ro 71beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328010|갓매산로71번길|Ganmaesan-ro 71beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411154328010|갓매산로71번길|Ganmaesan-ro 71beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328011|갓매산로76번길|Ganmaesan-ro 76beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328011|갓매산로76번길|Ganmaesan-ro 76beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328012|갓매산로86번길|Ganmaesan-ro 86beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328012|갓매산로86번길|Ganmaesan-ro 86beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328014|경수대로421번길|Gyeongsu-daero 421beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328014|경수대로421번길|Gyeongsu-daero 421beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328015|경수대로428번길|Gyeongsu-daero 428beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328015|경수대로428번길|Gyeongsu-daero 428beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328016|경수대로443번길|Gyeongsu-daero 443beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328016|경수대로443번길|Gyeongsu-daero 443beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328017|경수대로446번길|Gyeongsu-daero 446beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328017|경수대로446번길|Gyeongsu-daero 446beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328018|경수대로466번길|Gyeongsu-daero 466beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328018|경수대로466번길|Gyeongsu-daero 466beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328019|경수대로467번길|Gyeongsu-daero 467beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328019|경수대로467번길|Gyeongsu-daero 467beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328020|경수대로479번길|Gyeongsu-daero 479beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328020|경수대로479번길|Gyeongsu-daero 479beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328021|경수대로480번길|Gyeongsu-daero 480beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328021|경수대로480번길|Gyeongsu-daero 480beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328022|경수대로495번길|Gyeongsu-daero 495beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328022|경수대로495번길|Gyeongsu-daero 495beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328023|경수대로496번길|Gyeongsu-daero 496beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328023|경수대로496번길|Gyeongsu-daero 496beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328024|경수대로507번길|Gyeongsu-daero 507beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328024|경수대로507번길|Gyeongsu-daero 507beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328025|경수대로519번길|Gyeongsu-daero 519beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328025|경수대로519번길|Gyeongsu-daero 519beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328026|경수대로526번길|Gyeongsu-daero 526beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328026|경수대로526번길|Gyeongsu-daero 526beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328027|경수대로533번길|Gyeongsu-daero 533beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328027|경수대로533번길|Gyeongsu-daero 533beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328028|경수대로553번길|Gyeongsu-daero 553beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328028|경수대로553번길|Gyeongsu-daero 553beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328029|경수대로565번길|Gyeongsu-daero 565beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328029|경수대로565번길|Gyeongsu-daero 565beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328030|경수대로604번길|Gyeongsu-daero 604beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328030|경수대로604번길|Gyeongsu-daero 604beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328031|경수대로616번길|Gyeongsu-daero 616beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328031|경수대로616번길|Gyeongsu-daero 616beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328032|경수대로642번길|Gyeongsu-daero 642beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328032|경수대로642번길|Gyeongsu-daero 642beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328033|경수대로656번길|Gyeongsu-daero 656beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328033|경수대로656번길|Gyeongsu-daero 656beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328034|경수대로677번길|Gyeongsu-daero 677beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328034|경수대로677번길|Gyeongsu-daero 677beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328035|경수대로680번길|Gyeongsu-daero 680beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328035|경수대로680번길|Gyeongsu-daero 680beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328036|경수대로692번길|Gyeongsu-daero 692beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328036|경수대로692번길|Gyeongsu-daero 692beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328037|경수대로704번길|Gyeongsu-daero 704beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328037|경수대로704번길|Gyeongsu-daero 704beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328038|경수대로718번길|Gyeongsu-daero 718beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328038|경수대로718번길|Gyeongsu-daero 718beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328046|고등로52번길|Godeung-ro 52beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328046|고등로52번길|Godeung-ro 52beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328047|고등로59번길|Godeung-ro 59beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328047|고등로59번길|Godeung-ro 59beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328048|고등로60번길|Godeung-ro 60beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328048|고등로60번길|Godeung-ro 60beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328049|고등로71번길|Godeung-ro 71beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328049|고등로71번길|Godeung-ro 71beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328050|고등로72번길|Godeung-ro 72beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328050|고등로72번길|Godeung-ro 72beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328052|고등로84번길|Godeung-ro 84beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328052|고등로84번길|Godeung-ro 84beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328054|고등로95번길|Godeung-ro 95beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328054|고등로95번길|Godeung-ro 95beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328055|고등로96번길|Godeung-ro 96beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328055|고등로96번길|Godeung-ro 96beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328056|고매로10번길|Gomae-ro 10beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328056|고매로10번길|Gomae-ro 10beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328057|고매로15번길|Gomae-ro 15beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328057|고매로15번길|Gomae-ro 15beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328058|고매로19번길|Gomae-ro 19beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328058|고매로19번길|Gomae-ro 19beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328059|고매로20번길|Gomae-ro 20beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328059|고매로20번길|Gomae-ro 20beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328060|고매로23번길|Gomae-ro 23beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328060|고매로23번길|Gomae-ro 23beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328061|고매로39번길|Gomae-ro 39beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328061|고매로39번길|Gomae-ro 39beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328062|고매로9번길|Gomae-ro 9beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328062|고매로9번길|Gomae-ro 9beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328063|고화로108번길|Gohwa-ro 108beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328063|고화로108번길|Gohwa-ro 108beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328064|고화로10번길|Gohwa-ro 10beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328064|고화로10번길|Gohwa-ro 10beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328065|고화로130번길|Gohwa-ro 130beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328065|고화로130번길|Gohwa-ro 130beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328066|고화로13번길|Gohwa-ro 13beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328066|고화로13번길|Gohwa-ro 13beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328066|고화로13번길|Gohwa-ro 13beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328067|고화로14번길|Gohwa-ro 14beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328067|고화로14번길|Gohwa-ro 14beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328068|고화로18번길|Gohwa-ro 18beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328068|고화로18번길|Gohwa-ro 18beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328069|고화로20번길|Gohwa-ro 20beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328069|고화로20번길|Gohwa-ro 20beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328069|고화로20번길|Gohwa-ro 20beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328070|고화로25번길|Gohwa-ro 25beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328070|고화로25번길|Gohwa-ro 25beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328071|고화로30번길|Gohwa-ro 30beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328071|고화로30번길|Gohwa-ro 30beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328072|고화로31번길|Gohwa-ro 31beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328072|고화로31번길|Gohwa-ro 31beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328073|고화로39번길|Gohwa-ro 39beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328073|고화로39번길|Gohwa-ro 39beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328074|고화로51번길|Gohwa-ro 51beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328074|고화로51번길|Gohwa-ro 51beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328075|고화로52번길|Gohwa-ro 52beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328075|고화로52번길|Gohwa-ro 52beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328076|고화로61번길|Gohwa-ro 61beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328076|고화로61번길|Gohwa-ro 61beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328077|고화로62번길|Gohwa-ro 62beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328077|고화로62번길|Gohwa-ro 62beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328078|고화로71번길|Gohwa-ro 71beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328078|고화로71번길|Gohwa-ro 71beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328079|고화로72번길|Gohwa-ro 72beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328079|고화로72번길|Gohwa-ro 72beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328080|고화로81번길|Gohwa-ro 81beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328080|고화로81번길|Gohwa-ro 81beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328081|고화로82번길|Gohwa-ro 82beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328081|고화로82번길|Gohwa-ro 82beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328082|고화로9번길|Gohwa-ro 9beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328082|고화로9번길|Gohwa-ro 9beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328084|권광로124번길|Gwongwang-ro 124beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328084|권광로124번길|Gwongwang-ro 124beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328085|권광로134번길|Gwongwang-ro 134beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328085|권광로134번길|Gwongwang-ro 134beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328086|권광로139번길|Gwongwang-ro 139beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328087|권광로142번길|Gwongwang-ro 142beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328087|권광로142번길|Gwongwang-ro 142beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328088|권광로175번길|Gwongwang-ro 175beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328088|권광로175번길|Gwongwang-ro 175beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328089|권광로180번길|Gwongwang-ro 180beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328089|권광로180번길|Gwongwang-ro 180beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328090|권광로187번길|Gwongwang-ro 187beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328090|권광로187번길|Gwongwang-ro 187beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328091|권광로188번길|Gwongwang-ro 188beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328091|권광로188번길|Gwongwang-ro 188beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328092|권광로196번길|Gwongwang-ro 196beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328092|권광로196번길|Gwongwang-ro 196beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328093|권광로207번길|Gwongwang-ro 207beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328093|권광로207번길|Gwongwang-ro 207beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328094|권광로255번길|Gwongwang-ro 255beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328094|권광로255번길|Gwongwang-ro 255beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328095|권광로260번길|Gwongwang-ro 260beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328095|권광로260번길|Gwongwang-ro 260beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328096|권광로263번길|Gwongwang-ro 263beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328096|권광로263번길|Gwongwang-ro 263beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328097|권광로276번길|Gwongwang-ro 276beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328097|권광로276번길|Gwongwang-ro 276beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328098|권광로285번길|Gwongwang-ro 285beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328098|권광로285번길|Gwongwang-ro 285beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328099|권광로290번길|Gwongwang-ro 290beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328099|권광로290번길|Gwongwang-ro 290beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328101|권광로304번길|Gwongwang-ro 304beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328102|권광로312번길|Gwongwang-ro 312beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328102|권광로312번길|Gwongwang-ro 312beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328103|권광로317번길|Gwongwang-ro 317beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328103|권광로317번길|Gwongwang-ro 317beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328104|권광로340번길|Gwongwang-ro 340beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328104|권광로340번길|Gwongwang-ro 340beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328105|권광로348번길|Gwongwang-ro 348beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328105|권광로348번길|Gwongwang-ro 348beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328106|권광로364번길|Gwongwang-ro 364beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328106|권광로364번길|Gwongwang-ro 364beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328107|권광로367번길|Gwongwang-ro 367beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328107|권광로367번길|Gwongwang-ro 367beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328109|권선로741번길|Gwonseon-ro 741beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328109|권선로741번길|Gwonseon-ro 741beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328110|권선로766번길|Gwonseon-ro 766beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328112|덕영대로697번길|Deogyeong-daero 697beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328112|덕영대로697번길|Deogyeong-daero 697beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328113|덕영대로735번길|Deogyeong-daero 735beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328113|덕영대로735번길|Deogyeong-daero 735beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328114|덕영대로749번길|Deogyeong-daero 749beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328114|덕영대로749번길|Deogyeong-daero 749beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328115|덕영대로757번길|Deogyeong-daero 757beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328115|덕영대로757번길|Deogyeong-daero 757beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328116|덕영대로777번길|Deogyeong-daero 777beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328116|덕영대로777번길|Deogyeong-daero 777beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328117|덕영대로803번길|Deogyeong-daero 803beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328117|덕영대로803번길|Deogyeong-daero 803beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328122|덕영대로895번길|Deogyeong-daero 895beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328122|덕영대로895번길|Deogyeong-daero 895beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411154328123|덕영대로935번길|Deogyeong-daero 935beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328123|덕영대로935번길|Deogyeong-daero 935beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411154328124|덕영대로943번길|Deogyeong-daero 943beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328124|덕영대로943번길|Deogyeong-daero 943beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411154328124|덕영대로943번길|Deogyeong-daero 943beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328125|동말로105번길|Dongmal-ro 105beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328125|동말로105번길|Dongmal-ro 105beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328126|동말로106번길|Dongmal-ro 106beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328126|동말로106번길|Dongmal-ro 106beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328127|동말로13번길|Dongmal-ro 13beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328127|동말로13번길|Dongmal-ro 13beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328128|동말로16번길|Dongmal-ro 16beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328128|동말로16번길|Dongmal-ro 16beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328128|동말로16번길|Dongmal-ro 16beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328129|동말로25번길|Dongmal-ro 25beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328129|동말로25번길|Dongmal-ro 25beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328130|동말로26번길|Dongmal-ro 26beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328130|동말로26번길|Dongmal-ro 26beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328130|동말로26번길|Dongmal-ro 26beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328131|동말로37번길|Dongmal-ro 37beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328131|동말로37번길|Dongmal-ro 37beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328132|동말로38번길|Dongmal-ro 38beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328132|동말로38번길|Dongmal-ro 38beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328133|동말로47번길|Dongmal-ro 47beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328133|동말로47번길|Dongmal-ro 47beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328134|동말로48번길|Dongmal-ro 48beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328134|동말로48번길|Dongmal-ro 48beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328134|동말로48번길|Dongmal-ro 48beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328135|동말로4번길|Dongmal-ro 4beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328135|동말로4번길|Dongmal-ro 4beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328135|동말로4번길|Dongmal-ro 4beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328136|동말로57번길|Dongmal-ro 57beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328136|동말로57번길|Dongmal-ro 57beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328137|동말로58번길|Dongmal-ro 58beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328137|동말로58번길|Dongmal-ro 58beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328137|동말로58번길|Dongmal-ro 58beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328138|동말로67번길|Dongmal-ro 67beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328138|동말로67번길|Dongmal-ro 67beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328139|동말로68번길|Dongmal-ro 68beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328139|동말로68번길|Dongmal-ro 68beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328139|동말로68번길|Dongmal-ro 68beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328140|동말로77번길|Dongmal-ro 77beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328140|동말로77번길|Dongmal-ro 77beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328141|동말로78번길|Dongmal-ro 78beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328141|동말로78번길|Dongmal-ro 78beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328142|동말로95번길|Dongmal-ro 95beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328142|동말로95번길|Dongmal-ro 95beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328143|매산로104번길|Maesan-ro 104beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328143|매산로104번길|Maesan-ro 104beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154328143|매산로104번길|Maesan-ro 104beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328144|매산로116번길|Maesan-ro 116beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328144|매산로116번길|Maesan-ro 116beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154328144|매산로116번길|Maesan-ro 116beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328145|매산로126번길|Maesan-ro 126beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328145|매산로126번길|Maesan-ro 126beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154328145|매산로126번길|Maesan-ro 126beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328146|매산로130번길|Maesan-ro 130beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328146|매산로130번길|Maesan-ro 130beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328147|매산로151번길|Maesan-ro 151beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328147|매산로151번길|Maesan-ro 151beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|중동|Jung-dong|1|125|0||||
+411154328148|매산로155번길|Maesan-ro 155beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328148|매산로155번길|Maesan-ro 155beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|중동|Jung-dong|1|125|0||||
+411154328148|매산로155번길|Maesan-ro 155beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|구천동|Gucheon-dong|1|126|0||||
+411154328149|매산로20번길|Maesan-ro 20beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328149|매산로20번길|Maesan-ro 20beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411154328149|매산로20번길|Maesan-ro 20beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328150|매산로28번길|Maesan-ro 28beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328150|매산로28번길|Maesan-ro 28beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328151|매산로46번길|Maesan-ro 46beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328151|매산로46번길|Maesan-ro 46beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328151|매산로46번길|Maesan-ro 46beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328152|매산로52번길|Maesan-ro 52beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328152|매산로52번길|Maesan-ro 52beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328152|매산로52번길|Maesan-ro 52beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328153|매산로86번길|Maesan-ro 86beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328153|매산로86번길|Maesan-ro 86beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328154|매산로96번길|Maesan-ro 96beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328154|매산로96번길|Maesan-ro 96beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154328155|세류로104번길|Seryu-ro 104beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328155|세류로104번길|Seryu-ro 104beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154328156|세류로112번길|Seryu-ro 112beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328156|세류로112번길|Seryu-ro 112beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154328157|세류로75번길|Seryu-ro 75beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328157|세류로75번길|Seryu-ro 75beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328158|세류로83번길|Seryu-ro 83beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328158|세류로83번길|Seryu-ro 83beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328159|세지로152번길|Seji-ro 152beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328159|세지로152번길|Seji-ro 152beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328160|세지로155번길|Seji-ro 155beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328160|세지로155번길|Seji-ro 155beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328161|세지로161번길|Seji-ro 161beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328161|세지로161번길|Seji-ro 161beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328162|세지로165번길|Seji-ro 165beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328162|세지로165번길|Seji-ro 165beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328163|세지로174번길|Seji-ro 174beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328163|세지로174번길|Seji-ro 174beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328164|세지로175번길|Seji-ro 175beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328164|세지로175번길|Seji-ro 175beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328165|세지로189번길|Seji-ro 189beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328165|세지로189번길|Seji-ro 189beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328166|세지로191번길|Seji-ro 191beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328166|세지로191번길|Seji-ro 191beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328167|세지로198번길|Seji-ro 198beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328167|세지로198번길|Seji-ro 198beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328168|세지로224번길|Seji-ro 224beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328168|세지로224번길|Seji-ro 224beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328169|세지로225번길|Seji-ro 225beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328169|세지로225번길|Seji-ro 225beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328170|세지로233번길|Seji-ro 233beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328170|세지로233번길|Seji-ro 233beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328171|세지로234번길|Seji-ro 234beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328171|세지로234번길|Seji-ro 234beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328172|세지로243번길|Seji-ro 243beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328172|세지로243번길|Seji-ro 243beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328173|세지로244번길|Seji-ro 244beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328173|세지로244번길|Seji-ro 244beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328174|세지로251번길|Seji-ro 251beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328174|세지로251번길|Seji-ro 251beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328175|세지로253번길|Seji-ro 253beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328175|세지로253번길|Seji-ro 253beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328176|세지로258번길|Seji-ro 258beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328176|세지로258번길|Seji-ro 258beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328177|세지로267번길|Seji-ro 267beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328177|세지로267번길|Seji-ro 267beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328178|세지로270번길|Seji-ro 270beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328178|세지로270번길|Seji-ro 270beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328179|세지로283번길|Seji-ro 283beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328179|세지로283번길|Seji-ro 283beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328180|세지로294번길|Seji-ro 294beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328180|세지로294번길|Seji-ro 294beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328181|세지로306번길|Seji-ro 306beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328181|세지로306번길|Seji-ro 306beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328182|세지로314번길|Seji-ro 314beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328182|세지로314번길|Seji-ro 314beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328183|세지로331번길|Seji-ro 331beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328183|세지로331번길|Seji-ro 331beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328184|세지로339번길|Seji-ro 339beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328184|세지로339번길|Seji-ro 339beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328185|세지로351번길|Seji-ro 351beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328185|세지로351번길|Seji-ro 351beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328186|세지로365번길|Seji-ro 365beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328186|세지로365번길|Seji-ro 365beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328187|세지로372번길|Seji-ro 372beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328187|세지로372번길|Seji-ro 372beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328188|세지로377번길|Seji-ro 377beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328188|세지로377번길|Seji-ro 377beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328189|세지로385번길|Seji-ro 385beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328189|세지로385번길|Seji-ro 385beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328190|세지로399번길|Seji-ro 399beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328190|세지로399번길|Seji-ro 399beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328191|세지로421번길|Seji-ro 421beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328191|세지로421번길|Seji-ro 421beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328192|수성로101번길|Suseong-ro 101beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328192|수성로101번길|Suseong-ro 101beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328193|수성로157번길|Suseong-ro 157beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328193|수성로157번길|Suseong-ro 157beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328194|수성로182번길|Suseong-ro 182beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328194|수성로182번길|Suseong-ro 182beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328195|수성로232번길|Suseong-ro 232beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328195|수성로232번길|Suseong-ro 232beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328196|수원천로137번길|Suwoncheon-ro 137beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328196|수원천로137번길|Suwoncheon-ro 137beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328197|수원천로147번길|Suwoncheon-ro 147beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328197|수원천로147번길|Suwoncheon-ro 147beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328198|수원천로199번길|Suwoncheon-ro 199beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328198|수원천로199번길|Suwoncheon-ro 199beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|구천동|Gucheon-dong|1|126|0||||
+411154328199|수원천로202번길|Suwoncheon-ro 202beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328199|수원천로202번길|Suwoncheon-ro 202beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328199|수원천로202번길|Suwoncheon-ro 202beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328200|수원천로204번길|Suwoncheon-ro 204beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328200|수원천로204번길|Suwoncheon-ro 204beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328200|수원천로204번길|Suwoncheon-ro 204beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328201|수원천로210번길|Suwoncheon-ro 210beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328201|수원천로210번길|Suwoncheon-ro 210beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328202|수원천로213번길|Suwoncheon-ro 213beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328202|수원천로213번길|Suwoncheon-ro 213beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|구천동|Gucheon-dong|1|126|0||||
+411154328203|수원천로220번길|Suwoncheon-ro 220beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328203|수원천로220번길|Suwoncheon-ro 220beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328204|수원천로229번길|Suwoncheon-ro 229beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328204|수원천로229번길|Suwoncheon-ro 229beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|구천동|Gucheon-dong|1|126|0||||
+411154328205|수원천로231번길|Suwoncheon-ro 231beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328205|수원천로231번길|Suwoncheon-ro 231beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|구천동|Gucheon-dong|1|126|0||||
+411154328206|수원천로249번길|Suwoncheon-ro 249beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328206|수원천로249번길|Suwoncheon-ro 249beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411154328207|수원천로255번길|Suwoncheon-ro 255beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328207|수원천로255번길|Suwoncheon-ro 255beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411154328208|수원천로258번길|Suwoncheon-ro 258beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328208|수원천로258번길|Suwoncheon-ro 258beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328209|수원천로264번길|Suwoncheon-ro 264beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328209|수원천로264번길|Suwoncheon-ro 264beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328210|수원천로316번길|Suwoncheon-ro 316beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328210|수원천로316번길|Suwoncheon-ro 316beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328212|신풍로23번길|Sinpung-ro 23beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328212|신풍로23번길|Sinpung-ro 23beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411154328213|신풍로39번길|Sinpung-ro 39beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328213|신풍로39번길|Sinpung-ro 39beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411154328214|신풍로45번길|Sinpung-ro 45beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328214|신풍로45번길|Sinpung-ro 45beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411154328215|신풍로63번길|Sinpung-ro 63beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328215|신풍로63번길|Sinpung-ro 63beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|장안동|Jangan-dong|1|131|0||||
+411154328217|월드컵로297번길|World cup-ro 297beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328217|월드컵로297번길|World cup-ro 297beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328218|월드컵로311번길|World cup-ro 311beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328218|월드컵로311번길|World cup-ro 311beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328219|월드컵로321번길|World cup-ro 321beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328219|월드컵로321번길|World cup-ro 321beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328220|월드컵로345번길|World cup-ro 345beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328220|월드컵로345번길|World cup-ro 345beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328221|월드컵로357번길|World cup-ro 357beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328221|월드컵로357번길|World cup-ro 357beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328222|월드컵로365번길|World cup-ro 365beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328222|월드컵로365번길|World cup-ro 365beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328224|월드컵로369번길|World cup-ro 369beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328224|월드컵로369번길|World cup-ro 369beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328225|월드컵로381번길|World cup-ro 381beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328225|월드컵로381번길|World cup-ro 381beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328226|인계로101번길|Ingye-ro 101beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328226|인계로101번길|Ingye-ro 101beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328227|인계로108번길|Ingye-ro 108beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328227|인계로108번길|Ingye-ro 108beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328228|인계로10번길|Ingye-ro 10beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328228|인계로10번길|Ingye-ro 10beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328228|인계로10번길|Ingye-ro 10beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328229|인계로124번길|Ingye-ro 124beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328229|인계로124번길|Ingye-ro 124beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328230|인계로138번길|Ingye-ro 138beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328230|인계로138번길|Ingye-ro 138beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328231|인계로19번길|Ingye-ro 19beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328231|인계로19번길|Ingye-ro 19beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328231|인계로19번길|Ingye-ro 19beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328232|인계로28번길|Ingye-ro 28beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328232|인계로28번길|Ingye-ro 28beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328233|인계로29번길|Ingye-ro 29beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328233|인계로29번길|Ingye-ro 29beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328234|인계로39번길|Ingye-ro 39beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328234|인계로39번길|Ingye-ro 39beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328235|인계로40번길|Ingye-ro 40beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328235|인계로40번길|Ingye-ro 40beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328236|인계로4번길|Ingye-ro 4beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328236|인계로4번길|Ingye-ro 4beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328237|인계로61번길|Ingye-ro 61beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328237|인계로61번길|Ingye-ro 61beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328238|인계로68번길|Ingye-ro 68beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328238|인계로68번길|Ingye-ro 68beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328239|인계로94번길|Ingye-ro 94beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328239|인계로94번길|Ingye-ro 94beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328240|인계로9번길|Ingye-ro 9beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328240|인계로9번길|Ingye-ro 9beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328240|인계로9번길|Ingye-ro 9beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328241|일월로18번길|Irwol-ro 18beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328241|일월로18번길|Irwol-ro 18beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328242|일월로22번길|Irwol-ro 22beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328242|일월로22번길|Irwol-ro 22beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328243|일월로42번길|Irwol-ro 42beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328243|일월로42번길|Irwol-ro 42beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328244|장다리로171번길|Jangdari-ro 171beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328244|장다리로171번길|Jangdari-ro 171beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328245|장다리로172번길|Jangdari-ro 172beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328245|장다리로172번길|Jangdari-ro 172beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328246|장다리로195번길|Jangdari-ro 195beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328246|장다리로195번길|Jangdari-ro 195beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328247|장다리로196번길|Jangdari-ro 196beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328247|장다리로196번길|Jangdari-ro 196beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328248|장다리로219번길|Jangdari-ro 219beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328248|장다리로219번길|Jangdari-ro 219beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328249|장다리로223번길|Jangdari-ro 223beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328249|장다리로223번길|Jangdari-ro 223beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328250|장다리로229번길|Jangdari-ro 229beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328250|장다리로229번길|Jangdari-ro 229beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328251|장다리로233번길|Jangdari-ro 233beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328251|장다리로233번길|Jangdari-ro 233beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328252|장다리로245번길|Jangdari-ro 245beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328252|장다리로245번길|Jangdari-ro 245beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328253|장다리로271번길|Jangdari-ro 271beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328253|장다리로271번길|Jangdari-ro 271beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328254|장다리로283번길|Jangdari-ro 283beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328254|장다리로283번길|Jangdari-ro 283beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328255|장다리로306번길|Jangdari-ro 306beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328255|장다리로306번길|Jangdari-ro 306beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328256|장다리로314번길|Jangdari-ro 314beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328256|장다리로314번길|Jangdari-ro 314beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328257|장다리로322번길|Jangdari-ro 322beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328257|장다리로322번길|Jangdari-ro 322beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328258|장다리로334번길|Jangdari-ro 334beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328258|장다리로334번길|Jangdari-ro 334beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328259|정자천로13번길|Jeongjacheon-ro 13beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328260|정자천로14번길|Jeongjacheon-ro 14beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328260|정자천로14번길|Jeongjacheon-ro 14beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328261|정자천로32번길|Jeongjacheon-ro 32beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328261|정자천로32번길|Jeongjacheon-ro 32beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328262|정조로631번길|Jeongjo-ro 631beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328262|정조로631번길|Jeongjo-ro 631beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328263|정조로632번길|Jeongjo-ro 632beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328263|정조로632번길|Jeongjo-ro 632beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328264|정조로644번길|Jeongjo-ro 644beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328264|정조로644번길|Jeongjo-ro 644beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328265|정조로652번길|Jeongjo-ro 652beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328265|정조로652번길|Jeongjo-ro 652beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328266|정조로674번길|Jeongjo-ro 674beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328266|정조로674번길|Jeongjo-ro 674beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328267|정조로676번길|Jeongjo-ro 676beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328267|정조로676번길|Jeongjo-ro 676beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328268|정조로709번길|Jeongjo-ro 709beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328268|정조로709번길|Jeongjo-ro 709beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328269|정조로712번길|Jeongjo-ro 712beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328269|정조로712번길|Jeongjo-ro 712beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|중동|Jung-dong|1|125|0||||
+411154328269|정조로712번길|Jeongjo-ro 712beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|구천동|Gucheon-dong|1|126|0||||
+411154328270|정조로715번길|Jeongjo-ro 715beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328270|정조로715번길|Jeongjo-ro 715beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328271|정조로742번길|Jeongjo-ro 742beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328271|정조로742번길|Jeongjo-ro 742beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|중동|Jung-dong|1|125|0||||
+411154328271|정조로742번길|Jeongjo-ro 742beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|구천동|Gucheon-dong|1|126|0||||
+411154328272|정조로758번길|Jeongjo-ro 758beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328272|정조로758번길|Jeongjo-ro 758beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411154328272|정조로758번길|Jeongjo-ro 758beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411154328273|정조로764번길|Jeongjo-ro 764beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328273|정조로764번길|Jeongjo-ro 764beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411154328273|정조로764번길|Jeongjo-ro 764beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411154328274|정조로770번길|Jeongjo-ro 770beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328274|정조로770번길|Jeongjo-ro 770beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411154328274|정조로770번길|Jeongjo-ro 770beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411154328275|정조로776번길|Jeongjo-ro 776beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328275|정조로776번길|Jeongjo-ro 776beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411154328275|정조로776번길|Jeongjo-ro 776beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411154328276|정조로777번길|Jeongjo-ro 777beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328276|정조로777번길|Jeongjo-ro 777beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로2가|Paldallo 2(i)-ga|1|121|0||||
+411154328276|정조로777번길|Jeongjo-ro 777beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411154328276|정조로777번길|Jeongjo-ro 777beon-gil|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남창동|Namchang-dong|1|123|0||||
+411154328277|정조로788번길|Jeongjo-ro 788beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328277|정조로788번길|Jeongjo-ro 788beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로2가|Paldallo 2(i)-ga|1|121|0||||
+411154328278|정조로791번길|Jeongjo-ro 791beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328278|정조로791번길|Jeongjo-ro 791beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로2가|Paldallo 2(i)-ga|1|121|0||||
+411154328278|정조로791번길|Jeongjo-ro 791beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남창동|Namchang-dong|1|123|0||||
+411154328279|정조로795번길|Jeongjo-ro 795beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328279|정조로795번길|Jeongjo-ro 795beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로2가|Paldallo 2(i)-ga|1|121|0||||
+411154328279|정조로795번길|Jeongjo-ro 795beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남창동|Namchang-dong|1|123|0||||
+411154328280|정조로796번길|Jeongjo-ro 796beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328280|정조로796번길|Jeongjo-ro 796beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로1가|Paldallo 1(il)-ga|1|120|0||||
+411154328280|정조로796번길|Jeongjo-ro 796beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로2가|Paldallo 2(i)-ga|1|121|0||||
+411154328280|정조로796번길|Jeongjo-ro 796beon-gil|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328281|정조로800번길|Jeongjo-ro 800beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328281|정조로800번길|Jeongjo-ro 800beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로1가|Paldallo 1(il)-ga|1|120|0||||
+411154328281|정조로800번길|Jeongjo-ro 800beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328282|정조로801번길|Jeongjo-ro 801beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328282|정조로801번길|Jeongjo-ro 801beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로1가|Paldallo 1(il)-ga|1|120|0||||
+411154328282|정조로801번길|Jeongjo-ro 801beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로2가|Paldallo 2(i)-ga|1|121|0||||
+411154328282|정조로801번길|Jeongjo-ro 801beon-gil|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남창동|Namchang-dong|1|123|0||||
+411154328283|정조로805번길|Jeongjo-ro 805beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328283|정조로805번길|Jeongjo-ro 805beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로1가|Paldallo 1(il)-ga|1|120|0||||
+411154328283|정조로805번길|Jeongjo-ro 805beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남창동|Namchang-dong|1|123|0||||
+411154328284|정조로810번길|Jeongjo-ro 810beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328284|정조로810번길|Jeongjo-ro 810beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로1가|Paldallo 1(il)-ga|1|120|0||||
+411154328284|정조로810번길|Jeongjo-ro 810beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328285|정조로818번길|Jeongjo-ro 818beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328285|정조로818번길|Jeongjo-ro 818beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328285|정조로818번길|Jeongjo-ro 818beon-gil|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로1가|Paldallo 1(il)-ga|1|120|0||||
+411154328286|정조로832번길|Jeongjo-ro 832beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328286|정조로832번길|Jeongjo-ro 832beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411154328287|정조로841번길|Jeongjo-ro 841beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328287|정조로841번길|Jeongjo-ro 841beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411154328288|정조로850번길|Jeongjo-ro 850beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328288|정조로850번길|Jeongjo-ro 850beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411154328289|정조로860번길|Jeongjo-ro 860beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328289|정조로860번길|Jeongjo-ro 860beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411154328290|정조로861번길|Jeongjo-ro 861beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328290|정조로861번길|Jeongjo-ro 861beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411154328291|정조로885번길|Jeongjo-ro 885beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328291|정조로885번길|Jeongjo-ro 885beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|장안동|Jangan-dong|1|131|0||||
+411154328292|정조로886번길|Jeongjo-ro 886beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328292|정조로886번길|Jeongjo-ro 886beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411154328293|정조로892번길|Jeongjo-ro 892beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328293|정조로892번길|Jeongjo-ro 892beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411154328294|정조로900번길|Jeongjo-ro 900beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328294|정조로900번길|Jeongjo-ro 900beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411154328295|정조로905번길|Jeongjo-ro 905beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328295|정조로905번길|Jeongjo-ro 905beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|장안동|Jangan-dong|1|131|0||||
+411154328296|정조로906번길|Jeongjo-ro 906beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328296|정조로906번길|Jeongjo-ro 906beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411154328298|중부대로106번길|Jungbu-daero 106beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328298|중부대로106번길|Jungbu-daero 106beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328299|중부대로10번길|Jungbu-daero 10beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328299|중부대로10번길|Jungbu-daero 10beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|중동|Jung-dong|1|125|0||||
+411154328299|중부대로10번길|Jungbu-daero 10beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|구천동|Gucheon-dong|1|126|0||||
+411154328300|중부대로119번길|Jungbu-daero 119beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328300|중부대로119번길|Jungbu-daero 119beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328301|중부대로11번길|Jungbu-daero 11beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328301|중부대로11번길|Jungbu-daero 11beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411154328302|중부대로125번길|Jungbu-daero 125beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328302|중부대로125번길|Jungbu-daero 125beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328303|중부대로128번길|Jungbu-daero 128beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328303|중부대로128번길|Jungbu-daero 128beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328304|중부대로12번길|Jungbu-daero 12beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328304|중부대로12번길|Jungbu-daero 12beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|구천동|Gucheon-dong|1|126|0||||
+411154328305|중부대로13번길|Jungbu-daero 13beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328305|중부대로13번길|Jungbu-daero 13beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411154328306|중부대로143번길|Jungbu-daero 143beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328306|중부대로143번길|Jungbu-daero 143beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328307|중부대로154번길|Jungbu-daero 154beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328307|중부대로154번길|Jungbu-daero 154beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328308|중부대로170번길|Jungbu-daero 170beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328308|중부대로170번길|Jungbu-daero 170beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328309|중부대로17번길|Jungbu-daero 17beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328309|중부대로17번길|Jungbu-daero 17beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411154328310|중부대로183번길|Jungbu-daero 183beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328310|중부대로183번길|Jungbu-daero 183beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328311|중부대로206번길|Jungbu-daero 206beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328311|중부대로206번길|Jungbu-daero 206beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328312|중부대로207번길|Jungbu-daero 207beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328312|중부대로207번길|Jungbu-daero 207beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328314|중부대로223번길|Jungbu-daero 223beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328314|중부대로223번길|Jungbu-daero 223beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328315|중부대로239번길|Jungbu-daero 239beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328315|중부대로239번길|Jungbu-daero 239beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328316|중부대로246번길|Jungbu-daero 246beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328317|중부대로256번길|Jungbu-daero 256beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328318|중부대로271번길|Jungbu-daero 271beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328319|중부대로34번길|Jungbu-daero 34beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328319|중부대로34번길|Jungbu-daero 34beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328320|중부대로39번길|Jungbu-daero 39beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328320|중부대로39번길|Jungbu-daero 39beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328321|중부대로3번길|Jungbu-daero 3beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328321|중부대로3번길|Jungbu-daero 3beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411154328322|중부대로42번길|Jungbu-daero 42beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328322|중부대로42번길|Jungbu-daero 42beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328323|중부대로47번길|Jungbu-daero 47beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328323|중부대로47번길|Jungbu-daero 47beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328324|중부대로60번길|Jungbu-daero 60beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328324|중부대로60번길|Jungbu-daero 60beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328325|중부대로79번길|Jungbu-daero 79beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328325|중부대로79번길|Jungbu-daero 79beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328326|중부대로7번길|Jungbu-daero 7beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328326|중부대로7번길|Jungbu-daero 7beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411154328326|중부대로7번길|Jungbu-daero 7beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411154328327|중부대로87번길|Jungbu-daero 87beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328327|중부대로87번길|Jungbu-daero 87beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328328|창룡대로103번길|Changnyong-daero 103beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328328|창룡대로103번길|Changnyong-daero 103beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매향동|Maehyang-dong|1|128|0||||
+411154328329|창룡대로104번길|Changnyong-daero 104beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328329|창룡대로104번길|Changnyong-daero 104beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328330|창룡대로144번길|Changnyong-daero 144beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328330|창룡대로144번길|Changnyong-daero 144beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328331|창룡대로150번길|Changnyong-daero 150beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328331|창룡대로150번길|Changnyong-daero 150beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328333|창룡대로207번길|Changnyong-daero 207beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328334|창룡대로210번길|Changnyong-daero 210beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328334|창룡대로210번길|Changnyong-daero 210beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328335|창룡대로26번길|Changnyong-daero 26beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328335|창룡대로26번길|Changnyong-daero 26beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328336|창룡대로30번길|Changnyong-daero 30beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328336|창룡대로30번길|Changnyong-daero 30beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328337|창룡대로38번길|Changnyong-daero 38beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328337|창룡대로38번길|Changnyong-daero 38beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328338|창룡대로41번길|Changnyong-daero 41beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328338|창룡대로41번길|Changnyong-daero 41beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매향동|Maehyang-dong|1|128|0||||
+411154328339|창룡대로56번길|Changnyong-daero 56beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328339|창룡대로56번길|Changnyong-daero 56beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328340|창룡대로62번길|Changnyong-daero 62beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328340|창룡대로62번길|Changnyong-daero 62beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328341|창룡대로74번길|Changnyong-daero 74beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328341|창룡대로74번길|Changnyong-daero 74beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328342|창룡대로7번길|Changnyong-daero 7beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328342|창룡대로7번길|Changnyong-daero 7beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411154328343|창룡대로80번길|Changnyong-daero 80beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328343|창룡대로80번길|Changnyong-daero 80beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328344|창룡대로8번길|Changnyong-daero 8beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328344|창룡대로8번길|Changnyong-daero 8beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로1가|Paldallo 1(il)-ga|1|120|0||||
+411154328344|창룡대로8번길|Changnyong-daero 8beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328345|창룡문로100번길|Changnyongmun-ro 100beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328345|창룡문로100번길|Changnyongmun-ro 100beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328346|창룡문로111번길|Changnyongmun-ro 111beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328346|창룡문로111번길|Changnyongmun-ro 111beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328347|창룡문로118번길|Changnyongmun-ro 118beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328347|창룡문로118번길|Changnyongmun-ro 118beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328348|창룡문로14번길|Changnyongmun-ro 14beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328348|창룡문로14번길|Changnyongmun-ro 14beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328349|창룡문로56번길|Changnyongmun-ro 56beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328349|창룡문로56번길|Changnyongmun-ro 56beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328350|창룡문로7번길|Changnyongmun-ro 7beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328350|창룡문로7번길|Changnyongmun-ro 7beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328351|창룡문로89번길|Changnyongmun-ro 89beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328351|창룡문로89번길|Changnyongmun-ro 89beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328352|창룡문로94번길|Changnyongmun-ro 94beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328352|창룡문로94번길|Changnyongmun-ro 94beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328353|팔달로100번길|Paldal-ro 100beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328353|팔달로100번길|Paldal-ro 100beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328354|팔달로107번길|Paldal-ro 107beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328354|팔달로107번길|Paldal-ro 107beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328355|팔달로10번길|Paldal-ro 10beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328355|팔달로10번길|Paldal-ro 10beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411154328356|팔달로110번길|Paldal-ro 110beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328356|팔달로110번길|Paldal-ro 110beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328357|팔달로119번길|Paldal-ro 119beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328357|팔달로119번길|Paldal-ro 119beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328359|팔달로120번길|Paldal-ro 120beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328359|팔달로120번길|Paldal-ro 120beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328360|팔달로127번길|Paldal-ro 127beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328360|팔달로127번길|Paldal-ro 127beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328361|팔달로130번길|Paldal-ro 130beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328361|팔달로130번길|Paldal-ro 130beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328362|팔달로141번길|Paldal-ro 141beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328362|팔달로141번길|Paldal-ro 141beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328363|팔달로142번길|Paldal-ro 142beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328363|팔달로142번길|Paldal-ro 142beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328364|팔달로153번길|Paldal-ro 153beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328364|팔달로153번길|Paldal-ro 153beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328365|팔달로154번길|Paldal-ro 154beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328365|팔달로154번길|Paldal-ro 154beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328366|팔달로165번길|Paldal-ro 165beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328366|팔달로165번길|Paldal-ro 165beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328367|팔달로173번길|Paldal-ro 173beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328367|팔달로173번길|Paldal-ro 173beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328368|팔달로183번길|Paldal-ro 183beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328368|팔달로183번길|Paldal-ro 183beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328372|팔달로42번길|Paldal-ro 42beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328372|팔달로42번길|Paldal-ro 42beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328373|팔달로48번길|Paldal-ro 48beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328373|팔달로48번길|Paldal-ro 48beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328375|팔달로52번길|Paldal-ro 52beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328375|팔달로52번길|Paldal-ro 52beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328383|팔달로99번길|Paldal-ro 99beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328383|팔달로99번길|Paldal-ro 99beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328383|팔달로99번길|Paldal-ro 99beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328384|팔달문로103번길|Paldalmun-ro 103beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328384|팔달문로103번길|Paldalmun-ro 103beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328385|팔달문로104번길|Paldalmun-ro 104beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328385|팔달문로104번길|Paldalmun-ro 104beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328386|팔달문로108번길|Paldalmun-ro 108beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328386|팔달문로108번길|Paldalmun-ro 108beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328387|팔달문로10번길|Paldalmun-ro 10beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328387|팔달문로10번길|Paldalmun-ro 10beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411154328388|팔달문로114번길|Paldalmun-ro 114beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328388|팔달문로114번길|Paldalmun-ro 114beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328389|팔달문로115번길|Paldalmun-ro 115beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328389|팔달문로115번길|Paldalmun-ro 115beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328390|팔달문로118번길|Paldalmun-ro 118beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328390|팔달문로118번길|Paldalmun-ro 118beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328391|팔달문로130번길|Paldalmun-ro 130beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328391|팔달문로130번길|Paldalmun-ro 130beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328392|팔달문로131번길|Paldalmun-ro 131beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328392|팔달문로131번길|Paldalmun-ro 131beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328393|팔달문로139번길|Paldalmun-ro 139beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328393|팔달문로139번길|Paldalmun-ro 139beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328394|팔달문로140번길|Paldalmun-ro 140beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328394|팔달문로140번길|Paldalmun-ro 140beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328395|팔달문로150번길|Paldalmun-ro 150beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328395|팔달문로150번길|Paldalmun-ro 150beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328396|팔달문로153번길|Paldalmun-ro 153beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328396|팔달문로153번길|Paldalmun-ro 153beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328397|팔달문로163번길|Paldalmun-ro 163beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328397|팔달문로163번길|Paldalmun-ro 163beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328398|팔달문로175번길|Paldalmun-ro 175beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328398|팔달문로175번길|Paldalmun-ro 175beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154328399|팔달문로32번길|Paldalmun-ro 32beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328399|팔달문로32번길|Paldalmun-ro 32beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328400|팔달문로3번길|Paldalmun-ro 3beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328400|팔달문로3번길|Paldalmun-ro 3beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로1가|Paldallo 1(il)-ga|1|120|0||||
+411154328400|팔달문로3번길|Paldalmun-ro 3beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로2가|Paldallo 2(i)-ga|1|121|0||||
+411154328400|팔달문로3번길|Paldalmun-ro 3beon-gil|03|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154328401|팔달문로41번길|Paldalmun-ro 41beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328401|팔달문로41번길|Paldalmun-ro 41beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328402|팔달문로42번길|Paldalmun-ro 42beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328402|팔달문로42번길|Paldalmun-ro 42beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328403|팔달문로4번길|Paldalmun-ro 4beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328403|팔달문로4번길|Paldalmun-ro 4beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411154328403|팔달문로4번길|Paldalmun-ro 4beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|영동|Yeong-dong|1|124|0||||
+411154328404|팔달문로53번길|Paldalmun-ro 53beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328404|팔달문로53번길|Paldalmun-ro 53beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328405|팔달문로56번길|Paldalmun-ro 56beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328405|팔달문로56번길|Paldalmun-ro 56beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328406|팔달문로57번길|Paldalmun-ro 57beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328406|팔달문로57번길|Paldalmun-ro 57beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328407|팔달문로75번길|Paldalmun-ro 75beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328407|팔달문로75번길|Paldalmun-ro 75beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328408|팔달문로81번길|Paldalmun-ro 81beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328408|팔달문로81번길|Paldalmun-ro 81beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328409|팔달문로82번길|Paldalmun-ro 82beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328409|팔달문로82번길|Paldalmun-ro 82beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328410|팔달문로93번길|Paldalmun-ro 93beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328410|팔달문로93번길|Paldalmun-ro 93beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328411|팔달문로96번길|Paldalmun-ro 96beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328411|팔달문로96번길|Paldalmun-ro 96beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328412|팔달문로97번길|Paldalmun-ro 97beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328412|팔달문로97번길|Paldalmun-ro 97beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|지동|Ji-dong|1|139|0||||
+411154328413|행궁로22번길|Haenggung-ro 22beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328413|행궁로22번길|Haenggung-ro 22beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남창동|Namchang-dong|1|123|0||||
+411154328414|행궁로26번길|Haenggung-ro 26beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328414|행궁로26번길|Haenggung-ro 26beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남창동|Namchang-dong|1|123|0||||
+411154328415|행궁로40번길|Haenggung-ro 40beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328415|행궁로40번길|Haenggung-ro 40beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남창동|Namchang-dong|1|123|0||||
+411154328416|행궁로62번길|Haenggung-ro 62beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328416|행궁로62번길|Haenggung-ro 62beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411154328417|행궁로84번길|Haenggung-ro 84beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328417|행궁로84번길|Haenggung-ro 84beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411154328417|행궁로84번길|Haenggung-ro 84beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154328418|향교로137번길|Hyanggyo-ro 137beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328418|향교로137번길|Hyanggyo-ro 137beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|팔달로3가|Paldallo 3(sam)-ga|1|122|0||||
+411154328418|향교로137번길|Hyanggyo-ro 137beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154328419|향교로1번길|Hyanggyo-ro 1beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328419|향교로1번길|Hyanggyo-ro 1beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411154328420|향교로3번길|Hyanggyo-ro 3beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328420|향교로3번길|Hyanggyo-ro 3beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로1가|Maesanno 1(il)-ga|1|134|0||||
+411154328421|향교로47번길|Hyanggyo-ro 47beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328421|향교로47번길|Hyanggyo-ro 47beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328421|향교로47번길|Hyanggyo-ro 47beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328422|향교로57번길|Hyanggyo-ro 57beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328422|향교로57번길|Hyanggyo-ro 57beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로2가|Maesanno 2(i)-ga|1|135|0||||
+411154328422|향교로57번길|Hyanggyo-ro 57beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328424|화산로39번길|Hwasan-ro 39beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328425|화산로6번길|Hwasan-ro 6beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328425|화산로6번길|Hwasan-ro 6beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328426|화서문로16번길|Hwaseomun-ro 16beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328426|화서문로16번길|Hwaseomun-ro 16beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411154328427|화서문로17번길|Hwaseomun-ro 17beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328427|화서문로17번길|Hwaseomun-ro 17beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|장안동|Jangan-dong|1|131|0||||
+411154328428|화서문로22번길|Hwaseomun-ro 22beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328428|화서문로22번길|Hwaseomun-ro 22beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411154328429|화서문로31번길|Hwaseomun-ro 31beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328429|화서문로31번길|Hwaseomun-ro 31beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|장안동|Jangan-dong|1|131|0||||
+411154328430|화서문로32번길|Hwaseomun-ro 32beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328430|화서문로32번길|Hwaseomun-ro 32beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411154328431|화서문로41번길|Hwaseomun-ro 41beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328431|화서문로41번길|Hwaseomun-ro 41beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|장안동|Jangan-dong|1|131|0||||
+411154328432|화서문로42번길|Hwaseomun-ro 42beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328432|화서문로42번길|Hwaseomun-ro 42beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411154328433|화서문로45번길|Hwaseomun-ro 45beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328433|화서문로45번길|Hwaseomun-ro 45beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|장안동|Jangan-dong|1|131|0||||
+411154328434|화서문로46번길|Hwaseomun-ro 46beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328434|화서문로46번길|Hwaseomun-ro 46beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411154328435|화서문로48번길|Hwaseomun-ro 48beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328435|화서문로48번길|Hwaseomun-ro 48beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|신풍동|Sinpung-dong|1|130|0||||
+411154328436|화서문로51번길|Hwaseomun-ro 51beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328436|화서문로51번길|Hwaseomun-ro 51beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|장안동|Jangan-dong|1|131|0||||
+411154328437|화서문로71번길|Hwaseomun-ro 71beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328437|화서문로71번길|Hwaseomun-ro 71beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411154328438|화서문로72번길|Hwaseomun-ro 72beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328438|화서문로72번길|Hwaseomun-ro 72beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411154328439|화서문로75번길|Hwaseomun-ro 75beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328439|화서문로75번길|Hwaseomun-ro 75beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|북수동|Buksu-dong|1|129|0||||
+411154328440|화양로11번길|Hwayang-ro 11beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328440|화양로11번길|Hwayang-ro 11beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328441|화양로21번길|Hwayang-ro 21beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328441|화양로21번길|Hwayang-ro 21beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328442|화양로24번길|Hwayang-ro 24beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328442|화양로24번길|Hwayang-ro 24beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328443|화양로29번길|Hwayang-ro 29beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328443|화양로29번길|Hwayang-ro 29beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328444|화양로35번길|Hwayang-ro 35beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328444|화양로35번길|Hwayang-ro 35beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328445|화양로38번길|Hwayang-ro 38beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328445|화양로38번길|Hwayang-ro 38beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328446|화양로47번길|Hwayang-ro 47beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328446|화양로47번길|Hwayang-ro 47beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328447|화양로50번길|Hwayang-ro 50beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328447|화양로50번길|Hwayang-ro 50beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328448|화양로56번길|Hwayang-ro 56beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328448|화양로56번길|Hwayang-ro 56beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328449|화양로5번길|Hwayang-ro 5beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328449|화양로5번길|Hwayang-ro 5beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328450|화양로67번길|Hwayang-ro 67beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328450|화양로67번길|Hwayang-ro 67beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328451|화양로68번길|Hwayang-ro 68beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328451|화양로68번길|Hwayang-ro 68beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328452|효원로100번길|Hyowon-ro 100beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328453|효원로103번길|Hyowon-ro 103beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328453|효원로103번길|Hyowon-ro 103beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328454|효원로12번길|Hyowon-ro 12beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328454|효원로12번길|Hyowon-ro 12beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
+411154328455|효원로147번길|Hyowon-ro 147beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328455|효원로147번길|Hyowon-ro 147beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328456|효원로148번길|Hyowon-ro 148beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328456|효원로148번길|Hyowon-ro 148beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328457|효원로153번길|Hyowon-ro 153beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328457|효원로153번길|Hyowon-ro 153beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328458|효원로15번길|Hyowon-ro 15beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328458|효원로15번길|Hyowon-ro 15beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328459|효원로160번길|Hyowon-ro 160beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328460|효원로16번길|Hyowon-ro 16beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328460|효원로16번길|Hyowon-ro 16beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328462|효원로193번길|Hyowon-ro 193beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328462|효원로193번길|Hyowon-ro 193beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328463|효원로219번길|Hyowon-ro 219beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328463|효원로219번길|Hyowon-ro 219beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328466|효원로235번길|Hyowon-ro 235beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328466|효원로235번길|Hyowon-ro 235beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328467|효원로249번길|Hyowon-ro 249beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328467|효원로249번길|Hyowon-ro 249beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328469|효원로265번길|Hyowon-ro 265beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328469|효원로265번길|Hyowon-ro 265beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328471|효원로291번길|Hyowon-ro 291beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328471|효원로291번길|Hyowon-ro 291beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328472|효원로292번길|Hyowon-ro 292beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328472|효원로292번길|Hyowon-ro 292beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328473|효원로307번길|Hyowon-ro 307beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328473|효원로307번길|Hyowon-ro 307beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328474|효원로308번길|Hyowon-ro 308beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328474|효원로308번길|Hyowon-ro 308beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154328475|효원로60번길|Hyowon-ro 60beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328475|효원로60번길|Hyowon-ro 60beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매산로3가|Maesanno 3(sam)-ga|1|136|0||||
+411154328476|효원로93번길|Hyowon-ro 93beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328476|효원로93번길|Hyowon-ro 93beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|교동|Gyo-dong|1|132|0||||
+411154328476|효원로93번길|Hyowon-ro 93beon-gil|02|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|매교동|Maegyo-dong|1|133|0||||
+411154328477|권광로123번길|Gwongwang-ro 123beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328479|권광로303번길|Gwongwang-ro 303beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328481|권선로734번길|Gwonseon-ro 734beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328483|덕영대로639번길|Deogyeong-daero 639beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328484|수인로9번길|Suin-ro 9beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328485|아주로4번길|Aju-ro 4beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328486|월드컵로366번길|World cup-ro 366beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328492|창룡대로151번길|Changnyong-daero 151beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328494|화산로17번길|Hwasan-ro 17beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328494|화산로17번길|Hwasan-ro 17beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|화서동|Hwaseo-dong|1|138|0||||
+411154328497|효원로190번길|Hyowon-ro 190beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328498|효원로220번길|Hyowon-ro 220beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328499|효원로230번길|Hyowon-ro 230beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328500|효원로256번길|Hyowon-ro 256beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154328501|효원로266번길|Hyowon-ro 266beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154331121|아주로13번길|Aju-ro 13beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154331121|아주로13번길|Aju-ro 13beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154331122|아주로27번길|Aju-ro 27beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154331122|아주로27번길|Aju-ro 27beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154331123|아주로39번길|Aju-ro 39beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154331123|아주로39번길|Aju-ro 39beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154331124|아주로47번길|Aju-ro 47beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154331124|아주로47번길|Aju-ro 47beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154331156|월드컵로211번길|World cup-ro 211beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154331156|월드컵로211번길|World cup-ro 211beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|우만동|Uman-dong|1|140|0||||
+411154331157|인계로166번길|Ingye-ro 166beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154331157|인계로166번길|Ingye-ro 166beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154331223|광교로42번길|Gwanggyo-ro 42beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154853946|창룡대로36번길|Changnyong-daero 36beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154853946|창룡대로36번길|Changnyong-daero 36beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|남수동|Namsu-dong|1|127|0||||
+411154857781|수성로100번길|Suseong-ro 100beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154858666|중부대로220번길|Jungbu-daero 220beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154858666|중부대로220번길|Jungbu-daero 220beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|인계동|Ingye-dong|1|141|0||||
+411154859720|고등로33번길|Godeung-ro 33beon-gil|00|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|||2||0||||
+411154859720|고등로33번길|Godeung-ro 33beon-gil|01|경기도|Gyeonggi-do|수원시 팔달구|Paldal-gu, Suwon-si|고등동|Godeung-dong|1|137|0||||
