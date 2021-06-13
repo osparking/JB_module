@@ -19,10 +19,16 @@
 			<version>2.7.3</version>
 		</dependency>
 		<dependency>
-			<groupId>javax.sql</groupId>
-			<artifactId>rowset</artifactId>
-			<version>1.0.1</version>
+		    <groupId>com.sun.jna</groupId>
+		    <artifactId>jna</artifactId>
+		    <version>3.0.9</version>
 		</dependency>
+		<dependency>
+		    <groupId>javax.sql</groupId>
+		    <artifactId>rowset</artifactId>
+		    <version>1.0.1</version>
+		</dependency>
+		
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
