@@ -1,0 +1,9 @@
+https://www.juso.go.kr/addrlink/addressBuildDevNew.do?menu=match
+	=> 주소DB 다운로드 => 전체자료 => 2021년 => 5월
+	
+* 개선_도로명코드_전체분.txt
+	// $ iconv -c -f euc-kr -t utf-8 test.txt > test-utf8.txt
+		https://docs.google.com/document/d/15H0g172Y_Ui-gtBR-FS_hVFO8uvWahqk1r_zsGky3II/edit?usp=sharing
+	=> 도로명코드_utf_8.txt
+	// commit message: road name code file, utf-8, small
+	=> 도로명코드_utf_8_small.txt 
