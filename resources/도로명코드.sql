@@ -1,5 +1,5 @@
 CREATE TABLE `도로명코드` (
-  `도로명코드` bigint(20) NOT NULL COMMENT '413904397016',
+  `도로명코드` decimal(12,0) NOT NULL COMMENT '413904397016',
   `읍면동일련번호` tinyint(2) NOT NULL COMMENT '00',
   `시도명` varchar(20) DEFAULT NULL,
   `시군구` varchar(20) DEFAULT NULL,
