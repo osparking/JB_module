@@ -1,6 +1,9 @@
 #
 # Project specific excludes
 #
+!.classpath
+!.project
+
 
 # java
 
