@@ -31,7 +31,7 @@ public class AddressMan {
 
 	public static void main(String[] args) {
 		AddressMan addressMan = new AddressMan();
-		
+
 		if (args.length > 0) {
 			switch (args[0]) {
 			case "road":
@@ -55,24 +55,50 @@ public class AddressMan {
 		String txtWhole = "resources\\주소_경기도.txt";
 		File addrFile = new File(txtWhole);
 		int lines = 0;
-		
+
 		try (Scanner scanner = new Scanner(addrFile)) {
 			int selectionCount = 0;
 			while (scanner.hasNextLine()) {
 				if (++lines % 1000 == 0)
-					System.out.print(lines/1000 + " ");
+					System.out.print(lines / 1000 + " ");
 				String[] items;
 				String line = scanner.nextLine();
 
 				items = line.split("\\|", -1);
-				if (fKeyInSmall(items[1], items[2]))
-					selectionCount++;
+				if (fKeyInSmall(items[1], items[2])) {
+					selectionCount += insert2TableAddress(items);
+				}
 			}
-			System.out.println(selectionCount + " 행 식별됨.");
+			System.out.println(selectionCount + " 행 삽입됨.");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+	}
 
+	private int insert2TableAddress(String[] items) {
+		int insertionCount = 0;
+		String 관리번호 = items[0];
+		String 도로명코드 = items[1];
+		String 읍면동일련번호 = items[2];
+		String 지하여부 = items[3];
+		String 건물본번 = items[4];
+		String 건물부번 = items[5];
+		String 기초구역번호 = items[6];
+
+		try {
+			Statement insStmt = conn.createStatement();
+			//@formatter:off
+			String sql = "insert into 도로명주소 "
+					+ "values (" + 관리번호 +"," +  도로명코드 
+					+ "," + 읍면동일련번호 + "," + 지하여부 
+					+ "," + 건물본번 + "," + 건물부번 
+					+ "," + 기초구역번호 + ")";
+			//@formatter:on
+			insertionCount = insStmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}		
+		return insertionCount;
 	}
 
 	/**
@@ -86,8 +112,10 @@ public class AddressMan {
 		boolean fkExists = false;
 		try {
 			Statement insStmt = conn.createStatement();
+			// @form:off
 			String sql = "select count(*) row_count" + " from 도로명코드 도" + "	where 도.도로명코드 = " + 도로명코드
 					+ " and 도.읍면동일련번호 = " + 읍면동일련번호;
+			// @form:on
 			ResultSet rs = insStmt.executeQuery(sql);
 
 			if (rs != null && rs.next()) {
@@ -153,9 +181,16 @@ public class AddressMan {
 			// 시도명,시군구,읍면동구분,도로명,읍면동,읍면동코드)
 			// values (411152012001,0,
 			// '경기도','수원시 팔달구',2,'창룡대로',null,null)
-			String sql = "insert into 도로명코드(" + "도로명코드,읍면동일련번호,시도명," + "시군구,읍면동구분,도로명," + "읍면동,읍면동코드) " + "values ("
-					+ 도로명코드 + "," + 읍면동일련번호 + ",'" + 시도명 + "'," + 시군구명 + "," + 읍면동구분 + ",'" + 도로명 + "'," + 읍면동 + ","
-					+ 읍면동코드 + ")";
+			//@formatter:off
+			String sql = "insert into 도로명코드(" 
+					+ "도로명코드,읍면동일련번호,시도명," 
+					+ "시군구,읍면동구분,도로명," 
+					+ "읍면동,읍면동코드) " 
+					+ "values ("
+					+ 도로명코드 + "," + 읍면동일련번호 + ",'" + 시도명 
+					+ "'," + 시군구명 + "," + 읍면동구분 + ",'" + 도로명 
+					+ "'," + 읍면동 + "," + 읍면동코드 + ")";
+			//@formatter:on
 			insStmt.execute(sql);
 		} catch (SQLException e) {
 			e.printStackTrace();
