@@ -97,7 +97,7 @@ public class AddressMan {
 			insertionCount = insStmt.executeUpdate(sql);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}		
+		}
 		return insertionCount;
 	}
 
@@ -112,10 +112,12 @@ public class AddressMan {
 		boolean fkExists = false;
 		try {
 			Statement insStmt = conn.createStatement();
-			// @form:off
-			String sql = "select count(*) row_count" + " from 도로명코드 도" + "	where 도.도로명코드 = " + 도로명코드
+			// @formatter:off
+			String sql = "select count(*) row_count" 
+					+ " from 도로명코드 도" 
+					+ "	where 도.도로명코드 = " + 도로명코드
 					+ " and 도.읍면동일련번호 = " + 읍면동일련번호;
-			// @form:on
+			// @formatter:on
 			ResultSet rs = insStmt.executeQuery(sql);
 
 			if (rs != null && rs.next()) {
