@@ -34,7 +34,7 @@ public class AddressMan {
 
 		if (args.length > 0) {
 			switch (args[0]) {
-			case "road":
+			case "code":
 				addressMan.smallTxt2TableRoad();
 				break;
 
