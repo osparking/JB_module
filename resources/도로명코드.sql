@@ -1,3 +1,6 @@
+CREATE INDEX 도로명코드_도로명_IDX USING BTREE 
+	ON address_road_gg.도로명코드 (도로명);
+
 -- address_road_gg.도로명코드 definition
 
 CREATE TABLE `도로명코드` (
