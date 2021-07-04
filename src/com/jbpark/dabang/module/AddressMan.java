@@ -90,67 +90,70 @@ public class AddressMan {
 
 	private void search() {
 		try (Scanner scanner = new Scanner(System.in)) {
-			System.out.print("도로명: ");
-			String searchKey = "덕영대로895";
-
+			//@formatter:off
+			String sql = "SELECT  A.기초구역번호 AS 새우편번호, " 
+					+ "concat( " + "B.시도명, ' ', "
+					+ "if (B.시군구 = '', '', concat(B.시군구,' ')), " 
+					+ "case when B.읍면동구분 = 0 then concat(B.읍면동,' ') "
+					+ "else ''  " 
+					+ "end,  " 
+					+ "concat(B.도로명,' '), " 
+					+ "case when A.지하여부 = 0 then ''  "
+					+ "	when A.지하여부 = 1 then '지하 '  " 
+					+ "	when A.지하여부 = 2 then '공중 ' end, " + "A.건물본번, "
+					+ "if (A.건물부번 = 0, '', concat('-',A.건물부번)), " 
+					+ "CASE WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 0) THEN '' "
+					+ "	WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 1) then " 
+					+ "		case D.시군구건물명  "
+					+ "			when (D.시군구건물명 = '') then ''  " 
+					+ "			else concat('(',D.시군구건물명,')') end  "
+					+ "	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 0)  " 
+					+ "		THEN concat('(',B.읍면동,')') "
+					+ "	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 1)  " 
+					+ "		THEN concat('(', B.읍면동 "
+					+ "			, case when (D.시군구건물명 = '') then ''  "
+					+ "				   else concat(',', D.시군구건물명) end " 
+					+ "			,')')  " 
+					+ "   	END  "
+					+ "   	) AS 도로명주소 " 
+					+ "  FROM 도로명주소 A, 도로명코드 B, 부가정보 D  " 
+					+ " WHERE A.도로명코드    = B.도로명코드 "
+					+ "   AND A.읍면동일련번호 = B.읍면동일련번호 " 
+					+ "   AND A.관리번호     = D.관리번호  "
+					+ "   AND %s;";
+			
 			AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
 
 			assert (addrSearchKey.get건물명일부() != null 
 					|| addrSearchKey.get도로명일부() != null) 
-				: "건물명 및 도로명 둘 다 없다!";
+				: "건물명 및 도로명 둘 다 없음!";
 			
 			assert (addrSearchKey.get건물본번일부() != null 
 					&& addrSearchKey.get도로명일부() != null) 
-				: "건물본번 있으나 도로명은 없네!";
+				: "건물본번 있으나 도로명은 없음!";
 			
-			if (searchKey != null) {
-				searchKey = searchKey.trim();
-				if (searchKey.length() > 0) {
-					DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
-					String timeLabel = LocalTime.now().format(dtf);
-					logger.config(searchKey + ": " + timeLabel);
-					System.out.println((searchKey + ": " + timeLabel));
-				}
+			String sCond = null;
+			if (addrSearchKey.get건물명일부() == null) {
+				sCond = "B.도로명 LIKE ?";
 			}
 
-			String sql = "SELECT  A.기초구역번호 AS 새우편번호, " + "concat( " + "B.시도명, ' ', "
-					+ "if (B.시군구 = '', '', concat(B.시군구,' ')), " + "case when B.읍면동구분 = 0 then concat(B.읍면동,' ') "
-					+ "else ''  " + "end,  " + "concat(B.도로명,' '), " + "case when A.지하여부 = 0 then ''  "
-					+ "	when A.지하여부 = 1 then '지하 '  " + "	when A.지하여부 = 2 then '공중 ' end, " + "A.건물본번, "
-					+ "if (A.건물부번 = 0, '', concat('-',A.건물부번)), " + "CASE WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 0) THEN 'a' "
-					+ "	WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 1) then " + "		case D.시군구건물명  "
-					+ "			when (D.시군구건물명 = '') then 'b'  " + "			else concat('(',D.시군구건물명,')') end  "
-					+ "	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 0)  " + "		THEN concat('(',B.읍면동,')') "
-					+ "	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 1)  " + "		THEN concat('(', B.읍면동 "
-					+ "			, case when (D.시군구건물명 = '') then ''  "
-					+ "				   else concat(',', D.시군구건물명) end " + "			,')')  " + "   	END  "
-					+ "   	) AS 도로명주소 " + "  FROM 도로명주소 A, 도로명코드 B, 부가정보 D  " + " WHERE A.도로명코드    = B.도로명코드 "
-					+ "   AND A.읍면동일련번호 = B.읍면동일련번호 " + "   AND A.관리번호     = D.관리번호  "
-					+ "   AND B.도로명 LIKE concat('덕영대로895','%'); ";
+			String stmt = String.format(sql, sCond);
+			var ps = conn.prepareStatement(stmt);
 
-			var ps = conn.prepareStatement(sql);
-//			String line = null;
-//			String iSql = "insert into 부가정보 values (?,?,?)";
-//			var iPs = conn.prepareStatement(iSql);
-//
-//			while ((line = br.readLine()) != null) 
-			{
-//				if (++lines % printUnit == 0) {
-//					System.out.println(lines / printUnit + " ");
-//					System.out.println(LocalDateTime.now());
-//				}
-//				String[] items;
-
-//				items = line.split("\\|", -1);
-//				ps.setString(1, items[0]);
-				String msg = "결과 행 수: " + getRoadAddrList(ps).size();
-				logger.config(msg);
-				System.out.println(msg);
-				getRoadAddrList(ps).forEach(System.out::println);
+			if (addrSearchKey.get건물명일부() == null) {
+				// 덕영대로895 => 42 행
+				ps.setString(1, addrSearchKey.get도로명일부() + "%");
 			}
-
-//		} catch (IOException e) {
-//			e.printStackTrace();
+			//@formatter:on
+			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
+			String timeLabel = LocalTime.now().format(dtf);
+			logger.config(addrSearchKey + ": " + timeLabel);
+			System.out.println(addrSearchKey + ": " + timeLabel);
+			
+			String msg = "결과 행 수: " + getRoadAddrList(ps).size();
+			logger.config(msg);
+			System.out.println(msg);
+			getRoadAddrList(ps).forEach(System.out::println);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
