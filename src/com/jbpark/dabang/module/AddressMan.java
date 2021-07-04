@@ -157,8 +157,9 @@ public class AddressMan {
 
 //				items = line.split("\\|", -1);
 //				ps.setString(1, items[0]);
-				logger.config("결과 행 수: " + 
-						getRoadAddrList(ps).size());
+				String msg = "결과 행 수: " + getRoadAddrList(ps).size();
+				logger.config(msg);
+				System.out.println(msg);
 				getRoadAddrList(ps).forEach(System.out::println);
 			}
 
@@ -175,15 +176,14 @@ public class AddressMan {
 	 * @param ps
 	 * @return 존재 때 true, 비 존재 때 false
 	 */
-	private List<String> getRoadAddrList(PreparedStatement ps) {
-		// select count(*) from 도로명주소 도
-		// where 도.관리번호 = 4117310400112330000008128;
-		var roadAddrList = new ArrayList<String>();
+	private List<RoadAddress> getRoadAddrList(PreparedStatement ps) {
+		var roadAddrList = new ArrayList<RoadAddress>();
 		
 		try (ResultSet rs = ps.executeQuery()) {
 			while (rs != null && rs.next()) {
-				String addr = rs.getString(1);
-				roadAddrList.add(addr);
+				var roadAddress =
+						new RoadAddress(rs.getString(1), rs.getString(2));
+				roadAddrList.add(roadAddress);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
