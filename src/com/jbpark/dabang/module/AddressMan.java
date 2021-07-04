@@ -95,6 +95,14 @@ public class AddressMan {
 
 			AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
 
+			assert (addrSearchKey.get건물명일부() != null 
+					|| addrSearchKey.get도로명일부() != null) 
+				: "건물명 및 도로명 둘 다 없다!";
+			
+			assert (addrSearchKey.get건물본번일부() != null 
+					&& addrSearchKey.get도로명일부() != null) 
+				: "건물본번 있으나 도로명은 없네!";
+			
 			if (searchKey != null) {
 				searchKey = searchKey.trim();
 				if (searchKey.length() > 0) {
