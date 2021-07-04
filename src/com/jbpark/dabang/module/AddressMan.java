@@ -13,11 +13,35 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import jbpark.utility.JB_FileHandler;
 
 public class AddressMan {
 	static Connection conn = getConnection();
-
+	private static Logger logger = Logger.getLogger("com.jbpark.dabang");
+	{
+		logger.setLevel(Level.CONFIG);
+		logger.setUseParentHandlers(false);
+		int LOG_ROTATION_COUNT = 10;
+		JB_FileHandler handler;
+		try {
+			String logFile = "D:/LOG/JB_module";
+			System.out.println("로그파일: " + logFile + ".*.log.*");
+			handler = new JB_FileHandler(logFile + ".%g.log", 0, LOG_ROTATION_COUNT);
+			handler.setLevel(Level.CONFIG);
+			logger.addHandler(handler);
+		} catch (SecurityException | IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	static Connection getConnection() {
 		Connection conn = null;
 		String userName = "myself";
@@ -40,6 +64,10 @@ public class AddressMan {
 
 		if (args.length > 0) {
 			switch (args[0]) {
+			case "search":
+				addressMan.search();
+				break;			
+			
 			case "code":
 				addressMan.smallTxt2TableRoad();
 				break;
@@ -58,6 +86,109 @@ public class AddressMan {
 				break;
 			}
 		}
+	}
+
+	private void search() {
+		try (Scanner scanner = new Scanner(System.in)) {
+			System.out.print("도로명: ");
+			String searchKey = "덕영대로895";
+
+//			if (scanner.hasNextLine())
+//				searchKey = scanner.nextLine();
+
+			if (searchKey != null) {
+				searchKey = searchKey.trim();
+				if (searchKey.length() > 0) {
+					DateTimeFormatter dtf = 
+							DateTimeFormatter.ofPattern("HH:mm");
+					String timeLabel = 
+							LocalTime.now().format(dtf);
+					logger.config(searchKey + ": " + timeLabel);
+					System.out.println((searchKey + ": " + timeLabel));
+				}
+			}
+
+			String sql = 
+			"SELECT  A.기초구역번호 AS 새우편번호, " +
+			"concat( " +
+			"B.시도명, ' ', " +
+			"if (B.시군구 = '', '', concat(B.시군구,' ')), " +
+			"case when B.읍면동구분 = 0 then concat(B.읍면동,' ') " +
+			"else ''  " +
+			"end,  " +
+			"concat(B.도로명,' '), " +
+			"case when A.지하여부 = 0 then ''  " +
+			"	when A.지하여부 = 1 then '지하 '  " +
+			"	when A.지하여부 = 2 then '공중 ' end, " +
+			"A.건물본번, " +
+			"if (A.건물부번 = 0, '', concat('-',A.건물부번)), " +
+			"CASE WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 0) THEN 'a' " +
+			"	WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 1) then " +
+			"		case D.시군구건물명  " +
+			"			when (D.시군구건물명 = '') then 'b'  " +
+			"			else concat('(',D.시군구건물명,')') end  " +
+			"	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 0)  " +
+			"		THEN concat('(',B.읍면동,')') " +
+			"	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 1)  " +
+			"		THEN concat('(', B.읍면동 " +
+			"			, case when (D.시군구건물명 = '') then ''  " +
+			"				   else concat(',', D.시군구건물명) end " +
+			"			,')')  " +
+			"   	END  " +
+			"   	) AS 도로명주소 " +
+			"  FROM 도로명주소 A, 도로명코드 B, 부가정보 D  " +
+			" WHERE A.도로명코드    = B.도로명코드 " +
+			"   AND A.읍면동일련번호 = B.읍면동일련번호 " +
+			"   AND A.관리번호     = D.관리번호  " +
+			"   AND B.도로명 LIKE concat('덕영대로895','%'); ";
+					
+			var ps = conn.prepareStatement(sql);
+//			String line = null;
+//			String iSql = "insert into 부가정보 values (?,?,?)";
+//			var iPs = conn.prepareStatement(iSql);
+//
+//			while ((line = br.readLine()) != null) 
+			{
+//				if (++lines % printUnit == 0) {
+//					System.out.println(lines / printUnit + " ");
+//					System.out.println(LocalDateTime.now());
+//				}
+//				String[] items;
+
+//				items = line.split("\\|", -1);
+//				ps.setString(1, items[0]);
+				logger.config("결과 행 수: " + 
+						getRoadAddrList(ps).size());
+				getRoadAddrList(ps).forEach(System.out::println);
+			}
+
+//		} catch (IOException e) {
+//			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 관리번호 값 도로명주소 테이블 존재여부 판단
+	 * 
+	 * @param ps
+	 * @return 존재 때 true, 비 존재 때 false
+	 */
+	private List<String> getRoadAddrList(PreparedStatement ps) {
+		// select count(*) from 도로명주소 도
+		// where 도.관리번호 = 4117310400112330000008128;
+		var roadAddrList = new ArrayList<String>();
+		
+		try (ResultSet rs = ps.executeQuery()) {
+			while (rs != null && rs.next()) {
+				String addr = rs.getString(1);
+				roadAddrList.add(addr);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return roadAddrList;
 	}
 
 	private void largeAdditionalText() {
