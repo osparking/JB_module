@@ -17,6 +17,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -28,7 +29,7 @@ public class AddressMan {
 	private static Logger logger = Logger.getLogger("com.jbpark.dabang");
 	{
 		logger.setLevel(Level.CONFIG);
-		logger.setUseParentHandlers(false);
+//		logger.setUseParentHandlers(false);
 		int LOG_ROTATION_COUNT = 10;
 		JB_FileHandler handler;
 		try {
@@ -65,7 +66,16 @@ public class AddressMan {
 		if (args.length > 0) {
 			switch (args[0]) {
 			case "search":
-				addressMan.search();
+				Scanner scanner = new Scanner(System.in);
+				while (true) {
+					try {
+						addressMan.search(scanner);
+					} catch (StopSearchingException sse) {
+						break;
+					}
+				}
+				logger.info("종료");
+				System.out.println("종료");
 				break;
 
 			case "code":
@@ -88,8 +98,8 @@ public class AddressMan {
 		}
 	}
 
-	private void search() {
-		try (Scanner scanner = new Scanner(System.in)) {
+	private void search(Scanner scanner) throws StopSearchingException {
+		try  {
 			//@formatter:off
 			String sql = "SELECT  A.기초구역번호 AS 새우편번호, " 
 					+ "concat( " + "B.시도명, ' ', "
@@ -135,6 +145,11 @@ public class AddressMan {
 			String sCond = null;
 			if (addrSearchKey.get건물명일부() == null) {
 				sCond = "B.도로명 LIKE ?";
+				if (addrSearchKey.get건물본번일부() != null) {
+					sCond += " and A.건물본번 like ?";
+				}
+			} else {
+				sCond = "D.시군구건물명 LIKE ?";
 			}
 
 			String stmt = String.format(sql, sCond);
@@ -143,13 +158,19 @@ public class AddressMan {
 			if (addrSearchKey.get건물명일부() == null) {
 				// 덕영대로895 => 42 행
 				ps.setString(1, addrSearchKey.get도로명일부() + "%");
+				if (addrSearchKey.get건물본번일부() != null) {
+					// 덕영대로 89 => 5 행
+					ps.setString(2, addrSearchKey.get건물본번일부() + "%");
+				}
+			} else {
+				ps.setString(1, addrSearchKey.get건물명일부() + "%");
 			}
 			//@formatter:on
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
 			String timeLabel = LocalTime.now().format(dtf);
 			logger.config(addrSearchKey + ": " + timeLabel);
 			System.out.println(addrSearchKey + ": " + timeLabel);
-			
+
 			String msg = "결과 행 수: " + getRoadAddrList(ps).size();
 			logger.config(msg);
 			System.out.println(msg);
@@ -159,33 +180,45 @@ public class AddressMan {
 		}
 	}
 
-	private AddrSearchKey getAddrSearchKey(Scanner scanner) {
+	private AddrSearchKey getAddrSearchKey(Scanner scanner) 
+			throws StopSearchingException{
 		var asKey = new AddrSearchKey();
 
 		System.out.print("검색 옵션 입력(1:도로명, 2:도로명+건물번호, 3:건물명): ");
-		String inputText = scanner.nextLine().trim();
-		int searchOption = Integer.parseInt(inputText);
+		try {
+			String inputText = null;
+			
+			if (scanner.hasNextLine()) {
+				inputText = scanner.nextLine().trim();
+			}
+			int searchOption = Integer.parseInt(inputText);
 
-		switch (searchOption) {
-		case 1:
-			// 도로명(일부)만 입력
-			System.out.print("도로명(일부): ");
-			asKey.set도로명일부(scanner.nextLine().trim());
-			break;
-		case 2:
-			// 도로명(일부)+건물본번(일부) 입력
-			System.out.print("도로명(일부): ");
-			asKey.set도로명일부(scanner.nextLine().trim());
-			System.out.print("건물본번(일부): ");
-			asKey.set건물본번일부(scanner.nextLine().trim());
-			break;
-		case 3:
-			// 건물명(일부)만 입력
-			System.out.print("건물명(일부): ");
-			asKey.set건물명일부(scanner.nextLine().trim());
-			break;
-		default:
-			break;
+			switch (searchOption) {
+			case 1:
+				// 도로명(일부)만 입력
+				System.out.print("도로명(일부): ");
+				asKey.set도로명일부(scanner.nextLine().trim());
+				break;
+			case 2:
+				// 도로명(일부)+건물본번(일부) 입력
+				System.out.print("도로명(일부): ");
+				asKey.set도로명일부(scanner.nextLine().trim());
+				System.out.print("건물본번(일부): ");
+				asKey.set건물본번일부(scanner.nextLine().trim());
+				break;
+			case 3:
+				// 건물명(일부)만 입력
+				System.out.print("건물명(일부): ");
+				asKey.set건물명일부(scanner.nextLine().trim());
+				break;
+			default:
+				break;
+			}
+		} catch (NoSuchElementException 
+				| IllegalStateException 
+				| NumberFormatException e) {
+			System.out.println();
+			throw new StopSearchingException();
 		}
 
 		return asKey;
