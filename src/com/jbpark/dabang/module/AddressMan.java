@@ -184,7 +184,8 @@ public class AddressMan {
 			throws StopSearchingException{
 		var asKey = new AddrSearchKey();
 
-		System.out.print("검색 옵션 입력(1:도로명, 2:도로명+건물번호, 3:건물명): ");
+		System.out.println("검색 옵션 입력(1:도로명, 2:도로명+건물번호, 3:건물명): ");
+		System.out.print("(멈추려면 그냥 엔터 치세요 :-) : ");
 		try {
 			String inputText = null;
 			
