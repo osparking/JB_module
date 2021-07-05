@@ -137,18 +137,30 @@ public class AddressMan {
 			/**
 			 * 도로명으로 검색
 			 */
-			boolean roadName = addrSearchKey.get도로명일부() != null;
-			boolean bldgNumb = addrSearchKey.get건물본번일부() != null;
-			boolean searchByRoad = (roadName && !bldgNumb) 
-					|| (roadName && bldgNumb); 
+			boolean searchByRoadName 
+				= addrSearchKey.get도로명일부() != null;
+			boolean bldgNumbNull = addrSearchKey.get건물본번일부() == null;
+			
+			/**
+			 * P implies Q == (!P || Q); P:건물본번-notNull, Q:도로명-존재
+			 * !P:건물본번-Null
+			 * Truth Table(3rd와 4th 열 값 4개 일치)
+			 * P	Q	P->Q	!P||Q
+			 * T	T	  T		  T
+			 * T	F	  F		  F
+			 * F	T	  T		  T
+			 * F	F	  T		  T
+			 */
+			assert(bldgNumbNull || searchByRoadName);
 			
 			/**
 			 * 건물이름으로 검색
 			 */			
-			boolean searchByBldgName = addrSearchKey.get건물명일부() != null;
+			boolean searchByBldgName 
+				= addrSearchKey.get건물명일부() != null;
 			
-			assert (searchByRoad ^ searchByBldgName)
-				: "건물본번 있으나 도로명은 없음!";
+			assert (searchByRoadName ^ searchByBldgName)
+				: "'건물본번 도로명 둘 중 정확히 하나' 위반";
 			
 			String sCond = null;
 			if (addrSearchKey.get건물명일부() == null) {
