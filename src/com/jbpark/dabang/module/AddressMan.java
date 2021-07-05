@@ -125,9 +125,9 @@ public class AddressMan {
 			AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
 
 			boolean cond1 = addrSearchKey.get도로명일부() != null;
-			boolean cond2 = addrSearchKey.get건물명일부() != null;
-			boolean cond3 = addrSearchKey.get도로명일부() != null 
+			boolean cond2 = addrSearchKey.get도로명일부() != null
 					&& addrSearchKey.get건물본번일부() != null;
+			boolean cond3 = addrSearchKey.get건물명일부() != null;
 			
 			assert ( cond1 || cond2 || cond3)
 				: "건물본번 있으나 도로명은 없음!";
