@@ -134,12 +134,20 @@ public class AddressMan {
 			
 			AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
 
-			boolean cond1 = addrSearchKey.get도로명일부() != null;
-			boolean cond2 = addrSearchKey.get도로명일부() != null
-					&& addrSearchKey.get건물본번일부() != null;
-			boolean cond3 = addrSearchKey.get건물명일부() != null;
+			/**
+			 * 도로명으로 검색
+			 */
+			boolean roadName = addrSearchKey.get도로명일부() != null;
+			boolean bldgNumb = addrSearchKey.get건물본번일부() != null;
+			boolean searchByRoad = (roadName && !bldgNumb) 
+					|| (roadName && bldgNumb); 
 			
-			assert ( cond1 || cond2 || cond3)
+			/**
+			 * 건물이름으로 검색
+			 */			
+			boolean searchByBldgName = addrSearchKey.get건물명일부() != null;
+			
+			assert (searchByRoad ^ searchByBldgName)
 				: "건물본번 있으나 도로명은 없음!";
 			
 			String sCond = null;
