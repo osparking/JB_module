@@ -8,7 +8,7 @@ public class JB_FileHandler extends FileHandler {
 	public JB_FileHandler(String pattern, int limit, int count) 
 			throws IOException, SecurityException {
 		super(pattern, limit, count);
-	}
+	} fff
 	
 	/** Write each log line(=record) on to disk right away.
 	 * @author Park, JongBum
