@@ -1,7 +1,8 @@
 package com.jbpark.utility;
 
 import java.io.IOException;
-import java.util.logging.FileHandler;
+import java.nio.file.NoSuchFileException;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -14,24 +15,29 @@ import java.util.logging.Logger;
  *
  */
 public class JLogger {
-
-	private static String filePath = null;
 	private static Logger logger = Logger.getGlobal();
 	
 	public static String getFilePath() {
-		StringBuilder lfPath = new StringBuilder();
-		lfPath.append(System.getProperty("user.home"));
-		lfPath.append("\\G_LOG\\java(n).log");
-		filePath = lfPath.toString(); 		
-		return "로그파일: " + filePath;
+		return "로그파일: " + logFile;
 	}
+	private static String logFile = "D:/LOG/global.%g.log";
 	public static Logger getLogger() {
+		logger.setLevel(Level.CONFIG);
+		logger.setUseParentHandlers(false);
+		int LOG_ROTATION_COUNT = 30;
+		JB_FileHandler handler;
 		try {
-			FileHandler fHandler = new FileHandler();
-			logger.addHandler(fHandler);
+			handler = new JB_FileHandler(logFile, 0, LOG_ROTATION_COUNT);
+			handler.setLevel(Level.CONFIG);
+			logger.addHandler(handler);
+		} catch (NoSuchFileException e) {
+			System.out.println("파일부재 오류: " + e.getFile());
+			System.out.println("프로그램 종료!");
+			System.exit(-1);
 		} catch (SecurityException | IOException e) {
 			e.printStackTrace();
-		}
+		}		
+		
 		System.out.println(JLogger.getFilePath());
 		return logger;
 	}	
