@@ -1,4 +1,4 @@
-package jbpark.utility;
+package com.jbpark.utility;
 
 import java.io.IOException;
 import java.util.logging.FileHandler;

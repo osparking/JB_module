@@ -22,7 +22,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import jbpark.utility.JB_FileHandler;
+import com.jbpark.utility.JB_FileHandler;
 
 public class AddressMan {
 	static Connection conn = getConnection();
@@ -134,13 +134,33 @@ public class AddressMan {
 			
 			AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
 
-			assert (addrSearchKey.get건물명일부() != null 
-					|| addrSearchKey.get도로명일부() != null) 
-				: "건물명 및 도로명 둘 다 없음!";
+			/**
+			 * 도로명으로 검색
+			 */
+			boolean searchByRoadName 
+				= addrSearchKey.get도로명일부() != null;
+			boolean bldgNumbNull = addrSearchKey.get건물본번일부() == null;
 			
-			assert (addrSearchKey.get건물본번일부() != null 
-					&& addrSearchKey.get도로명일부() != null) 
-				: "건물본번 있으나 도로명은 없음!";
+			/**
+			 * P implies Q == (!P || Q); P:건물본번-notNull, Q:도로명-존재
+			 * !P:건물본번-Null
+			 * Truth Table(3rd와 4th 열 값 4개 일치)
+			 * P	Q	P->Q	!P||Q
+			 * T	T	  T		  T
+			 * T	F	  F		  F
+			 * F	T	  T		  T
+			 * F	F	  T		  T
+			 */
+			assert(bldgNumbNull || searchByRoadName);
+			
+			/**
+			 * 건물이름으로 검색
+			 */			
+			boolean searchByBldgName 
+				= addrSearchKey.get건물명일부() != null;
+			
+			assert (searchByRoadName ^ searchByBldgName)
+				: "'건물본번 도로명 둘 중 정확히 하나' 위반";
 			
 			String sCond = null;
 			if (addrSearchKey.get건물명일부() == null) {
@@ -184,7 +204,8 @@ public class AddressMan {
 			throws StopSearchingException{
 		var asKey = new AddrSearchKey();
 
-		System.out.print("검색 옵션 입력(1:도로명, 2:도로명+건물번호, 3:건물명): ");
+		System.out.println("검색 옵션 입력(1:도로명, 2:도로명+건물번호, 3:건물명): ");
+		System.out.print("(멈추려면 그냥 엔터 치세요 :-) : ");
 		try {
 			String inputText = null;
 			
