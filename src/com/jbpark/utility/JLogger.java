@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.NoSuchFileException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 /**
  * J(JongBum Park) Global Logger log file location
@@ -29,6 +30,7 @@ public class JLogger {
 		try {
 			handler = new JB_FileHandler(logFile, 0, LOG_ROTATION_COUNT);
 			handler.setLevel(Level.CONFIG);
+			handler.setFormatter(new SimpleFormatter());
 			logger.addHandler(handler);
 		} catch (NoSuchFileException e) {
 			System.out.println("파일부재 오류: " + e.getFile());
