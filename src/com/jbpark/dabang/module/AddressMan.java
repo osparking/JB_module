@@ -134,60 +134,28 @@ public class AddressMan {
 					+ "   AND %s;";
 			
 			AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
-
-			/**
-			 * 도로명으로 검색
-			 */
-//			boolean searchByRoadName 
-//				= addrSearchKey.get도로명일부() != null;
-//			boolean bldgNumbNull = addrSearchKey.get건물본번일부() == null;
-			
-			/**
-			 * P implies Q == (!P || Q); P:건물본번-notNull, Q:도로명-존재
-			 * !P:건물본번-Null
-			 * Truth Table(3rd와 4th 열 값 4개 일치)
-			 * P	Q	P->Q	!P||Q
-			 * T	T	  T		  T
-			 * T	F	  F		  F
-			 * F	T	  T		  T
-			 * F	F	  T		  T
-			 */
-//			assert(bldgNumbNull || searchByRoadName);
-			
-			/**
-			 * 건물이름으로 검색
-			 */			
-//			boolean searchByBldgName 
-//				= addrSearchKey.get건물명일부() != null;
-//			
-//			assert (searchByRoadName ^ searchByBldgName)
-//				: "'건물본번 도로명 둘 중 정확히 하나' 위반";
 			
 			String sCond = null;
-//			if (addrSearchKey.get건물본번() == null) {
-//				// 건물명 혹은 (건물 본번 없는)도로명 
-//				sCond = "B.도로명 LIKE ?";
-//				if (addrSearchKey.get건물본번일부() != null) {
-//					sCond += " and A.건물본번 like ?";
-//				}
-//			} else {
-//				// 건물 본번 있는 도로명
-//				sCond = "D.시군구건물명 LIKE ?";
-//			}
+			if (addrSearchKey.get건물본번() == null) {
+				// 건물명 혹은 (건물 본번 없는)도로명 
+				sCond = "(B.도로명 LIKE concat(?,'%') "
+						+ "or D.시군구건물명 LIKE concat(?, '%'))";
+			} else {
+				// 도로명 및 건물 본번으로 검색
+				sCond = "B.도로명 LIKE concat(?,'%') "
+						+ "AND A.건물본번 LIKE concat(?, '%')";
+			}
 
 			String stmt = String.format(sql, sCond);
 			var ps = conn.prepareStatement(stmt);
 
-//			if (addrSearchKey.get건물명일부() == null) {
-//				// 덕영대로895 => 42 행
-//				ps.setString(1, addrSearchKey.get도로명일부() + "%");
-//				if (addrSearchKey.get건물본번일부() != null) {
-//					// 덕영대로 89 => 5 행
-//					ps.setString(2, addrSearchKey.get건물본번일부() + "%");
-//				}
-//			} else {
-//				ps.setString(1, addrSearchKey.get건물명일부() + "%");
-//			}
+			if (addrSearchKey.get건물본번() == null) {
+				ps.setString(1, addrSearchKey.get도로_건물());
+				ps.setString(2, addrSearchKey.get도로_건물());
+			} else {
+				ps.setString(1, addrSearchKey.get도로_건물());
+				ps.setString(2, addrSearchKey.get건물본번());
+			}
 			//@formatter:on
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
 			String timeLabel = LocalTime.now().format(dtf);
@@ -231,19 +199,6 @@ public class AddressMan {
 				asKey.set도로_건물(searchKeys[0]);
 				asKey.set건물본번(searchKeys[1]);
 			}
-			System.out.println();
-
-//				// 도로명(일부)만 입력
-//				System.out.print("도로명(일부): ");
-//
-//				// 도로명(일부)+건물본번(일부) 입력
-//				System.out.print("도로명(일부): ");
-//				asKey.set도로명일부(scanner.nextLine().trim());
-//				System.out.print("건물본번(일부): ");
-//
-//				// 건물명(일부)만 입력
-//				System.out.print("건물명(일부): ");
-				
 		} catch (NoSuchElementException 
 				| IllegalStateException 
 				| NumberFormatException e) {
