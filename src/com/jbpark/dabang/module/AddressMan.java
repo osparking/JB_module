@@ -138,9 +138,9 @@ public class AddressMan {
 			/**
 			 * 도로명으로 검색
 			 */
-			boolean searchByRoadName 
-				= addrSearchKey.get도로명일부() != null;
-			boolean bldgNumbNull = addrSearchKey.get건물본번일부() == null;
+//			boolean searchByRoadName 
+//				= addrSearchKey.get도로명일부() != null;
+//			boolean bldgNumbNull = addrSearchKey.get건물본번일부() == null;
 			
 			/**
 			 * P implies Q == (!P || Q); P:건물본번-notNull, Q:도로명-존재
@@ -152,40 +152,42 @@ public class AddressMan {
 			 * F	T	  T		  T
 			 * F	F	  T		  T
 			 */
-			assert(bldgNumbNull || searchByRoadName);
+//			assert(bldgNumbNull || searchByRoadName);
 			
 			/**
 			 * 건물이름으로 검색
 			 */			
-			boolean searchByBldgName 
-				= addrSearchKey.get건물명일부() != null;
-			
-			assert (searchByRoadName ^ searchByBldgName)
-				: "'건물본번 도로명 둘 중 정확히 하나' 위반";
+//			boolean searchByBldgName 
+//				= addrSearchKey.get건물명일부() != null;
+//			
+//			assert (searchByRoadName ^ searchByBldgName)
+//				: "'건물본번 도로명 둘 중 정확히 하나' 위반";
 			
 			String sCond = null;
-			if (addrSearchKey.get건물명일부() == null) {
-				sCond = "B.도로명 LIKE ?";
-				if (addrSearchKey.get건물본번일부() != null) {
-					sCond += " and A.건물본번 like ?";
-				}
-			} else {
-				sCond = "D.시군구건물명 LIKE ?";
-			}
+//			if (addrSearchKey.get건물본번() == null) {
+//				// 건물명 혹은 (건물 본번 없는)도로명 
+//				sCond = "B.도로명 LIKE ?";
+//				if (addrSearchKey.get건물본번일부() != null) {
+//					sCond += " and A.건물본번 like ?";
+//				}
+//			} else {
+//				// 건물 본번 있는 도로명
+//				sCond = "D.시군구건물명 LIKE ?";
+//			}
 
 			String stmt = String.format(sql, sCond);
 			var ps = conn.prepareStatement(stmt);
 
-			if (addrSearchKey.get건물명일부() == null) {
-				// 덕영대로895 => 42 행
-				ps.setString(1, addrSearchKey.get도로명일부() + "%");
-				if (addrSearchKey.get건물본번일부() != null) {
-					// 덕영대로 89 => 5 행
-					ps.setString(2, addrSearchKey.get건물본번일부() + "%");
-				}
-			} else {
-				ps.setString(1, addrSearchKey.get건물명일부() + "%");
-			}
+//			if (addrSearchKey.get건물명일부() == null) {
+//				// 덕영대로895 => 42 행
+//				ps.setString(1, addrSearchKey.get도로명일부() + "%");
+//				if (addrSearchKey.get건물본번일부() != null) {
+//					// 덕영대로 89 => 5 행
+//					ps.setString(2, addrSearchKey.get건물본번일부() + "%");
+//				}
+//			} else {
+//				ps.setString(1, addrSearchKey.get건물명일부() + "%");
+//			}
 			//@formatter:on
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
 			String timeLabel = LocalTime.now().format(dtf);
@@ -205,7 +207,10 @@ public class AddressMan {
 			throws StopSearchingException{
 		var asKey = new AddrSearchKey();
 
-		System.out.println("검색 옵션 입력(1:도로명, 2:도로명+건물번호, 3:건물명): ");
+		System.out.println("검색 키 입력 형태 => ");
+		System.out.println("\t-도로명(예, 덕영대로895)");
+		System.out.println("\t-도로명 건물번호(예, 덕영대로 89)");
+		System.out.println("\t-건물명(예, 세진)");
 		System.out.print("(멈추려면 그냥 엔터 치세요 :-) : ");
 		try {
 			String inputText = null;
@@ -213,29 +218,32 @@ public class AddressMan {
 			if (scanner.hasNextLine()) {
 				inputText = scanner.nextLine().trim();
 			}
-			int searchOption = Integer.parseInt(inputText);
-
-			switch (searchOption) {
-			case 1:
-				// 도로명(일부)만 입력
-				System.out.print("도로명(일부): ");
-				asKey.set도로명일부(scanner.nextLine().trim());
-				break;
-			case 2:
-				// 도로명(일부)+건물본번(일부) 입력
-				System.out.print("도로명(일부): ");
-				asKey.set도로명일부(scanner.nextLine().trim());
-				System.out.print("건물본번(일부): ");
-				asKey.set건물본번일부(scanner.nextLine().trim());
-				break;
-			case 3:
-				// 건물명(일부)만 입력
-				System.out.print("건물명(일부): ");
-				asKey.set건물명일부(scanner.nextLine().trim());
-				break;
-			default:
-				break;
+			String[] searchKeys = inputText.split("\\s+");
+			
+			assert(searchKeys.length == 1 || searchKeys.length == 2);
+			if (searchKeys.length == 1) {
+				// 도로명 혹은 건물명
+				if (searchKeys[0].length() == 0 )
+					throw new StopSearchingException();
+				asKey.set도로_건물(searchKeys[0]);
+			} else {
+				// 도로명 그리고 건물본번
+				asKey.set도로_건물(searchKeys[0]);
+				asKey.set건물본번(searchKeys[1]);
 			}
+			System.out.println();
+
+//				// 도로명(일부)만 입력
+//				System.out.print("도로명(일부): ");
+//
+//				// 도로명(일부)+건물본번(일부) 입력
+//				System.out.print("도로명(일부): ");
+//				asKey.set도로명일부(scanner.nextLine().trim());
+//				System.out.print("건물본번(일부): ");
+//
+//				// 건물명(일부)만 입력
+//				System.out.print("건물명(일부): ");
+				
 		} catch (NoSuchElementException 
 				| IllegalStateException 
 				| NumberFormatException e) {
