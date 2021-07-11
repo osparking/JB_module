@@ -23,17 +23,18 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.jbpark.utility.JB_FileHandler;
+import com.jbpark.utility.JLogger;
 
 public class AddressMan {
 	static Connection conn = getConnection();
-	private static Logger logger = Logger.getLogger("com.jbpark.dabang");
+	private static Logger logger = JLogger.getLogger();
 	{
 		logger.setLevel(Level.CONFIG);
 //		logger.setUseParentHandlers(false);
 		int LOG_ROTATION_COUNT = 10;
 		JB_FileHandler handler;
 		try {
-			String logFile = "D:/LOG/JB_module";
+			String logFile = "LOG/JB_module";
 			System.out.println("로그파일: " + logFile + ".*.log.*");
 			handler = new JB_FileHandler(logFile + ".%g.log", 0, LOG_ROTATION_COUNT);
 			handler.setLevel(Level.CONFIG);
