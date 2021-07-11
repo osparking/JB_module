@@ -4,6 +4,9 @@
 !.classpath
 !.project
 
+# LOG folder for debugging messages
+LOG/
+
 
 # java
 
