@@ -26,25 +26,11 @@ import com.jbpark.utility.JB_FileHandler;
 import com.jbpark.utility.JLogger;
 
 public class AddressMan {
-	static Connection conn = getConnection();
 	private static Logger logger = JLogger.getLogger();
-	{
-		logger.setLevel(Level.CONFIG);
-//		logger.setUseParentHandlers(false);
-		int LOG_ROTATION_COUNT = 10;
-		JB_FileHandler handler;
-		try {
-			String logFile = "LOG/JB_module";
-			System.out.println("로그파일: " + logFile + ".*.log.*");
-			handler = new JB_FileHandler(logFile + ".%g.log", 0, LOG_ROTATION_COUNT);
-			handler.setLevel(Level.CONFIG);
-			logger.addHandler(handler);
-		} catch (SecurityException | IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	static Connection getConnection() {
+	
+	private static Connection conn = getConnection();
+	
+	private static Connection getConnection() {
 		Connection conn = null;
 		String userName = "myself";
 		String password = "1234";
@@ -54,7 +40,7 @@ public class AddressMan {
 		try {
 			Class.forName(driver);
 			conn = DriverManager.getConnection(url, userName, password);
-			System.out.println("Connection is successful");
+			logger.info("Connection is successful");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -157,10 +143,8 @@ public class AddressMan {
 				ps.setString(2, addrSearchKey.get건물본번());
 			}
 			//@formatter:on
-			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
-			String timeLabel = LocalTime.now().format(dtf);
-			logger.config(addrSearchKey + ": " + timeLabel);
-			System.out.println(addrSearchKey + ": " + timeLabel);
+			logger.config(addrSearchKey.toString());
+			System.out.println(addrSearchKey);
 
 			String msg = "결과 행 수: " + getRoadAddrList(ps).size();
 			logger.config(msg);
