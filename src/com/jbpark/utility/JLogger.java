@@ -16,6 +16,7 @@ import java.util.logging.SimpleFormatter;
  *
  */
 public class JLogger {
+	
 	private static Logger logger = Logger.getGlobal();
 	
 	public static String getFilePath() {
@@ -24,22 +25,48 @@ public class JLogger {
 	private static String logFile = "";
 	
 	/**
-	 * 로그파일 이름 'corejava.%g.log' 사용됨.
+	 * 로그 파일이름 'corejava.%g.log' 사용됨.
+	 * 콘솔 출력은 비활성화 됨
+	 * 
 	 * @return 맞춤 변형된 Global logger 
 	 */
 	public static Logger getLogger() {
-		return getLogger("corejava");
+		return getLogger("corejava", false);
 	}
+	
 	/**
-	 * 로그파일 이름 '<filename>.%g.log' 사용됨.
-	 * @param filename
+	 * 전달된 '파일이름' 내포 파일명: '<로거이름>.%g.log'
+	 * 콘솔 출력은 비활성화 됨
+	 * 
+	 * @param name 파일이름
 	 * @return 맞춤 변형된 Global logger 
 	 */
 	public static Logger getLogger(String filename) {
+		return getLogger(filename, false);
+	}
+	
+	/**
+	 * 로그 파일이름 'corejava.%g.log' 사용됨.
+	 * 
+	 * @param useParentHandlers 콘솔 출력 옵션
+	 * @return 맞춤 변형된 Global logger 
+	 */
+	public static Logger getLogger(boolean useParentHandlers) {
+		return getLogger("corejava", useParentHandlers);
+	}
+	/**
+	 * 전달된 '파일이름' 내포 파일명: '<파일이름>.%g.log'
+	 * 
+	 * @param filename 파일이름
+	 * @param useParentHandlers 콘솔 출력 옵션
+	 * @return 맞춤 변형된 Global logger 
+	 */
+	public static Logger getLogger(String filename,
+			boolean useParentHandlers) {
 		setLogFile(filename);
 		
 		logger.setLevel(Level.CONFIG);
-		logger.setUseParentHandlers(false);
+		logger.setUseParentHandlers(useParentHandlers);
 		int LOG_ROTATION_COUNT = 3;
 		JB_FileHandler handler;
 		//@formatter:off
@@ -62,6 +89,7 @@ public class JLogger {
 		System.out.println(JLogger.getFilePath());
 		return logger;
 	}
+	
 	private static void setLogFile(String filename) {
 		logFile = "LOG/" + filename + ".%g.log";
 	}	
