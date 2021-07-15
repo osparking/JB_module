@@ -1,5 +1,7 @@
 package com.jbpark.dabang.module;
 
+import java.util.Objects;
+
 public class RoadAddress {
 	private String newZipcode;
 	private String roadName;
@@ -25,6 +27,27 @@ public class RoadAddress {
 	public String toString() {
 		return "(우편번호)" + newZipcode + " " + roadName;
 	}
-	
-	
+	/**
+	 * 자동 생성된 것임.
+	 */
+	@Override
+	public int hashCode() {
+		return Objects.hash(newZipcode, roadName);
+	}
+	/**
+	 * 자동 생성된 것임.
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		
+		RoadAddress other = (RoadAddress) obj;
+		return Objects.equals(newZipcode, other.newZipcode)
+				&& Objects.equals(roadName, other.roadName);
+	}	
 }
