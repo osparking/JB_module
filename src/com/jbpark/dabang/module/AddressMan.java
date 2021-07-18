@@ -117,7 +117,7 @@ public class AddressMan {
 					+ " WHERE A.도로명코드    = B.도로명코드 "
 					+ "   AND A.읍면동일련번호 = B.읍면동일련번호 " 
 					+ "   AND A.관리번호     = D.관리번호  "
-					+ "   AND %s;";
+					+ "   AND %s limit %d;";
 			
 			AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
 			
@@ -132,7 +132,8 @@ public class AddressMan {
 						+ "AND A.건물본번 LIKE concat(?, '%')";
 			}
 
-			String stmt = String.format(sql, sCond);
+			int maxRow = 20;
+			String stmt = String.format(sql, sCond, maxRow);
 			var ps = conn.prepareStatement(stmt);
 
 			if (addrSearchKey.get건물본번() == null) {
@@ -144,7 +145,6 @@ public class AddressMan {
 			}
 			//@formatter:on
 			logger.config(addrSearchKey.toString());
-			int maxRow = 20;
 			System.out.println(addrSearchKey + ", 최대: " + maxRow + "행");
 
 			List<RoadAddress> addressList = getRoadAddrList(ps, maxRow);
