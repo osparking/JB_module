@@ -13,16 +13,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.Scanner;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.jbpark.utility.JB_FileHandler;
 import com.jbpark.utility.JLogger;
 
 public class AddressMan {
@@ -88,11 +85,18 @@ public class AddressMan {
 	private void search(Scanner scanner) throws StopSearchingException {
 		AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
 		int maxRow = 20;
+		Integer pageNo = Utility.getIntegerValue(scanner, 
+				"페이지 번호를 입력하세요.", "페이지 번호(기본=1)",
+				true);
 		
 		//@formatter:off
-		System.out.println(addrSearchKey + ", 최대: " + maxRow + "행");
+		pageNo = Optional.ofNullable(pageNo).orElse(1);
+		System.out.println(addrSearchKey + ", 한계: " + maxRow + "행"
+				
+				+ ", 채취 페이지: " + pageNo);
 
-		SearchResult searchResult = searchAddress(addrSearchKey, maxRow);
+		SearchResult searchResult = searchAddress(addrSearchKey, 
+				maxRow, pageNo);
 		logger.config(searchResult.roadAddrList.toString());
 		
 		String msg = "표시 행: " + searchResult.roadAddrList.size() +
@@ -101,17 +105,49 @@ public class AddressMan {
 		logger.config(msg);
 		System.out.println(msg);
 		searchResult.roadAddrList.forEach(System.out::println);
-		//@formatter:on
 	}
+//	
+//	private int getFetchPage(Scanner scanner) {
+//		System.out.println("검색 페이지 번호를 입력하세요.");
+//		System.out.println("\t-페이지 번호(기본값=1, 엔터) : ");
+//		
+//		try {
+//			String inputText = null;
+//			
+//			if (scanner.hasNextLine()) {
+//				inputText = scanner.nextLine().trim();
+//			}
+//			
+//			if (searchKeys.length == 1) {
+//				// 도로명 혹은 건물명
+//				if (searchKeys[0].length() == 0 )
+//					throw new StopSearchingException();
+//				asKey.set도로_건물(searchKeys[0]);
+//			} else {
+//				// 도로명 그리고 건물본번
+//				asKey.set도로_건물(searchKeys[0]);
+//				asKey.set건물본번(searchKeys[1]);
+//			}
+//		} catch (NoSuchElementException 
+//				| IllegalStateException 
+//				| NumberFormatException e) {
+//			System.out.println();
+//			throw new StopSearchingException();
+//		}
+//		return 0;
+//	}
 
-	private SearchResult searchAddress(AddrSearchKey addrSearchKey, int maxRow) {
+	private SearchResult searchAddress(AddrSearchKey addrSearchKey, 
+			int maxRow, int pageNo) {
 		SearchResult result = new SearchResult();
 		
-		result.roadAddrList = getRoadAddrList(addrSearchKey, maxRow);
+		result.roadAddrList = getRoadAddrList(addrSearchKey, 
+				maxRow, pageNo);
 		result.totalRow = getRoadAddrCount(addrSearchKey);
 		
 		return result;
 	}
+	//@formatter:on
 
 	private int getRoadAddrCount(AddrSearchKey addrSearchKey) {
 		String sql = "SELECT count(*) " 
@@ -218,8 +254,9 @@ public class AddressMan {
 	 * @return 존재 때 true, 비 존재 때 false
 	 */
 	private List<RoadAddress> getRoadAddrList(AddrSearchKey addrSearchKey,
-			int maxRow) {
+			int maxRow, int pageNo) {
 		//@formatter:off
+		int offset = maxRow * (pageNo - 1); 
 		String sql = "SELECT  A.기초구역번호 AS 새우편번호, " 
 				+ "concat( " + "B.시도명, ' ', "
 				+ "if (B.시군구 = '', '', concat(B.시군구,' ')), " 
@@ -249,10 +286,10 @@ public class AddressMan {
 				+ " WHERE A.도로명코드    = B.도로명코드 "
 				+ "   AND A.읍면동일련번호 = B.읍면동일련번호 " 
 				+ "   AND A.관리번호     = D.관리번호  "
-				+ "   AND %s limit %d;";		
+				+ "   AND %s limit %d offset %d;";		
 
 		String stmt = String.format(sql, 
-				getSearchCondString(addrSearchKey), maxRow);
+				getSearchCondString(addrSearchKey), maxRow, offset);
 		PreparedStatement ps;
 		
 		try {

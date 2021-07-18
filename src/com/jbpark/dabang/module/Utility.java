@@ -8,12 +8,12 @@ import com.jbpark.utility.JLogger;
 public class Utility {
 	private static Logger logger = JLogger.getLogger(true); 
 	
-	public static Integer geIntegerValue(Scanner scanner,
+	public static Integer getIntegerValue(Scanner scanner,
 			String qLong, String qNoun) {
-		return geIntegerValue(scanner, qLong, qNoun, false);
+		return getIntegerValue(scanner, qLong, qNoun, false);
 	}
 	
-	public static Integer geIntegerValue(Scanner scanner,
+	public static Integer getIntegerValue(Scanner scanner,
 			String qLong, String qNoun, boolean returnNull) {
 		int count = 1;
 		System.out.println(qLong);
@@ -38,7 +38,7 @@ public class Utility {
 	}
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		Integer page = geIntegerValue(scanner, 
+		Integer page = getIntegerValue(scanner, 
 				"페이지 번호를 입력하세요.", "페이지 번호(기본=1)",
 				true);
 		logger.config("페이지: " + (page == null ? 1 : page));
