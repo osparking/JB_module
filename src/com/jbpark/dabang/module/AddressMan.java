@@ -82,17 +82,23 @@ public class AddressMan {
 		}
 	}
 
-	public SearchResult search(Scanner scanner) throws StopSearchingException {
+	public SearchResult search(Scanner scanner) 
+			throws StopSearchingException {
 		AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
 		int maxRow = 20;
-		Integer pageNo = Utility.getIntegerValue(scanner, 
-				"페이지 번호를 입력하세요.", "페이지 번호(기본=1)",
-				true);
+		
+		Integer pageNo;
+		try {
+			pageNo = Utility.getIntegerValue(scanner, 
+					"페이지 번호를 입력하세요.", "페이지 번호(기본=1)",
+					true);
+		} catch (NoInputException e) {
+			pageNo = 1;
+		}
 		
 		//@formatter:off
-		pageNo = Optional.ofNullable(pageNo).orElse(1);
-		System.out.println(addrSearchKey + ", 한계: " + maxRow + "행"				
-				+ ", 채취 페이지: " + pageNo);
+		System.out.println(addrSearchKey + ", 한계: " 
+				+ maxRow + "행" + ", 채취 페이지: " + pageNo);
 
 		return searchAddress(addrSearchKey, maxRow, pageNo);
 	}

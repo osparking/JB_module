@@ -9,12 +9,23 @@ public class Utility {
 	private static Logger logger = JLogger.getLogger(true); 
 	
 	public static Integer getIntegerValue(Scanner scanner,
-			String qLong, String qNoun) {
+			String qLong, String qNoun) throws NoInputException {
 		return getIntegerValue(scanner, qLong, qNoun, false);
 	}
 	
+	/**
+	 * 
+	 * @param scanner
+	 * @param qLong
+	 * @param qNoun
+	 * @param allowNoInput 참이면, 예외 발생
+	 * @return
+	 * @throws NoInputException 참일때 발생시킴
+	 */
 	public static Integer getIntegerValue(Scanner scanner,
-			String qLong, String qNoun, boolean returnNull) {
+			String qLong, String qNoun, boolean allowNoInput)
+				throws NoInputException
+	{
 		int count = 1;
 		System.out.println(qLong);
 		while (true) {
@@ -27,8 +38,10 @@ public class Utility {
 					break;
 				}
 			} catch(NumberFormatException e) {
-				if (returnNull && line.trim().length() == 0)
-					return null;
+				if (allowNoInput) {
+					if (line.trim().length() == 0)
+						throw new NoInputException();
+				}
 				System.out.println("입력된 " + qNoun + " '" 
 						+ line.trim() + "'은 부적절합니다.");
 				System.out.println("다시 입력하십시오...");
@@ -36,7 +49,7 @@ public class Utility {
 		}
 		return count;
 	}
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NoInputException {
 		Scanner scanner = new Scanner(System.in);
 		Integer page = getIntegerValue(scanner, 
 				"페이지 번호를 입력하세요.", "페이지 번호(기본=1)",
@@ -45,3 +58,4 @@ public class Utility {
 	}
 
 }
+	
