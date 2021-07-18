@@ -144,12 +144,14 @@ public class AddressMan {
 			}
 			//@formatter:on
 			logger.config(addrSearchKey.toString());
-			System.out.println(addrSearchKey);
+			int maxRow = 20;
+			System.out.println(addrSearchKey + ", 최대: " + maxRow + "행");
 
-			String msg = "결과 행 수: " + getRoadAddrList(ps).size();
+			List<RoadAddress> addressList = getRoadAddrList(ps, maxRow);
+			String msg = "결과 행 수: " + addressList.size();
 			logger.config(msg);
 			System.out.println(msg);
-			getRoadAddrList(ps).forEach(System.out::println);
+			addressList.forEach(System.out::println);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -197,9 +199,11 @@ public class AddressMan {
 	 * 관리번호 값 도로명주소 테이블 존재여부 판단
 	 * 
 	 * @param ps
+	 * @param maxRow 
 	 * @return 존재 때 true, 비 존재 때 false
 	 */
-	private List<RoadAddress> getRoadAddrList(PreparedStatement ps) {
+	private List<RoadAddress> getRoadAddrList(PreparedStatement ps,
+			int maxRow) {
 		var roadAddrList = new ArrayList<RoadAddress>();
 
 		try (ResultSet rs = ps.executeQuery()) {

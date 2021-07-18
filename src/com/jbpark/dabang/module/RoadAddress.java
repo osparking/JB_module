@@ -25,7 +25,7 @@ public class RoadAddress {
 	}
 	@Override
 	public String toString() {
-		return "(우편번호)" + newZipcode + " " + roadName;
+		return "\t- (우편번호)" + newZipcode + " " + roadName;
 	}
 	/**
 	 * 자동 생성된 것임.
