@@ -3,7 +3,7 @@ package com.jbpark.dabang.module;
 public class SearchResult {
 	int totalRow;
 	private RoadAddress[] addresses;
-	private int addressCount;
+	private int addrCount;
 	
 	public int getTotalRow() {
 		return totalRow;
@@ -17,10 +17,10 @@ public class SearchResult {
 	public void setAddresses(RoadAddress[] addresses) {
 		this.addresses = addresses;
 	}
-	public int getAddressCount() {
-		return addressCount;
+	public int getAddrCount() {
+		return addrCount;
 	}
 	public void setAddressCount(int addressCount) {
-		this.addressCount = addressCount;
+		this.addrCount = addressCount;
 	}
 } 
