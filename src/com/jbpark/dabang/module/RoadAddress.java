@@ -1,16 +1,25 @@
 package com.jbpark.dabang.module;
 
-import java.util.Objects;
-
 public class RoadAddress {
+	private String mgmtNumber;
 	private String newZipcode;
 	private String roadName;
 	
-	public RoadAddress(String newZipcode, String roadName) {
+	public RoadAddress(String mgmtNumber, String newZipcode, String roadName) {
 		super();
+		this.mgmtNumber = mgmtNumber;
 		this.newZipcode = newZipcode;
 		this.roadName = roadName;
 	}
+	
+	public String getMgmtNumber() {
+		return mgmtNumber;
+	}
+
+	public void setMgmtNumber(String mgmtNumber) {
+		this.mgmtNumber = mgmtNumber;
+	}
+
 	public String getNewZipcode() {
 		return newZipcode;
 	}
@@ -25,15 +34,19 @@ public class RoadAddress {
 	}
 	@Override
 	public String toString() {
-		return "\t- (우편번호)" + newZipcode + " " + roadName;
+		return ". (우편번호)" + newZipcode + " " + roadName;
 	}
 	/**
 	 * 자동 생성된 것임.
 	 */
 	@Override
 	public int hashCode() {
-		return Objects.hash(newZipcode, roadName);
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((mgmtNumber == null) ? 0 : mgmtNumber.hashCode());
+		return result;
 	}
+
 	/**
 	 * 자동 생성된 것임.
 	 */
@@ -45,9 +58,13 @@ public class RoadAddress {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		
 		RoadAddress other = (RoadAddress) obj;
-		return Objects.equals(newZipcode, other.newZipcode)
-				&& Objects.equals(roadName, other.roadName);
-	}	
+		if (mgmtNumber == null) {
+			if (other.mgmtNumber != null)
+				return false;
+		} else if (!mgmtNumber.equals(other.mgmtNumber))
+			return false;
+		return true;
+	}
+
 }

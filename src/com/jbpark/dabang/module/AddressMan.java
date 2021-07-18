@@ -97,51 +97,31 @@ public class AddressMan {
 
 		SearchResult searchResult = searchAddress(addrSearchKey, 
 				maxRow, pageNo);
-		logger.config(searchResult.roadAddrList.toString());
+		for (RoadAddress ra : searchResult.addresses) {
+			if (ra != null) logger.config(ra.toString());
+		}
 		
-		String msg = "표시 행: " + searchResult.roadAddrList.size() +
+		String msg = "표시 행: " + searchResult.addressCount +
 					 ", 전체 행: " + searchResult.totalRow;
 		
 		logger.config(msg);
 		System.out.println(msg);
-		searchResult.roadAddrList.forEach(System.out::println);
+		
+		RoadAddress[] addresses = searchResult.addresses;
+		for (int i = 0; i < searchResult.addresses.length; i++) {
+			if (addresses[i] == null) {
+				searchResult.addressCount = i;
+				break;
+			}
+			System.out.println("\t" + (i + 1) + addresses[i]);
+		}
 	}
-//	
-//	private int getFetchPage(Scanner scanner) {
-//		System.out.println("검색 페이지 번호를 입력하세요.");
-//		System.out.println("\t-페이지 번호(기본값=1, 엔터) : ");
-//		
-//		try {
-//			String inputText = null;
-//			
-//			if (scanner.hasNextLine()) {
-//				inputText = scanner.nextLine().trim();
-//			}
-//			
-//			if (searchKeys.length == 1) {
-//				// 도로명 혹은 건물명
-//				if (searchKeys[0].length() == 0 )
-//					throw new StopSearchingException();
-//				asKey.set도로_건물(searchKeys[0]);
-//			} else {
-//				// 도로명 그리고 건물본번
-//				asKey.set도로_건물(searchKeys[0]);
-//				asKey.set건물본번(searchKeys[1]);
-//			}
-//		} catch (NoSuchElementException 
-//				| IllegalStateException 
-//				| NumberFormatException e) {
-//			System.out.println();
-//			throw new StopSearchingException();
-//		}
-//		return 0;
-//	}
-
+	
 	private SearchResult searchAddress(AddrSearchKey addrSearchKey, 
 			int maxRow, int pageNo) {
 		SearchResult result = new SearchResult();
 		
-		result.roadAddrList = getRoadAddrList(addrSearchKey, 
+		result.addresses = getRoadAddrList(addrSearchKey, 
 				maxRow, pageNo);
 		result.totalRow = getRoadAddrCount(addrSearchKey);
 		
@@ -242,7 +222,8 @@ public class AddressMan {
 	
 	private class SearchResult {
 		int totalRow;
-		private List<RoadAddress> roadAddrList;
+		private RoadAddress[] addresses;
+		private int addressCount;
 	} 
 
 	/**
@@ -253,11 +234,12 @@ public class AddressMan {
 	 * @param totalRow 
 	 * @return 존재 때 true, 비 존재 때 false
 	 */
-	private List<RoadAddress> getRoadAddrList(AddrSearchKey addrSearchKey,
+	private RoadAddress[] getRoadAddrList(AddrSearchKey addrSearchKey,
 			int maxRow, int pageNo) {
 		//@formatter:off
 		int offset = maxRow * (pageNo - 1); 
-		String sql = "SELECT  A.기초구역번호 AS 새우편번호, " 
+		String sql = 
+				  "SELECT A.관리번호, A.기초구역번호 AS 새우편번호, " 
 				+ "concat( " + "B.시도명, ' ', "
 				+ "if (B.시군구 = '', '', concat(B.시군구,' ')), " 
 				+ "case when B.읍면동구분 = 0 then concat(B.읍면동,' ') "
@@ -293,17 +275,21 @@ public class AddressMan {
 		PreparedStatement ps;
 		
 		try {
-			var roadAddrList = new ArrayList<RoadAddress>();
+			var addresses = new RoadAddress[maxRow];
 
 			ps = conn.prepareStatement(stmt);
-			setPrepareStatement(ps, addrSearchKey);			
+			setPrepareStatement(ps, addrSearchKey);	
+			int idx = 0;
 			try (ResultSet rs = ps.executeQuery()) {
 				while (rs != null && rs.next()) {
 					var roadAddress = new RoadAddress(
-							rs.getString(1), rs.getString(2));
-					roadAddrList.add(roadAddress);
+							rs.getString(1), rs.getString(2),
+							rs.getString(3));
+					addresses[idx++] = roadAddress;
 				}
-				return roadAddrList;
+				if (idx < maxRow) 
+					addresses[idx] = null; 
+				return addresses;
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
