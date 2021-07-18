@@ -82,7 +82,7 @@ public class AddressMan {
 		}
 	}
 
-	private void search(Scanner scanner) throws StopSearchingException {
+	public SearchResult search(Scanner scanner) throws StopSearchingException {
 		AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
 		int maxRow = 20;
 		Integer pageNo = Utility.getIntegerValue(scanner, 
@@ -91,38 +91,18 @@ public class AddressMan {
 		
 		//@formatter:off
 		pageNo = Optional.ofNullable(pageNo).orElse(1);
-		System.out.println(addrSearchKey + ", 한계: " + maxRow + "행"
-				
+		System.out.println(addrSearchKey + ", 한계: " + maxRow + "행"				
 				+ ", 채취 페이지: " + pageNo);
 
-		SearchResult searchResult = searchAddress(addrSearchKey, 
-				maxRow, pageNo);
-		for (RoadAddress ra : searchResult.addresses) {
-			if (ra != null) logger.config(ra.toString());
-		}
-		
-		String msg = "표시 행: " + searchResult.addressCount +
-					 ", 전체 행: " + searchResult.totalRow;
-		
-		logger.config(msg);
-		System.out.println(msg);
-		
-		RoadAddress[] addresses = searchResult.addresses;
-		for (int i = 0; i < searchResult.addresses.length; i++) {
-			if (addresses[i] == null) {
-				searchResult.addressCount = i;
-				break;
-			}
-			System.out.println("\t" + (i + 1) + addresses[i]);
-		}
+		return searchAddress(addrSearchKey, maxRow, pageNo);
 	}
 	
 	private SearchResult searchAddress(AddrSearchKey addrSearchKey, 
 			int maxRow, int pageNo) {
 		SearchResult result = new SearchResult();
 		
-		result.addresses = getRoadAddrList(addrSearchKey, 
-				maxRow, pageNo);
+		result.setAddresses(getRoadAddrList(addrSearchKey, 
+				maxRow, pageNo));
 		result.totalRow = getRoadAddrCount(addrSearchKey);
 		
 		return result;
@@ -219,12 +199,6 @@ public class AddressMan {
 
 		return asKey;
 	}
-	
-	private class SearchResult {
-		int totalRow;
-		private RoadAddress[] addresses;
-		private int addressCount;
-	} 
 
 	/**
 	 * 관리번호 값 도로명주소 테이블 존재여부 판단
