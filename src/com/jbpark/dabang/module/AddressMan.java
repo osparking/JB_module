@@ -86,74 +86,83 @@ public class AddressMan {
 	}
 
 	private void search(Scanner scanner) throws StopSearchingException {
-		try  {
-			//@formatter:off
-			String sql = "SELECT  A.기초구역번호 AS 새우편번호, " 
-					+ "concat( " + "B.시도명, ' ', "
-					+ "if (B.시군구 = '', '', concat(B.시군구,' ')), " 
-					+ "case when B.읍면동구분 = 0 then concat(B.읍면동,' ') "
-					+ "else ''  " 
-					+ "end,  " 
-					+ "concat(B.도로명,' '), " 
-					+ "case when A.지하여부 = 0 then ''  "
-					+ "	when A.지하여부 = 1 then '지하 '  " 
-					+ "	when A.지하여부 = 2 then '공중 ' end, " + "A.건물본번, "
-					+ "if (A.건물부번 = 0, '', concat('-',A.건물부번)), " 
-					+ "CASE WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 0) THEN '' "
-					+ "	WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 1) then " 
-					+ "		case D.시군구건물명  "
-					+ "			when (D.시군구건물명 = '') then ''  " 
-					+ "			else concat('(',D.시군구건물명,')') end  "
-					+ "	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 0)  " 
-					+ "		THEN concat('(',B.읍면동,')') "
-					+ "	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 1)  " 
-					+ "		THEN concat('(', B.읍면동 "
-					+ "			, case when (D.시군구건물명 = '') then ''  "
-					+ "				   else concat(',', D.시군구건물명) end " 
-					+ "			,')')  " 
-					+ "   	END  "
-					+ "   	) AS 도로명주소 " 
-					+ "  FROM 도로명주소 A, 도로명코드 B, 부가정보 D  " 
-					+ " WHERE A.도로명코드    = B.도로명코드 "
-					+ "   AND A.읍면동일련번호 = B.읍면동일련번호 " 
-					+ "   AND A.관리번호     = D.관리번호  "
-					+ "   AND %s limit %d;";
-			
-			AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
-			
-			String sCond = null;
-			if (addrSearchKey.get건물본번() == null) {
-				// 건물명 혹은 (건물 본번 없는)도로명 
-				sCond = "(B.도로명 LIKE concat(?,'%') "
-						+ "or D.시군구건물명 LIKE concat(?, '%'))";
-			} else {
-				// 도로명 및 건물 본번으로 검색
-				sCond = "B.도로명 LIKE concat(?,'%') "
-						+ "AND A.건물본번 LIKE concat(?, '%')";
+		AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
+		int maxRow = 20;
+		
+		//@formatter:off
+		System.out.println(addrSearchKey + ", 최대: " + maxRow + "행");
+
+		SearchResult searchResult = searchAddress(addrSearchKey, maxRow);
+		logger.config(searchResult.roadAddrList.toString());
+		
+		String msg = "표시 행: " + searchResult.roadAddrList.size() +
+					 ", 전체 행: " + searchResult.totalRow;
+		
+		logger.config(msg);
+		System.out.println(msg);
+		searchResult.roadAddrList.forEach(System.out::println);
+		//@formatter:on
+	}
+
+	private SearchResult searchAddress(AddrSearchKey addrSearchKey, int maxRow) {
+		SearchResult result = new SearchResult();
+		
+		result.roadAddrList = getRoadAddrList(addrSearchKey, maxRow);
+		result.totalRow = getRoadAddrCount(addrSearchKey);
+		
+		return result;
+	}
+
+	private int getRoadAddrCount(AddrSearchKey addrSearchKey) {
+		String sql = "SELECT count(*) " 
+				+ "FROM 도로명주소 A, 도로명코드 B, 부가정보 D " 
+				+ "WHERE A.도로명코드 = B.도로명코드"
+				+ " AND A.읍면동일련번호 = B.읍면동일련번호" 
+				+ " AND A.관리번호 = D.관리번호"
+				+ " AND %s;";
+
+		String stmt = String.format(sql, 
+				getSearchCondString(addrSearchKey));
+		PreparedStatement ps;
+		try {
+			ps = conn.prepareStatement(stmt);
+			setPrepareStatement(ps, addrSearchKey);
+			try (ResultSet rs = ps.executeQuery()) {
+				int rowCount = 0;
+				if (rs != null && rs.next() ) {
+					rowCount = rs.getInt(1);
+				}
+				return rowCount;
+			} catch (SQLException e) {
+				e.printStackTrace();
 			}
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		return -1;
+	}
 
-			int maxRow = 20;
-			String stmt = String.format(sql, sCond, maxRow);
-			var ps = conn.prepareStatement(stmt);
+	private void setPrepareStatement(PreparedStatement ps, 
+			AddrSearchKey addrSearchKey) throws SQLException {
+		if (addrSearchKey.get건물본번() == null) {
+			ps.setString(1, addrSearchKey.get도로_건물());
+			ps.setString(2, addrSearchKey.get도로_건물());
+		} else {
+			ps.setString(1, addrSearchKey.get도로_건물());
+			ps.setString(2, addrSearchKey.get건물본번());
+		}
+	}
 
-			if (addrSearchKey.get건물본번() == null) {
-				ps.setString(1, addrSearchKey.get도로_건물());
-				ps.setString(2, addrSearchKey.get도로_건물());
-			} else {
-				ps.setString(1, addrSearchKey.get도로_건물());
-				ps.setString(2, addrSearchKey.get건물본번());
-			}
-			//@formatter:on
-			logger.config(addrSearchKey.toString());
-			System.out.println(addrSearchKey + ", 최대: " + maxRow + "행");
-
-			List<RoadAddress> addressList = getRoadAddrList(ps, maxRow);
-			String msg = "결과 행 수: " + addressList.size();
-			logger.config(msg);
-			System.out.println(msg);
-			addressList.forEach(System.out::println);
-		} catch (SQLException e) {
-			e.printStackTrace();
+	private String getSearchCondString(AddrSearchKey 
+			addrSearchKey) {
+		if (addrSearchKey.get건물본번() == null) {
+			// 건물명 혹은 (건물 본번 없는)도로명 
+			return "(B.도로명 LIKE concat(?,'%') "
+					+ "or D.시군구건물명 LIKE concat(?, '%'))";
+		} else {
+			// 도로명 및 건물 본번으로 검색
+			return "B.도로명 LIKE concat(?,'%') "
+					+ "AND A.건물본번 LIKE concat(?, '%')";
 		}
 	}
 
@@ -194,27 +203,77 @@ public class AddressMan {
 
 		return asKey;
 	}
+	
+	private class SearchResult {
+		int totalRow;
+		private List<RoadAddress> roadAddrList;
+	} 
 
 	/**
 	 * 관리번호 값 도로명주소 테이블 존재여부 판단
 	 * 
-	 * @param ps
+	 * @param addrSearchKey
 	 * @param maxRow 
+	 * @param totalRow 
 	 * @return 존재 때 true, 비 존재 때 false
 	 */
-	private List<RoadAddress> getRoadAddrList(PreparedStatement ps,
+	private List<RoadAddress> getRoadAddrList(AddrSearchKey addrSearchKey,
 			int maxRow) {
-		var roadAddrList = new ArrayList<RoadAddress>();
+		//@formatter:off
+		String sql = "SELECT  A.기초구역번호 AS 새우편번호, " 
+				+ "concat( " + "B.시도명, ' ', "
+				+ "if (B.시군구 = '', '', concat(B.시군구,' ')), " 
+				+ "case when B.읍면동구분 = 0 then concat(B.읍면동,' ') "
+				+ "else ''  " 
+				+ "end,  " 
+				+ "concat(B.도로명,' '), " 
+				+ "case when A.지하여부 = 0 then ''  "
+				+ "	when A.지하여부 = 1 then '지하 '  " 
+				+ "	when A.지하여부 = 2 then '공중 ' end, " + "A.건물본번, "
+				+ "if (A.건물부번 = 0, '', concat('-',A.건물부번)), " 
+				+ "CASE WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 0) THEN '' "
+				+ "	WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 1) then " 
+				+ "		case D.시군구건물명  "
+				+ "			when (D.시군구건물명 = '') then ''  " 
+				+ "			else concat('(',D.시군구건물명,')') end  "
+				+ "	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 0)  " 
+				+ "		THEN concat('(',B.읍면동,')') "
+				+ "	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 1)  " 
+				+ "		THEN concat('(', B.읍면동 "
+				+ "			, case when (D.시군구건물명 = '') then ''  "
+				+ "				   else concat(',', D.시군구건물명) end " 
+				+ "			,')')  " 
+				+ "   	END  "
+				+ "   	) AS 도로명주소 " 
+				+ "  FROM 도로명주소 A, 도로명코드 B, 부가정보 D  " 
+				+ " WHERE A.도로명코드    = B.도로명코드 "
+				+ "   AND A.읍면동일련번호 = B.읍면동일련번호 " 
+				+ "   AND A.관리번호     = D.관리번호  "
+				+ "   AND %s limit %d;";		
 
-		try (ResultSet rs = ps.executeQuery()) {
-			while (rs != null && rs.next()) {
-				var roadAddress = new RoadAddress(rs.getString(1), rs.getString(2));
-				roadAddrList.add(roadAddress);
+		String stmt = String.format(sql, 
+				getSearchCondString(addrSearchKey), maxRow);
+		PreparedStatement ps;
+		
+		try {
+			var roadAddrList = new ArrayList<RoadAddress>();
+
+			ps = conn.prepareStatement(stmt);
+			setPrepareStatement(ps, addrSearchKey);			
+			try (ResultSet rs = ps.executeQuery()) {
+				while (rs != null && rs.next()) {
+					var roadAddress = new RoadAddress(
+							rs.getString(1), rs.getString(2));
+					roadAddrList.add(roadAddress);
+				}
+				return roadAddrList;
+			} catch (SQLException e) {
+				e.printStackTrace();
 			}
-		} catch (SQLException e) {
-			e.printStackTrace();
+		} catch (SQLException e1) {
+			e1.printStackTrace();
 		}
-		return roadAddrList;
+		return null;
 	}
 
 	private void largeAdditionalText() {
