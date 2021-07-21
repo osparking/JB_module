@@ -6,7 +6,6 @@ import java.util.logging.Logger;
 import com.jbpark.utility.JLogger;
 
 public class Utility {
-	private static Logger logger = JLogger.getLogger(true); 
 	
 	public static Integer getIntegerValue(Scanner scanner,
 			String qLong, String qNoun) throws NoInputException {
@@ -50,6 +49,8 @@ public class Utility {
 		return count;
 	}
 	public static void main(String[] args) throws NoInputException {
+		Logger logger = JLogger.getLogger(true); 
+
 		Scanner scanner = new Scanner(System.in);
 		Integer page = getIntegerValue(scanner, 
 				"페이지 번호를 입력하세요.", "페이지 번호(기본=1)",
