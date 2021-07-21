@@ -5,9 +5,7 @@ import java.sql.DriverManager;
 import java.util.logging.Logger;
 
 public class JB_DabangDB {
-	private static Logger logger = JLogger.getLogger();
-	
-	public static Connection getConnection() {
+	public static Connection getConnection(Logger logger) {
 		Connection conn = null;
 		String userName = "myself";
 		String password = "1234";
