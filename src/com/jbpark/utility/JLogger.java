@@ -1,5 +1,6 @@
 package com.jbpark.utility;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.NoSuchFileException;
 import java.util.logging.Level;
@@ -91,6 +92,11 @@ public class JLogger {
 	}
 	
 	private static void setLogFile(String filename) {
+		File tmpDir = new File("LOG");
+		boolean exists = tmpDir.exists();
+		if (!exists) {
+			tmpDir.mkdir();
+		} 
 		logFile = "LOG/" + filename + ".%g.log";
 	}	
 }
