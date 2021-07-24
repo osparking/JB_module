@@ -93,14 +93,16 @@ public class AddressMan {
 		AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
 		int maxRow = 20;
 
+		//@formatter:off
 		Integer pageNo;
 		try {
-			pageNo = Utility.getIntegerValue(scanner, "페이지 번호를 입력하세요.", "페이지 번호(기본=1)", true);
+			pageNo = Utility.getIntegerValue(scanner, 
+					"페이지 번호를 입력하세요.", "페이지 번호(기본=1)", 
+					true);
 		} catch (NoInputException e) {
 			pageNo = 1;
 		}
 
-		//@formatter:off
 		System.out.println(addrSearchKey + ", 한계: " 
 				+ maxRow + "행" + ", 채취 페이지: " + pageNo);
 
@@ -115,8 +117,13 @@ public class AddressMan {
 	//@formatter:on
 
 	private int getRoadAddrCount(AddrSearchKey addrSearchKey) {
-		String sql = "SELECT count(*) " + "FROM 도로명주소 A, 도로명코드 B, 부가정보 D " + "WHERE A.도로명코드 = B.도로명코드"
-				+ " AND A.읍면동일련번호 = B.읍면동일련번호" + " AND A.관리번호 = D.관리번호" + " AND %s;";
+		//formatter:off
+		String sql = "SELECT count(*) " 
+				+ "FROM 도로명주소 A, 도로명코드 B, 부가정보 D " 
+				+ "WHERE A.도로명코드 = B.도로명코드"
+				+ " AND A.읍면동일련번호 = B.읍면동일련번호" 
+				+ " AND A.관리번호 = D.관리번호" + " AND %s;";
+		//formatter:on
 
 		String stmt = String.format(sql, getSearchCondString(addrSearchKey));
 		PreparedStatement ps;
@@ -502,10 +509,11 @@ public class AddressMan {
 		}
 	}
 
-	public void displayCustomerAddresses(int 고객id, Logger logger) {
+	//@formatter:off
+	public ArrayList<CustomerAddress> displayCustomerAddresses
+							(int 고객id, Logger logger) {
 		AddressMan.logger = logger;
 		
-		//@formatter:off
 		String sql = "select 주.주소번호, 단.단지번호, 전.고객이름, "
 				+ "단.도로명주소, 상세주소 "
 				+ "from 고객주소 주"
@@ -538,5 +546,6 @@ public class AddressMan {
 						+ addresses.get(i));
 			}
 		}
+		return addresses;
 	}
 }
