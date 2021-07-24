@@ -31,7 +31,7 @@ public class AddressMan {
 		Connection conn = null;
 		String userName = "myself";
 		String password = "1234";
-		String url = "jdbc:mariadb://localhost:3306/address_road_gg";
+		String url = "jdbc:mariadb://localhost:3306/jb_dabang";
 		String driver = "org.mariadb.jdbc.Driver";
 
 		try {
