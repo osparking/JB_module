@@ -23,11 +23,11 @@ import java.util.logging.Logger;
 import com.jbpark.utility.JLogger;
 
 public class AddressMan {
-	private static Logger logger = JLogger.getLogger();
-	
+	private static Logger logger = null; 
+
 	private static Connection conn = getConnection();
-	
-	private static Connection getConnection() {
+
+	public static Connection getConnection() {
 		Connection conn = null;
 		String userName = "myself";
 		String password = "1234";
@@ -37,11 +37,11 @@ public class AddressMan {
 		try {
 			Class.forName(driver);
 			conn = DriverManager.getConnection(url, userName, password);
-			logger.info("Connection is successful");
+			return conn;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return conn;
+		return null;
 	}
 
 	public static void main(String[] args) {
@@ -82,29 +82,28 @@ public class AddressMan {
 		}
 	}
 
-	public SearchResult search(Scanner scanner) 
-			throws StopSearchingException {
+	/**
+	 * 고객에게 검색 키(들)을 입력받아 주소DB에서 유사한 주소 목록 채취하여 반환
+	 * 
+	 * @param scanner
+	 * @return 검색 결과 (제한된 주소 목록과 총 주소 건수)
+	 * @throws StopSearchingException
+	 */
+	public SearchResult search(Scanner scanner) throws StopSearchingException {
 		AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
 		int maxRow = 20;
-		
+
 		Integer pageNo;
 		try {
-			pageNo = Utility.getIntegerValue(scanner, 
-					"페이지 번호를 입력하세요.", "페이지 번호(기본=1)",
-					true);
+			pageNo = Utility.getIntegerValue(scanner, "페이지 번호를 입력하세요.", "페이지 번호(기본=1)", true);
 		} catch (NoInputException e) {
 			pageNo = 1;
 		}
-		
+
 		//@formatter:off
 		System.out.println(addrSearchKey + ", 한계: " 
 				+ maxRow + "행" + ", 채취 페이지: " + pageNo);
 
-		return searchAddress(addrSearchKey, maxRow, pageNo);
-	}
-	
-	private SearchResult searchAddress(AddrSearchKey addrSearchKey, 
-			int maxRow, int pageNo) {
 		SearchResult result = new SearchResult();
 		
 		result.setAddresses(getRoadAddrList(addrSearchKey, 
@@ -116,22 +115,17 @@ public class AddressMan {
 	//@formatter:on
 
 	private int getRoadAddrCount(AddrSearchKey addrSearchKey) {
-		String sql = "SELECT count(*) " 
-				+ "FROM 도로명주소 A, 도로명코드 B, 부가정보 D " 
-				+ "WHERE A.도로명코드 = B.도로명코드"
-				+ " AND A.읍면동일련번호 = B.읍면동일련번호" 
-				+ " AND A.관리번호 = D.관리번호"
-				+ " AND %s;";
+		String sql = "SELECT count(*) " + "FROM 도로명주소 A, 도로명코드 B, 부가정보 D " + "WHERE A.도로명코드 = B.도로명코드"
+				+ " AND A.읍면동일련번호 = B.읍면동일련번호" + " AND A.관리번호 = D.관리번호" + " AND %s;";
 
-		String stmt = String.format(sql, 
-				getSearchCondString(addrSearchKey));
+		String stmt = String.format(sql, getSearchCondString(addrSearchKey));
 		PreparedStatement ps;
 		try {
 			ps = conn.prepareStatement(stmt);
 			setPrepareStatement(ps, addrSearchKey);
 			try (ResultSet rs = ps.executeQuery()) {
 				int rowCount = 0;
-				if (rs != null && rs.next() ) {
+				if (rs != null && rs.next()) {
 					rowCount = rs.getInt(1);
 				}
 				return rowCount;
@@ -144,8 +138,7 @@ public class AddressMan {
 		return -1;
 	}
 
-	private void setPrepareStatement(PreparedStatement ps, 
-			AddrSearchKey addrSearchKey) throws SQLException {
+	private void setPrepareStatement(PreparedStatement ps, AddrSearchKey addrSearchKey) throws SQLException {
 		if (addrSearchKey.get건물본번() == null) {
 			ps.setString(1, addrSearchKey.get도로_건물());
 			ps.setString(2, addrSearchKey.get도로_건물());
@@ -155,21 +148,17 @@ public class AddressMan {
 		}
 	}
 
-	private String getSearchCondString(AddrSearchKey 
-			addrSearchKey) {
+	private String getSearchCondString(AddrSearchKey addrSearchKey) {
 		if (addrSearchKey.get건물본번() == null) {
-			// 건물명 혹은 (건물 본번 없는)도로명 
-			return "(B.도로명 LIKE concat(?,'%') "
-					+ "or D.시군구건물명 LIKE concat(?, '%'))";
+			// 건물명 혹은 (건물 본번 없는)도로명
+			return "(B.도로명 LIKE concat(?,'%') " + "or D.시군구건물명 LIKE concat(?, '%'))";
 		} else {
 			// 도로명 및 건물 본번으로 검색
-			return "B.도로명 LIKE concat(?,'%') "
-					+ "AND A.건물본번 LIKE concat(?, '%')";
+			return "B.도로명 LIKE concat(?,'%') " + "AND A.건물본번 LIKE concat(?, '%')";
 		}
 	}
 
-	private AddrSearchKey getAddrSearchKey(Scanner scanner) 
-			throws StopSearchingException{
+	private AddrSearchKey getAddrSearchKey(Scanner scanner) throws StopSearchingException {
 		var asKey = new AddrSearchKey();
 
 		System.out.println("검색 키 입력 형태 => ");
@@ -179,16 +168,16 @@ public class AddressMan {
 		System.out.print("(멈추려면 그냥 엔터 치세요 :-) : ");
 		try {
 			String inputText = null;
-			
+
 			if (scanner.hasNextLine()) {
 				inputText = scanner.nextLine().trim();
 			}
 			String[] searchKeys = inputText.split("\\s+");
-			
-			assert(searchKeys.length == 1 || searchKeys.length == 2);
+
+			assert (searchKeys.length == 1 || searchKeys.length == 2);
 			if (searchKeys.length == 1) {
 				// 도로명 혹은 건물명
-				if (searchKeys[0].length() == 0 )
+				if (searchKeys[0].length() == 0)
 					throw new StopSearchingException();
 				asKey.set도로_건물(searchKeys[0]);
 			} else {
@@ -196,9 +185,7 @@ public class AddressMan {
 				asKey.set도로_건물(searchKeys[0]);
 				asKey.set건물본번(searchKeys[1]);
 			}
-		} catch (NoSuchElementException 
-				| IllegalStateException 
-				| NumberFormatException e) {
+		} catch (NoSuchElementException | IllegalStateException | NumberFormatException e) {
 			System.out.println();
 			throw new StopSearchingException();
 		}
@@ -210,12 +197,11 @@ public class AddressMan {
 	 * 관리번호 값 도로명주소 테이블 존재여부 판단
 	 * 
 	 * @param addrSearchKey
-	 * @param maxRow 
-	 * @param totalRow 
+	 * @param maxRow
+	 * @param totalRow
 	 * @return 존재 때 true, 비 존재 때 false
 	 */
-	private RoadAddress[] getRoadAddrList(AddrSearchKey addrSearchKey,
-			int maxRow, int pageNo) {
+	private RoadAddress[] getRoadAddrList(AddrSearchKey addrSearchKey, int maxRow, int pageNo) {
 		//@formatter:off
 		int offset = maxRow * (pageNo - 1); 
 		String sql = 
@@ -513,6 +499,44 @@ public class AddressMan {
 			insStmt.execute(sql);
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}
+	}
+
+	public void displayCustomerAddresses(int 고객id, Logger logger) {
+		AddressMan.logger = logger;
+		
+		//@formatter:off
+		String sql = "select 주.주소번호, 단.단지번호, 전.고객이름, "
+				+ "단.도로명주소, 상세주소 "
+				+ "from 고객주소 주"
+				+ "	join 고객단지 단 on 단.단지번호 = 주.단지번호"
+				+ "	join 전통고객 전 on 전.고객ID = 주.고객ID "
+				+ "where 주.고객ID = " + 고객id + " "
+				+ "order by 주.주소번호 desc;";
+		//@formatter:on
+		var addresses = new ArrayList<CustomerAddress>();
+		
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			while (rs.next()) {
+				addresses.add(new CustomerAddress(
+						rs.getString(1), rs.getString(2),
+						rs.getString(3), rs.getString(4),
+						rs.getString(5)));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		// 고객 역대 입력 주소 표시
+		System.out.println("고객님 과거 입력 주소(들)");
+		if (addresses.size() == 0) {
+			System.out.println(": 없습니다.");
+		} else {
+			for (int i=1; i<addresses.size(); i++) {
+				System.out.println("\t" + i + "." 
+						+ addresses.get(i));
+			}
 		}
 	}
 }
