@@ -529,7 +529,8 @@ public class AddressMan {
 			ResultSet rs = stmt.executeQuery(sql);
 			while (rs.next()) {
 				addresses.add(new CustomerAddress(
-						rs.getString(1), rs.getString(2),
+						rs.getString(1), 
+						Integer.parseInt(rs.getString(2)),
 						rs.getString(3), rs.getString(4),
 						rs.getString(5)));
 			}
@@ -541,8 +542,8 @@ public class AddressMan {
 		if (addresses.size() == 0) {
 			System.out.println(": 없습니다.");
 		} else {
-			for (int i=1; i<addresses.size(); i++) {
-				System.out.println("\t" + i + "." 
+			for (int i=0; i<addresses.size(); i++) {
+				System.out.println("\t" + (i+1) + "." 
 						+ addresses.get(i));
 			}
 		}
