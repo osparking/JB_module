@@ -2,12 +2,12 @@ package com.jbpark.dabang.module;
 
 public class CustomerAddress {
 	private String 주소번호;
-	private String 단지번호;
+	private int 단지번호;
 	private String 고객이름;
 	private String 도로명주소;
 	private String 상세주소;
 	//@formatter:off
-	public CustomerAddress(String 주소번호, String 단지번호, 
+	public CustomerAddress(String 주소번호, int 단지번호, 
 			String 고객이름, String 도로명주소, String 상세주소) {
 		super();
 		this.주소번호 = 주소번호;
@@ -20,7 +20,7 @@ public class CustomerAddress {
 	public String get주소번호() {
 		return 주소번호;
 	}
-	public String get단지번호() {
+	public int get단지번호() {
 		return 단지번호;
 	}
 	public String get고객이름() {
