@@ -31,9 +31,9 @@ public class Utility {
 		return m.matches();
 	}
 
-	public static String get고객ID(Scanner scanner) {
+	public static String get고객ID(Scanner scanner, String prompt) {
 		while (true) {
-			System.out.print("고객ID를 입력하세요 : ");
+			System.out.print(prompt);
 			if (scanner.hasNext()) {
 				String id = scanner.nextLine().trim();
 				if (isValidID(id))
@@ -41,7 +41,7 @@ public class Utility {
 				else { 
 					String msg = "'" + id + "'는 바른 형식이 아닙니다.";
 					System.out.println(msg);
-					System.out.print("고객ID를 입력하세요 : ");
+					System.out.print(prompt);
 				}
 			}
 		}
