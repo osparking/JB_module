@@ -17,6 +17,7 @@ public class Utility {
 	 *      "https://www.geeksforgeeks.org/how-to-validate-identifier-using-regular-expression-in-java/">
 	 *      참고 웹문서</a>
 	 */
+	//@formatter:off
 	public static boolean isValidID(String identifier) {
 		String regex = "^([a-zA-Z_$][a-zA-Z\\d_$]*)$";
 
@@ -47,7 +48,8 @@ public class Utility {
 		}
 	}
 
-	public static Integer getIntegerValue(Scanner scanner, String qLong, String qNoun) throws NoInputException {
+	public static Integer getIntegerValue(Scanner scanner, 
+			String qLong, String qNoun) throws NoInputException {
 		return getIntegerValue(scanner, qLong, qNoun, false);
 	}
 
@@ -60,7 +62,8 @@ public class Utility {
 	 * @return
 	 * @throws NoInputException 참일때 발생시킴
 	 */
-	public static Integer getIntegerValue(Scanner scanner, String qLong, String qNoun, boolean allowNoInput)
+	public static Integer getIntegerValue(Scanner scanner, 
+			String qLong, String qNoun, boolean allowNoInput)
 			throws NoInputException {
 		int count = 1;
 		System.out.println(qLong);
@@ -78,18 +81,88 @@ public class Utility {
 					if (line.trim().length() == 0)
 						throw new NoInputException();
 				}
-				System.out.println("입력된 " + qNoun + " '" + line.trim() + "'은 부적절합니다.");
+				System.out.println("입력된 " + qNoun + " '" 
+						+ line.trim() + "'은 부적절합니다.");
 				System.out.println("다시 입력하십시오...");
 			}
 		}
 		return count;
+	}
+	
+	/**
+	 * 
+	 * @param password
+	 * @return
+	 * @see <a href="https://www.geeksforgeeks.org/how-to-validate-a-password-using-regular-expressions-in-java/">
+	 * geeksforgeeks</a>
+	 */
+    public static boolean isValidPassword(String password){
+        // Regex to check valid password.
+        String regex = "^(?=.*[0-9])"
+                       + "(?=.*[a-z])(?=.*[A-Z])"
+                       + "(?=.*[!@#$%^&+=])"
+                       + "(?=\\S+$).{4,20}$";
+  
+        // Compile the ReGex
+        Pattern p = Pattern.compile(regex);
+  
+        // If the password is empty
+        // return false
+        if (password == null) {
+            return false;
+        }
+  
+        // Pattern class contains matcher() method
+        // to find matching between given password
+        // and regular expression.
+        Matcher m = p.matcher(password);
+  
+        // Return if the password
+        // matched the ReGex
+        return m.matches();
+    }	
+	
+	public static String getPassword(Scanner scanner) {
+		String password = null;
+		
+		while (true) {
+			while (true) {
+				showPasswordRequirements();
+				if (scanner.hasNext()) {
+					password = scanner.nextLine();
+					if (isValidPassword(password)) {
+						break;
+					} else {
+						System.out.println(":: 요구조건에 미달합니다.");
+					}
+				}
+			}
+			for (int i =0; i<3; i++) {
+				System.out.print("반복 입력하세요: ");
+				if (scanner.hasNext()) {
+					String password2 = scanner.nextLine();
+					if (password.equals(password2))
+						return password;
+				}
+			}
+		}
+	}
+
+	private static void showPasswordRequirements() {
+		StringBuffer pwdReq = new StringBuffer("\t- 최소 4자리, 최대 20자리\n");
+		pwdReq.append("\t- 숫자, 대문자, 소문자, 특수문자 각 1개 이상\n");
+		pwdReq.append("\t- 특수문자: !@#$%&*()-+=^");
+		System.out.println("다음 조건을 충족하는 비밀번호를 입력하세요 - ");
+		System.out.println(pwdReq);
 	}
 
 	public static void main(String[] args) throws NoInputException {
 		Logger logger = JLogger.getLogger(true);
 
 		Scanner scanner = new Scanner(System.in);
-		Integer page = getIntegerValue(scanner, "페이지 번호를 입력하세요.", "페이지 번호(기본=1)", true);
+		String password = getPassword(scanner);
+		Integer page = getIntegerValue(scanner, 
+				"페이지 번호를 입력하세요.", "페이지 번호(기본=1)", true);
 		logger.config("페이지: " + (page == null ? 1 : page));
 	}
 
