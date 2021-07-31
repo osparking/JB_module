@@ -5,10 +5,15 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
+
+import com.jbpark.dabang.module.AddressMan;
 
 public class SecureMan {
 	/**
@@ -38,6 +43,38 @@ public class SecureMan {
 		}
 		return hash;
 	}
+	static Logger logger = JLogger.getLogger(true);
+	
+	private static Connection conn = null;
+	static {
+		conn = AddressMan.getConnection();
+		if (conn != null)
+			logger.info("Connection is successful");
+	};
+
+	public static int save전통고객(String 고객Id, byte[] salt, byte[] pwdEncd) {
+		//formatter:off
+		String iSql = "insert into 전통고객"
+				+ "(고객ID, 고객이름, salt, password) "
+				+ "values (?, ?, ?, ?);";
+		//formatter:on
+		try {
+			var iPs = conn.prepareStatement(iSql);
+			
+			iPs.setString(1, 고객Id);
+			iPs.setString(2, "아무개");
+			iPs.setBytes(3, salt);
+			iPs.setBytes(4, pwdEncd);
+			
+			int inserted = iPs.executeUpdate();
+			logger.config("생성된 고객ID: " + 고객Id);
+			return inserted;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			logger.severe(e.getMessage());
+		}	
+		return 0;
+	}
 
 	/**
 	 * 암호를 해슁하고, 이 때 소금도 보관해 둔다. 나중에 같은 암호라고 
@@ -46,15 +83,21 @@ public class SecureMan {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+				
 		String password = "1234567891";
 		byte[] salt = getSalt(); 
 		byte[] encedPwd = encryptPassword(password, salt);
 		// 16 bytes
 		System.out.println("암호화 전: " + password);
 		System.out.println("암호화 후(1): " + Arrays.toString(encedPwd));
+		
+		save전통고객("kdhong", salt, encedPwd);
+		
 		printInHexFormat(encedPwd);  // 암호화 후(2)
 		
-		String entered = " " + password ;
+		String entered = " " + password;
+		
+		
 		boolean passwordMatch = verifyPassword(
 				entered, encedPwd, salt);
 		
@@ -72,7 +115,7 @@ public class SecureMan {
 	 * 비밀번호와 함께 저장되어, 입력된 비밀번호 검사 때 사용됨.
 	 * @return 생성된 난수 소금
 	 */
-    private static byte[] getSalt() {
+    public static byte[] getSalt() {
     	byte[] salt = new byte[16];
 		SecureRandom random = new SecureRandom();
 		random.nextBytes(salt);
