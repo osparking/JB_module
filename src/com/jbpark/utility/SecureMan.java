@@ -6,9 +6,7 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Arrays;
 import java.util.logging.Logger;
 
@@ -54,30 +52,6 @@ public class SecureMan {
 			logger.info("Connection is successful");
 	};
 
-	public static int save전통고객(String 고객Id, byte[] salt, byte[] pwdEncd) {
-		//formatter:off
-		String iSql = "insert into 전통고객"
-				+ "(고객ID, 고객이름, salt, password) "
-				+ "values (?, ?, ?, ?);";
-		//formatter:on
-		try {
-			var iPs = conn.prepareStatement(iSql);
-			
-			iPs.setString(1, 고객Id);
-			iPs.setString(2, "아무개");
-			iPs.setBytes(3, salt);
-			iPs.setBytes(4, pwdEncd);
-			
-			int inserted = iPs.executeUpdate();
-			logger.config("생성된 고객ID: " + 고객Id);
-			return inserted;
-		} catch (SQLException e) {
-			e.printStackTrace();
-			logger.severe(e.getMessage());
-		}	
-		return 0;
-	}
-
 	/**
 	 * 암호를 해슁하고, 이 때 소금도 보관해 둔다. 나중에 같은 암호라고 
 	 * 주장되는 입력(entered)을 원래 암호와 같은지 비교할 때 소금이 
@@ -93,46 +67,7 @@ public class SecureMan {
 		System.out.println("암호화 전: " + password);
 		System.out.println("암호화 후(1): " + Arrays.toString(encedPwd));
 		
-		save전통고객("myself", salt, encedPwd);
-		
-		printInHexFormat(encedPwd);  // 암호화 후(2)
-		
-		String entered = password;
-		var customer = read전통고객("myself");
-		boolean passwordMatch = passwordVerified(
-				entered, customer);
-		
-		System.out.print("검증 결과: 입력 '" + entered);
-		if(passwordMatch) {
-			System.out.println("'는 바르다.");
-		} else {
-			System.out.println("'는 그르다.");
-		}		
 		return; 
-	}
-	
-	public static CustomerInfo read전통고객(String 고객ID) {
-		String getCustInfo = "select 고객SN, 고객이름, salt, password"
-				+ " from 전통고객 where 고객ID = '" + 고객ID + "'";
-		try {
-			Statement getStmt = conn.createStatement();
-			ResultSet rs = getStmt.executeQuery(getCustInfo);
-
-			if (rs.next()) {
-				var customer = new CustomerInfo();
-				
-				customer.set고객SN(rs.getInt(1));
-				customer.set고객이름(rs.getString(2));
-				customer.setSalt(rs.getBytes(3));;
-				customer.setPassword(rs.getBytes(4));
-				
-				return customer;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-			logger.severe(e.getMessage());
-		}
-		return null;		
 	}
 
 	/**
@@ -157,17 +92,15 @@ public class SecureMan {
      * Validate User Password Code Example in Java</a>
      */
 	public static boolean passwordVerified(String entered,
-			CustomerInfo customer)
+			byte[] salt, byte[] password)
     {
         boolean returnValue = false;
         
         // Generate New secure password with the same salt
-        byte[] securedEntered = encryptPassword(entered, 
-        		customer.getSalt());
+        byte[] securedEntered = encryptPassword(entered, salt);
         
         // Check if two passwords are equal
-        returnValue = Arrays.equals(customer.getPassword(),
-        		securedEntered);
+        returnValue = Arrays.equals(password, securedEntered);
         
         return returnValue;
     }
