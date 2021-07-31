@@ -6,7 +6,9 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Arrays;
 import java.util.logging.Logger;
 
@@ -85,21 +87,20 @@ public class SecureMan {
 	public static void main(String[] args) {
 				
 		String password = "1234567891";
-		byte[] salt = getSalt(); 
-		byte[] encedPwd = encryptPassword(password, salt);
-		// 16 bytes
-		System.out.println("암호화 전: " + password);
-		System.out.println("암호화 후(1): " + Arrays.toString(encedPwd));
+//		byte[] salt = getSalt(); 
+//		byte[] encedPwd = encryptPassword(password, salt);
+//		// 16 bytes
+//		System.out.println("암호화 전: " + password);
+//		System.out.println("암호화 후(1): " + Arrays.toString(encedPwd));
+//		
+//		save전통고객("kdhong", salt, encedPwd);
+//		
+//		printInHexFormat(encedPwd);  // 암호화 후(2)
 		
-		save전통고객("kdhong", salt, encedPwd);
-		
-		printInHexFormat(encedPwd);  // 암호화 후(2)
-		
-		String entered = " " + password;
-		
-		
-		boolean passwordMatch = verifyPassword(
-				entered, encedPwd, salt);
+		String entered = password;
+		var customer = read전통고객("kdhong");
+		boolean passwordMatch = passwordVerified(
+				entered, customer);
 		
 		System.out.print("검증 결과: 입력 '" + entered);
 		if(passwordMatch) {
@@ -110,6 +111,30 @@ public class SecureMan {
 		return; 
 	}
 	
+	public static CustomerInfo read전통고객(String 고객ID) {
+		String getCustInfo = "select 고객SN, 고객이름, salt, password"
+				+ " from 전통고객 where 고객ID = '" + 고객ID + "'";
+		try {
+			Statement getStmt = conn.createStatement();
+			ResultSet rs = getStmt.executeQuery(getCustInfo);
+
+			if (rs.next()) {
+				var customer = new CustomerInfo();
+				
+				customer.set고객SN(rs.getInt(1));
+				customer.set고객이름(rs.getString(2));
+				customer.setSalt(rs.getBytes(3));;
+				customer.setPassword(rs.getBytes(4));
+				
+				return customer;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			logger.severe(e.getMessage());
+		}
+		return null;		
+	}
+
 	/**
 	 * 비밀번호 암호화 때 호출되어 그를 위한 소금 생성, DB에 암호화된
 	 * 비밀번호와 함께 저장되어, 입력된 비밀번호 검사 때 사용됨.
@@ -131,16 +156,18 @@ public class SecureMan {
      * @see <a href="https://www.appsdeveloperblog.com/encrypt-user-password-example-java/">
      * Validate User Password Code Example in Java</a>
      */
-	public static boolean verifyPassword(String entered,
-            byte[] securedPassword, byte[] salt)
+	public static boolean passwordVerified(String entered,
+			CustomerInfo customer)
     {
         boolean returnValue = false;
         
         // Generate New secure password with the same salt
-        byte[] securedEntered = encryptPassword(entered, salt);
+        byte[] securedEntered = encryptPassword(entered, 
+        		customer.getSalt());
         
         // Check if two passwords are equal
-        returnValue = Arrays.equals(securedPassword, securedEntered);
+        returnValue = Arrays.equals(customer.getPassword(),
+        		securedEntered);
         
         return returnValue;
     }
