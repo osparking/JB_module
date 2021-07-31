@@ -514,13 +514,20 @@ public class AddressMan {
 							(int 고객id, Logger logger) {
 		AddressMan.logger = logger;
 		
-		String sql = "select 주.주소번호, 단.단지번호, 전.고객이름, "
-				+ "단.도로명주소, 상세주소 "
+		String sql = "select 주.주소번호, 단.단지번호, 전.고객이름,"
+				+ " 단.도로명주소, 상세주소 "
 				+ "from 고객주소 주"
-				+ "	join 고객단지 단 on 단.단지번호 = 주.단지번호"
-				+ "	join 전통고객 전 on 전.고객ID = 주.고객ID "
-				+ "where 주.고객ID = " + 고객id + " "
+				+ "	join 단지주소 단 on 단.단지번호 = 주.단지번호"
+				+ "	join 전통고객 전 on 전.고객SN = 주.고객SN "
+				+ "where 주.고객SN = " + 고객id + " "
 				+ "order by 주.주소번호 desc;";
+		
+//		select 주.주소번호, 단.단지번호, 전.고객이름, 단.도로명주소, 상세주소 
+//		from 고객주소 주
+//			join 단지주소 단 on 단.단지번호 = 주.단지번호	
+//			join 전통고객 전 on 전.고객SN = 주.고객SN 
+//		where 주.고객SN = 1 order by 주.주소번호 desc;		
+		
 		//@formatter:on
 		var addresses = new ArrayList<CustomerAddress>();
 		
