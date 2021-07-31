@@ -86,19 +86,19 @@ public class SecureMan {
 	 */
 	public static void main(String[] args) {
 				
-		String password = "1234567891";
-//		byte[] salt = getSalt(); 
-//		byte[] encedPwd = encryptPassword(password, salt);
-//		// 16 bytes
-//		System.out.println("암호화 전: " + password);
-//		System.out.println("암호화 후(1): " + Arrays.toString(encedPwd));
-//		
-//		save전통고객("kdhong", salt, encedPwd);
-//		
-//		printInHexFormat(encedPwd);  // 암호화 후(2)
+		String password = "1234";
+		byte[] salt = getSalt(); 
+		byte[] encedPwd = encryptPassword(password, salt);
+		// 16 bytes
+		System.out.println("암호화 전: " + password);
+		System.out.println("암호화 후(1): " + Arrays.toString(encedPwd));
+		
+		save전통고객("myself", salt, encedPwd);
+		
+		printInHexFormat(encedPwd);  // 암호화 후(2)
 		
 		String entered = password;
-		var customer = read전통고객("kdhong");
+		var customer = read전통고객("myself");
 		boolean passwordMatch = passwordVerified(
 				entered, customer);
 		
