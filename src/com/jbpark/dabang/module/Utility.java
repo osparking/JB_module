@@ -44,8 +44,12 @@ public class Utility {
 					System.out.println(msg);
 					System.out.print(prompt);
 				}
+			} else {
+				System.out.println("\n프로그램 강제 종료!");
+				break;
 			}
 		}
+		return null;
 	}
 
 	public static Integer getIntegerValue(Scanner scanner, 
