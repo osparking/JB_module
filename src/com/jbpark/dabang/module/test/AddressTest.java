@@ -2,8 +2,6 @@ package com.jbpark.dabang.module.test;
 
 import static org.junit.Assert.assertTrue;
 
-import java.util.Scanner;
-
 import org.junit.Test;
 
 import com.jbpark.dabang.module.AddrSearchKey;
