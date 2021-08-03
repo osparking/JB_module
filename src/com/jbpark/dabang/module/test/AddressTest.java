@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import org.junit.Test;
 
+import com.jbpark.dabang.module.AddrSearchKey;
 import com.jbpark.dabang.module.AddressMan;
 import com.jbpark.dabang.module.SearchResult;
 import com.jbpark.dabang.module.StopSearchingException;
@@ -15,12 +16,12 @@ public class AddressTest {
 	@Test
 	public void test() {
 		AddressMan aMan = new AddressMan();
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("'세진'을 입력할 것.");
+		var key = new AddrSearchKey();
+		
+		key.set도로_건물("세진");
 		try {
-			SearchResult result = aMan.search(scanner);
+			SearchResult result = aMan.search(key, 1);
 			int count = result.getTotalRow();
-			System.out.println(count);
 			assertTrue(count == 2);
 		} catch (StopSearchingException e) {
 			// TODO Auto-generated catch block

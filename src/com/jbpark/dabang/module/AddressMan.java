@@ -53,7 +53,19 @@ public class AddressMan {
 				Scanner scanner = new Scanner(System.in);
 				while (true) {
 					try {
-						addressMan.search(scanner);
+						var key = addressMan.getAddrSearchKey(scanner);
+						Integer pageNo;
+						try {
+							pageNo = Utility.getIntegerValue(scanner, 
+									"페이지 번호를 입력하세요.", "페이지 번호(기본=1)", 
+									true);
+						} catch (NoInputException e) {
+							pageNo = 1;
+						}
+						var result = addressMan.search(key, pageNo);
+						System.out.println("결과 행 수: " + 
+								result.getTotalRow());
+						
 					} catch (StopSearchingException sse) {
 						break;
 					}
@@ -89,35 +101,24 @@ public class AddressMan {
 	 * @return 검색 결과 (제한된 주소 목록과 총 주소 건수)
 	 * @throws StopSearchingException
 	 */
-	public SearchResult search(Scanner scanner) throws StopSearchingException {
-		AddrSearchKey addrSearchKey = getAddrSearchKey(scanner);
+	public SearchResult search(AddrSearchKey key, int pageNo) 
+			throws StopSearchingException {
 		int maxRow = 20;
 
 		//@formatter:off
-		Integer pageNo;
-		try {
-			pageNo = Utility.getIntegerValue(scanner, 
-					"페이지 번호를 입력하세요.", "페이지 번호(기본=1)", 
-					true);
-		} catch (NoInputException e) {
-			pageNo = 1;
-		}
-
-		System.out.println(addrSearchKey + ", 한계: " 
+		System.out.println(key + ", 한계: " 
 				+ maxRow + "행" + ", 채취 페이지: " + pageNo);
 
 		SearchResult result = new SearchResult();
 		
-		result.setAddresses(getRoadAddrList(addrSearchKey, 
+		result.setAddresses(getRoadAddrList(key, 
 				maxRow, pageNo));
-		result.totalRow = getRoadAddrCount(addrSearchKey);
+		result.totalRow = getRoadAddrCount(key);
 		
 		return result;
 	}
-	//@formatter:on
 
 	private int getRoadAddrCount(AddrSearchKey addrSearchKey) {
-		//formatter:off
 		String sql = "SELECT count(*) " 
 				+ "FROM 도로명주소 A, 도로명코드 B, 부가정보 D " 
 				+ "WHERE A.도로명코드 = B.도로명코드"
@@ -165,7 +166,8 @@ public class AddressMan {
 		}
 	}
 
-	private AddrSearchKey getAddrSearchKey(Scanner scanner) throws StopSearchingException {
+	public AddrSearchKey getAddrSearchKey(Scanner scanner) 
+			throws StopSearchingException {
 		var asKey = new AddrSearchKey();
 
 		System.out.println("검색 키 입력 형태 => ");
