@@ -19,7 +19,7 @@ public class Utility {
 	 */
 	//@formatter:off
 	public static boolean isValidID(String identifier) {
-		String regex = "^([a-zA-Z_$][a-zA-Z\\d_$]*)$";
+		String regex = "^([a-zA-Z_$][a-zA-Z\\d_$]{3,})$";
 
 		// Compile the ReGex
 		Pattern p = Pattern.compile(regex);
