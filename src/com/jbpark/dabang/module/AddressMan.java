@@ -214,7 +214,7 @@ public class AddressMan {
 		//@formatter:off
 		int offset = maxRow * (pageNo - 1); 
 		String sql = 
-				  "SELECT A.관리번호, A.기초구역번호 AS 새우편번호, " 
+				  " A.관리번호, A.기초구역번호 AS 새우편번호, " 
 				+ "concat( " + "B.시도명, ' ', "
 				+ "if (B.시군구 = '', '', concat(B.시군구,' ')), " 
 				+ "case when B.읍면동구분 = 0 then concat(B.읍면동,' ') "
@@ -523,13 +523,6 @@ public class AddressMan {
 				+ "	join 전통고객 전 on 전.고객SN = 주.고객SN "
 				+ "where 주.고객SN = " + 고객SN + " "
 				+ "order by 주.주소번호 desc;";
-//		
-		//select 주.주소번호, 단.단지번호, 전.고객이름, 단.우편번호
-		//	, 단.도로명주소, 상세주소 
-		//from 고객주소 주
-		//	join 단지주소 단 on 단.단지번호 = 주.단지번호	
-		//	join 전통고객 전 on 전.고객SN = 주.고객SN 
-		//where 주.고객SN = 9 order by 주.주소번호 desc;		
 		
 		//@formatter:on
 		var addresses = new ArrayList<CustomerAddress>();

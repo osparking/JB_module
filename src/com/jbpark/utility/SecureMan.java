@@ -43,14 +43,8 @@ public class SecureMan {
 		}
 		return hash;
 	}
-	static Logger logger = JLogger.getLogger(true);
 	
-	private static Connection conn = null;
-	static {
-		conn = AddressMan.getConnection();
-		if (conn != null)
-			logger.info("Connection is successful");
-	};
+	private static Connection conn = AddressMan.getConnection();
 
 	/**
 	 * 암호를 해슁하고, 이 때 소금도 보관해 둔다. 나중에 같은 암호라고 
