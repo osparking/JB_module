@@ -513,22 +513,23 @@ public class AddressMan {
 
 	//@formatter:off
 	public ArrayList<CustomerAddress> displayCustomerAddresses
-							(int 고객id, Logger logger) {
+							(int 고객SN, Logger logger) {
 		AddressMan.logger = logger;
 		
 		String sql = "select 주.주소번호, 단.단지번호, 전.고객이름,"
-				+ " 단.도로명주소, 상세주소 "
+				+ " 단.우편번호, 단.도로명주소, 상세주소 "
 				+ "from 고객주소 주"
 				+ "	join 단지주소 단 on 단.단지번호 = 주.단지번호"
 				+ "	join 전통고객 전 on 전.고객SN = 주.고객SN "
-				+ "where 주.고객SN = " + 고객id + " "
+				+ "where 주.고객SN = " + 고객SN + " "
 				+ "order by 주.주소번호 desc;";
-		
-//		select 주.주소번호, 단.단지번호, 전.고객이름, 단.도로명주소, 상세주소 
-//		from 고객주소 주
-//			join 단지주소 단 on 단.단지번호 = 주.단지번호	
-//			join 전통고객 전 on 전.고객SN = 주.고객SN 
-//		where 주.고객SN = 1 order by 주.주소번호 desc;		
+//		
+		//select 주.주소번호, 단.단지번호, 전.고객이름, 단.우편번호
+		//	, 단.도로명주소, 상세주소 
+		//from 고객주소 주
+		//	join 단지주소 단 on 단.단지번호 = 주.단지번호	
+		//	join 전통고객 전 on 전.고객SN = 주.고객SN 
+		//where 주.고객SN = 9 order by 주.주소번호 desc;		
 		
 		//@formatter:on
 		var addresses = new ArrayList<CustomerAddress>();
@@ -536,26 +537,28 @@ public class AddressMan {
 		try {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
+			
 			while (rs.next()) {
 				addresses.add(new CustomerAddress(
 						rs.getString(1), 
 						Integer.parseInt(rs.getString(2)),
-						rs.getString(3), rs.getString(4),
-						rs.getString(5)));
+						rs.getString(3), rs.getInt(4),
+						rs.getString(5), rs.getString(6)));
 			}
+			// 고객 역대 입력 주소 표시
+			System.out.println("고객님 과거 입력 주소(들)");
+			if (addresses.size() == 0) {
+				System.out.println(": 없습니다.");
+			} else {
+				for (int i=0; i<addresses.size(); i++) {
+					System.out.println("\t" + (i+1) + "." 
+							+ addresses.get(i));
+				}
+			}
+			return addresses;
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		// 고객 역대 입력 주소 표시
-		System.out.println("고객님 과거 입력 주소(들)");
-		if (addresses.size() == 0) {
-			System.out.println(": 없습니다.");
-		} else {
-			for (int i=0; i<addresses.size(); i++) {
-				System.out.println("\t" + (i+1) + "." 
-						+ addresses.get(i));
-			}
-		}
-		return addresses;
+		return null;
 	}
 }

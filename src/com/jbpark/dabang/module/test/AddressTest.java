@@ -1,5 +1,6 @@
 package com.jbpark.dabang.module.test;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -10,10 +11,10 @@ import com.jbpark.dabang.module.SearchResult;
 import com.jbpark.dabang.module.StopSearchingException;
 
 public class AddressTest {
+	AddressMan aMan = new AddressMan();
 
 	@Test
 	public void test() {
-		AddressMan aMan = new AddressMan();
 		var key = new AddrSearchKey();
 		
 		key.set도로_건물("세진");
@@ -27,4 +28,9 @@ public class AddressTest {
 		}
 	}
 
+	@Test
+	public void testDisplayCustomerAddress() {
+		var addressList = aMan.displayCustomerAddresses(9, null);
+		assertNotNull(addressList);
+	}
 }
