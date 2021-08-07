@@ -32,7 +32,11 @@ public class Utility {
 		return m.matches();
 	}
 
-	public static String get고객ID(Scanner scanner, String prompt) {
+	public static String get고객ID(Scanner scanner, String prompt,
+			boolean in_debug) {
+		if (in_debug)
+			return "myself";
+		
 		while (true) {
 			System.out.print(prompt);
 			if (scanner.hasNext()) {
@@ -42,7 +46,7 @@ public class Utility {
 				else { 
 					String msg = "'" + id + "'는 바른 형식이 아닙니다.";
 					System.out.println(msg);
-					System.out.print(prompt);
+					System.out.print(prompt);					
 				}
 			} else {
 				System.out.println("\n프로그램 강제 종료!");
