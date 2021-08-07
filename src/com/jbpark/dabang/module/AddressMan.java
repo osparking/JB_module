@@ -62,7 +62,7 @@ public class AddressMan {
 						} catch (NoInputException e) {
 							pageNo = 1;
 						}
-						var result = addressMan.search(key, pageNo);
+						var result = addressMan.searchAddress(key, pageNo);
 						System.out.println("결과 행 수: " + 
 								result.getTotalRow());
 						
@@ -101,7 +101,7 @@ public class AddressMan {
 	 * @return 검색 결과 (제한된 주소 목록과 총 주소 건수)
 	 * @throws StopSearchingException
 	 */
-	public SearchResult search(AddrSearchKey key, int pageNo) 
+	public SearchResult searchAddress(AddrSearchKey key, int pageNo) 
 			throws StopSearchingException {
 		int maxRow = 20;
 
@@ -215,38 +215,9 @@ public class AddressMan {
 	private int getRoadAddrList(AddrSearchKey addrSearchKey, 
 			int maxRow, int pageNo, RoadAddress[] addresses) {
 		//@formatter:off
-		int offset = maxRow * (pageNo - 1); 
-		String sql = "SELECT A.관리번호, A.기초구역번호 AS 새우편번호, " 
-				+ "concat( " + "B.시도명, ' ', "
-				+ "if (B.시군구 = '', '', concat(B.시군구,' ')), " 
-				+ "case when B.읍면동구분 = 0 then concat(B.읍면동,' ') "
-				+ "else ''  " 
-				+ "end,  " 
-				+ "concat(B.도로명,' '), " 
-				+ "case when A.지하여부 = 0 then ''  "
-				+ "	when A.지하여부 = 1 then '지하 '  " 
-				+ "	when A.지하여부 = 2 then '공중 ' end, " + "A.건물본번, "
-				+ "if (A.건물부번 = 0, '', concat('-',A.건물부번)), " 
-				+ "CASE WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 0) THEN '' "
-				+ "	WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 1) then " 
-				+ "		case D.시군구건물명  "
-				+ "			when (D.시군구건물명 = '') then ''  " 
-				+ "			else concat('(',D.시군구건물명,')') end  "
-				+ "	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 0)  " 
-				+ "		THEN concat('(',B.읍면동,')') "
-				+ "	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 1)  " 
-				+ "		THEN concat('(', B.읍면동 "
-				+ "			, case when (D.시군구건물명 = '') then ''  "
-				+ "				   else concat(',', D.시군구건물명) end " 
-				+ "			,')')  " 
-				+ "   	END  "
-				+ "   	) AS 도로명주소 " 
-				+ "  FROM 도로명주소 A, 도로명코드 B, 부가정보 D  " 
-				+ " WHERE A.도로명코드    = B.도로명코드 "
-				+ "   AND A.읍면동일련번호 = B.읍면동일련번호 " 
-				+ "   AND A.관리번호     = D.관리번호  "
-				+ "   AND %s limit %d offset %d;";		
-
+		int offset = maxRow * (pageNo - 1);
+		
+		String sql = getAddressSelectQuery();
 		String stmt = String.format(sql, 
 				getSearchCondString(addrSearchKey), maxRow, offset);
 		PreparedStatement ps;
@@ -274,6 +245,43 @@ public class AddressMan {
 			e1.printStackTrace();
 		}
 		return 0;
+	}
+
+	private String getAddressSelectQuery() {
+		var sb = new StringBuilder();
+		
+		sb.append("SELECT A.관리번호, A.기초구역번호 AS 새우편번호, "); 
+		sb.append("concat( " + "B.시도명, ' ', ");
+		sb.append("if (B.시군구 = '', '', concat(B.시군구,' ')), ");
+		sb.append("case when B.읍면동구분 = 0 then concat(B.읍면동,' ') ");
+		sb.append("else ''  ");
+		sb.append("end,  ");
+		sb.append("concat(B.도로명,' '), ");
+		sb.append("case when A.지하여부 = 0 then ''  ");
+		sb.append("	when A.지하여부 = 1 then '지하 '  ");
+		sb.append("	when A.지하여부 = 2 then '공중 ' end, " + "A.건물본번, ");
+		sb.append("if (A.건물부번 = 0, '', concat('-',A.건물부번)), ");
+		sb.append("CASE WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 0) THEN '' ");
+		sb.append("	WHEN (B.읍면동구분 = 0 AND D.공동주택여부 = 1) then ");
+		sb.append("		case D.시군구건물명  ");
+		sb.append("			when (D.시군구건물명 = '') then ''  ");
+		sb.append("			else concat('(',D.시군구건물명,')') end  ");
+		sb.append("	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 0)  ");
+		sb.append("		THEN concat('(',B.읍면동,')') ");
+		sb.append("	WHEN (B.읍면동구분 = 1 AND D.공동주택여부 = 1)  ");
+		sb.append("		THEN concat('(', B.읍면동 ");
+		sb.append("			, case when (D.시군구건물명 = '') then ''  ");
+		sb.append("				   else concat(',', D.시군구건물명) end ");
+		sb.append("			,')')  ");
+		sb.append("   	END  ");
+		sb.append("   	) AS 도로명주소 ");
+		sb.append("  FROM 도로명주소 A, 도로명코드 B, 부가정보 D  ");
+		sb.append(" WHERE A.도로명코드    = B.도로명코드 ");
+		sb.append("   AND A.읍면동일련번호 = B.읍면동일련번호 ");
+		sb.append("   AND A.관리번호     = D.관리번호  ");
+		sb.append("   AND %s limit %d offset %d");
+		
+		return sb.toString();
 	}
 
 	private void largeAdditionalText() {

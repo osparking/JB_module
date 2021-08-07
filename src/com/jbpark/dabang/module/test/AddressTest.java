@@ -19,7 +19,7 @@ public class AddressTest {
 		
 		key.set도로_건물("세진");
 		try {
-			SearchResult result = aMan.search(key, 1);
+			SearchResult result = aMan.searchAddress(key, 1);
 			int count = result.getTotalRow();
 			assertTrue(count == 2);
 		} catch (StopSearchingException e) {
