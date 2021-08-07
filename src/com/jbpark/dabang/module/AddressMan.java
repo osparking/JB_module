@@ -111,8 +111,10 @@ public class AddressMan {
 
 		SearchResult result = new SearchResult();
 		
-		result.setAddresses(getRoadAddrList(key, 
-				maxRow, pageNo));
+		RoadAddress[] addresses = new RoadAddress[20];
+		int rows = getRoadAddrList(key, maxRow, pageNo, addresses);
+		result.setAddresses(addresses);
+		result.setAddressCount(rows);
 		result.totalRow = getRoadAddrCount(key);
 		
 		return result;
@@ -210,11 +212,11 @@ public class AddressMan {
 	 * @param totalRow
 	 * @return 존재 때 true, 비 존재 때 false
 	 */
-	private RoadAddress[] getRoadAddrList(AddrSearchKey addrSearchKey, int maxRow, int pageNo) {
+	private int getRoadAddrList(AddrSearchKey addrSearchKey, 
+			int maxRow, int pageNo, RoadAddress[] addresses) {
 		//@formatter:off
 		int offset = maxRow * (pageNo - 1); 
-		String sql = 
-				  " A.관리번호, A.기초구역번호 AS 새우편번호, " 
+		String sql = "SELECT A.관리번호, A.기초구역번호 AS 새우편번호, " 
 				+ "concat( " + "B.시도명, ' ', "
 				+ "if (B.시군구 = '', '', concat(B.시군구,' ')), " 
 				+ "case when B.읍면동구분 = 0 then concat(B.읍면동,' ') "
@@ -250,7 +252,7 @@ public class AddressMan {
 		PreparedStatement ps;
 		
 		try {
-			var addresses = new RoadAddress[maxRow];
+//			var addresses = new RoadAddress[maxRow];
 
 			ps = conn.prepareStatement(stmt);
 			setPrepareStatement(ps, addrSearchKey);	
@@ -264,14 +266,14 @@ public class AddressMan {
 				}
 				if (idx < maxRow) 
 					addresses[idx] = null; 
-				return addresses;
+				return idx;
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
-		return null;
+		return 0;
 	}
 
 	private void largeAdditionalText() {
