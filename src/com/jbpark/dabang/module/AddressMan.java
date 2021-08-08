@@ -109,27 +109,22 @@ public class AddressMan {
 		System.out.println(key + ", 한계: " 
 				+ maxRow + "행" + ", 채취 페이지: " + pageNo);
 
-		SearchResult result = new SearchResult();
-		
-		RoadAddress[] addresses = new RoadAddress[20];
-		int rows = getRoadAddrList(key, maxRow, pageNo, addresses);
-		result.setAddresses(addresses);
-		result.setAddressCount(rows);
-		result.totalRow = getRoadAddrCount(key);
-		
-		return result;
+		return getRoadAddrList(key, maxRow, pageNo);
 	}
 
 	private int getRoadAddrCount(AddrSearchKey addrSearchKey) {
-		String sql = "SELECT count(*) " 
-				+ "FROM 도로명주소 A, 도로명코드 B, 부가정보 D " 
-				+ "WHERE A.도로명코드 = B.도로명코드"
-				+ " AND A.읍면동일련번호 = B.읍면동일련번호" 
-				+ " AND A.관리번호 = D.관리번호" + " AND %s;";
+		StringBuilder sb = new StringBuilder("SELECT count(*) ");
+		
+		sb.append("FROM 도로명주소 A, 도로명코드 B, 부가정보 D "); 
+		sb.append("WHERE A.도로명코드 = B.도로명코드");
+		sb.append(" AND A.읍면동일련번호 = B.읍면동일련번호"); 
+		sb.append(" AND A.관리번호 = D.관리번호" + " AND %s");
 		//formatter:on
 
-		String stmt = String.format(sql, getSearchCondString(addrSearchKey));
+		String stmt = String.format(sb.toString(), 
+				getSearchCondString(addrSearchKey));
 		PreparedStatement ps;
+		
 		try {
 			ps = conn.prepareStatement(stmt);
 			setPrepareStatement(ps, addrSearchKey);
@@ -204,6 +199,11 @@ public class AddressMan {
 		return asKey;
 	}
 
+	public SearchResult callGetRoadAddrList(
+			AddrSearchKey key, int maxRow, int pageNo) {
+		return getRoadAddrList(key, maxRow, pageNo);
+	}
+	
 	/**
 	 * 관리번호 값 도로명주소 테이블 존재여부 판단
 	 * 
@@ -212,10 +212,14 @@ public class AddressMan {
 	 * @param totalRow
 	 * @return 존재 때 true, 비 존재 때 false
 	 */
-	private int getRoadAddrList(AddrSearchKey addrSearchKey, 
-			int maxRow, int pageNo, RoadAddress[] addresses) {
+	private SearchResult getRoadAddrList(
+			AddrSearchKey addrSearchKey, int maxRow, int pageNo) {
+
+		SearchResult result = null;
+		
 		//@formatter:off
 		int offset = maxRow * (pageNo - 1);
+		var addresses = new RoadAddress[20]; 
 		
 		String sql = getAddressSelectQuery();
 		String stmt = String.format(sql, 
@@ -223,28 +227,30 @@ public class AddressMan {
 		PreparedStatement ps;
 		
 		try {
-//			var addresses = new RoadAddress[maxRow];
-
 			ps = conn.prepareStatement(stmt);
 			setPrepareStatement(ps, addrSearchKey);	
+			ps.addBatch();
+		
 			int idx = 0;
 			try (ResultSet rs = ps.executeQuery()) {
+				result = new SearchResult();
+				
 				while (rs != null && rs.next()) {
 					var roadAddress = new RoadAddress(
 							rs.getString(1), rs.getString(2),
 							rs.getString(3));
 					addresses[idx++] = roadAddress;
 				}
-				if (idx < maxRow) 
-					addresses[idx] = null; 
-				return idx;
+				result.setAddresses(addresses);
+				result.setAddressCount(idx);
+				result.setTotalRow(getRoadAddrCount(addrSearchKey));
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
-		return 0;
+		return result;
 	}
 
 	private String getAddressSelectQuery() {
