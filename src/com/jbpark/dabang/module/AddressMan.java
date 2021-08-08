@@ -14,14 +14,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-import com.jbpark.utility.JLogger;
-
+// @formatter:off
 public class AddressMan {
 	private static Logger logger = null; 
 
@@ -105,54 +102,10 @@ public class AddressMan {
 			throws StopSearchingException {
 		int maxRow = 20;
 
-		//@formatter:off
 		System.out.println(key + ", 한계: " 
 				+ maxRow + "행" + ", 채취 페이지: " + pageNo);
 
 		return getRoadAddrList(key, maxRow, pageNo);
-	}
-
-	private int getRoadAddrCount(AddrSearchKey addrSearchKey) {
-		StringBuilder sb = new StringBuilder("SELECT count(*) ");
-		
-		sb.append("FROM 도로명주소 A, 도로명코드 B, 부가정보 D "); 
-		sb.append("WHERE A.도로명코드 = B.도로명코드");
-		sb.append(" AND A.읍면동일련번호 = B.읍면동일련번호"); 
-		sb.append(" AND A.관리번호 = D.관리번호" + " AND %s");
-		//formatter:on
-
-		String stmt = String.format(sb.toString(), 
-				getSearchCondString(addrSearchKey));
-		PreparedStatement ps;
-		
-		try {
-			ps = conn.prepareStatement(stmt);
-			setPrepareStatement(ps, addrSearchKey, 1);
-			try (ResultSet rs = ps.executeQuery()) {
-				int rowCount = 0;
-				if (rs != null && rs.next()) {
-					rowCount = rs.getInt(1);
-				}
-				return rowCount;
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		} catch (SQLException e1) {
-			e1.printStackTrace();
-		}
-		return -1;
-	}
-
-	private void setPrepareStatement(PreparedStatement ps, 
-			AddrSearchKey addrSearchKey, int idx) 
-					throws SQLException {
-		if (addrSearchKey.get건물본번() == null) {
-			ps.setString(idx, addrSearchKey.get도로_건물());
-			ps.setString(idx+1, addrSearchKey.get도로_건물());
-		} else {
-			ps.setString(idx, addrSearchKey.get도로_건물());
-			ps.setString(idx+1, addrSearchKey.get건물본번());
-		}
 	}
 
 	private String getSearchCondString(AddrSearchKey key) {
@@ -218,7 +171,6 @@ public class AddressMan {
 	 */
 	private SearchResult getRoadAddrList(
 			AddrSearchKey addrSearchKey, int maxRow, int pageNo) {
-		//@formatter:off
 		int offset = maxRow * (pageNo - 1);
 		var addresses = new RoadAddress[20]; 
 		
@@ -310,7 +262,7 @@ public class AddressMan {
 	private void largeAdditionalText() {
 		String file = "resources\\부가정보_경기도_utf_8.txt";
 		int lines = 0;
-		//@formatter:off
+
 		try (BufferedReader br = 
 				Files.newBufferedReader(Path.of(file))) { // v2-c2
 			int selectionCount = 0;
@@ -342,13 +294,11 @@ public class AddressMan {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}		
-		//@formatter:on
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	// @formatter:off
 	private int insert2TableAdditional(
 			PreparedStatement iPs, String[] items) {
 		int insertionCount = 0;
@@ -368,7 +318,6 @@ public class AddressMan {
 		}
 		return insertionCount;
 	}
-	//@formatter:on
 
 	/**
 	 * 관리번호 값 도로명주소 테이블 존재여부 판단
@@ -432,13 +381,11 @@ public class AddressMan {
 
 		try {
 			Statement insStmt = conn.createStatement();
-			//@formatter:off
 			String sql = "insert into 도로명주소 "
 					+ "values (" + 관리번호 +"," +  도로명코드 
 					+ "," + 읍면동일련번호 + "," + 지하여부 
 					+ "," + 건물본번 + "," + 건물부번 
 					+ "," + 기초구역번호 + ")";
-			//@formatter:on
 			insertionCount = insStmt.executeUpdate(sql);
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -457,12 +404,10 @@ public class AddressMan {
 		boolean fkExists = false;
 		try {
 			Statement insStmt = conn.createStatement();
-			// @formatter:off
 			String sql = "select count(*) row_count" 
 					+ " from 도로명코드 도" 
 					+ "	where 도.도로명코드 = " + 도로명코드
 					+ " and 도.읍면동일련번호 = " + 읍면동일련번호;
-			// @formatter:on
 			ResultSet rs = insStmt.executeQuery(sql);
 
 			if (rs != null && rs.next()) {
@@ -528,7 +473,6 @@ public class AddressMan {
 			// 시도명,시군구,읍면동구분,도로명,읍면동,읍면동코드)
 			// values (411152012001,0,
 			// '경기도','수원시 팔달구',2,'창룡대로',null,null)
-			//@formatter:off
 			String sql = "insert into 도로명코드(" 
 					+ "도로명코드,읍면동일련번호,시도명," 
 					+ "시군구,읍면동구분,도로명," 
@@ -537,14 +481,12 @@ public class AddressMan {
 					+ 도로명코드 + "," + 읍면동일련번호 + ",'" + 시도명 
 					+ "'," + 시군구명 + "," + 읍면동구분 + ",'" + 도로명 
 					+ "'," + 읍면동 + "," + 읍면동코드 + ")";
-			//@formatter:on
 			insStmt.execute(sql);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
 
-	//@formatter:off
 	public ArrayList<CustomerAddress> displayCustomerAddresses
 							(int 고객SN, Logger logger) {
 		AddressMan.logger = logger;
@@ -557,7 +499,6 @@ public class AddressMan {
 				+ "where 주.고객SN = " + 고객SN + " "
 				+ "order by 주.주소번호 desc;";
 		
-		//@formatter:on
 		var addresses = new ArrayList<CustomerAddress>();
 		
 		try {
