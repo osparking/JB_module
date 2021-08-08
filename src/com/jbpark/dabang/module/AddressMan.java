@@ -127,7 +127,7 @@ public class AddressMan {
 		
 		try {
 			ps = conn.prepareStatement(stmt);
-			setPrepareStatement(ps, addrSearchKey);
+			setPrepareStatement(ps, addrSearchKey, 1);
 			try (ResultSet rs = ps.executeQuery()) {
 				int rowCount = 0;
 				if (rs != null && rs.next()) {
@@ -143,23 +143,27 @@ public class AddressMan {
 		return -1;
 	}
 
-	private void setPrepareStatement(PreparedStatement ps, AddrSearchKey addrSearchKey) throws SQLException {
+	private void setPrepareStatement(PreparedStatement ps, 
+			AddrSearchKey addrSearchKey, int idx) 
+					throws SQLException {
 		if (addrSearchKey.get건물본번() == null) {
-			ps.setString(1, addrSearchKey.get도로_건물());
-			ps.setString(2, addrSearchKey.get도로_건물());
+			ps.setString(idx, addrSearchKey.get도로_건물());
+			ps.setString(idx+1, addrSearchKey.get도로_건물());
 		} else {
-			ps.setString(1, addrSearchKey.get도로_건물());
-			ps.setString(2, addrSearchKey.get건물본번());
+			ps.setString(idx, addrSearchKey.get도로_건물());
+			ps.setString(idx+1, addrSearchKey.get건물본번());
 		}
 	}
 
-	private String getSearchCondString(AddrSearchKey addrSearchKey) {
-		if (addrSearchKey.get건물본번() == null) {
+	private String getSearchCondString(AddrSearchKey key) {
+		if (key.get건물본번() == null) {
 			// 건물명 혹은 (건물 본번 없는)도로명
-			return "(B.도로명 LIKE concat(?,'%') " + "or D.시군구건물명 LIKE concat(?, '%'))";
+			return "(B.도로명 LIKE '%" + key.get도로_건물() + "%' or "
+					+ "D.시군구건물명 LIKE '%" + key.get도로_건물() + "%')";
 		} else {
 			// 도로명 및 건물 본번으로 검색
-			return "B.도로명 LIKE concat(?,'%') " + "AND A.건물본번 LIKE concat(?, '%')";
+			return "B.도로명 LIKE '" + key.get도로_건물() + "' " 
+					+ "AND A.건물본번 LIKE '%" + key.get건물본번() + "%'";
 		}
 	}
 
@@ -214,43 +218,56 @@ public class AddressMan {
 	 */
 	private SearchResult getRoadAddrList(
 			AddrSearchKey addrSearchKey, int maxRow, int pageNo) {
-
-		SearchResult result = null;
-		
 		//@formatter:off
 		int offset = maxRow * (pageNo - 1);
 		var addresses = new RoadAddress[20]; 
 		
-		String sql = getAddressSelectQuery();
-		String stmt = String.format(sql, 
-				getSearchCondString(addrSearchKey), maxRow, offset);
-		PreparedStatement ps;
+		String sqlCount = getAddressCountQuery();
+		String sKey = getSearchCondString(addrSearchKey); 
+		sqlCount = String.format(sqlCount, sKey);
 		
-		try {
-			ps = conn.prepareStatement(stmt);
-			setPrepareStatement(ps, addrSearchKey);	
-			ps.addBatch();
+		String sqlList = getAddressSelectQuery();
+		sqlList = String.format(sqlList, sKey, maxRow, offset);
 		
-			int idx = 0;
-			try (ResultSet rs = ps.executeQuery()) {
-				result = new SearchResult();
-				
-				while (rs != null && rs.next()) {
-					var roadAddress = new RoadAddress(
-							rs.getString(1), rs.getString(2),
-							rs.getString(3));
-					addresses[idx++] = roadAddress;
-				}
-				result.setAddresses(addresses);
-				result.setAddressCount(idx);
-				result.setTotalRow(getRoadAddrCount(addrSearchKey));
-			} catch (SQLException e) {
-				e.printStackTrace();
+		SearchResult result = null;
+		
+		try (var stmt = conn.createStatement()){
+			var rs = stmt.executeQuery(sqlCount);
+			
+			result = new SearchResult();
+			if (rs.next()) {
+				result.setTotalRow(rs.getInt(1));
 			}
+			
+			rs = stmt.executeQuery(sqlList);
+			int idx = 0;
+			while (rs != null && rs.next()) {
+				var roadAddress = new RoadAddress(
+						rs.getString(1), 
+						rs.getString(2),
+						rs.getString(3));
+				addresses[idx++] = roadAddress;
+			}
+			result.setAddresses(addresses);
+			result.setAddressCount(idx);
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
 		return result;
+	}
+
+	/**
+	 * 
+	 * @return select 문 - 한 s 인자.
+	 */
+	private String getAddressCountQuery() {
+		StringBuilder sb = new StringBuilder("SELECT count(*) ");
+		
+		sb.append("FROM 도로명주소 A, 도로명코드 B, 부가정보 D "); 
+		sb.append("WHERE A.도로명코드 = B.도로명코드");
+		sb.append(" AND A.읍면동일련번호 = B.읍면동일련번호"); 
+		sb.append(" AND A.관리번호 = D.관리번호" + " AND %s");
+		return sb.toString();
 	}
 
 	private String getAddressSelectQuery() {
