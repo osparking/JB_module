@@ -52,16 +52,12 @@ public class AddressMan {
 					try {
 						var key = addressMan.getAddrSearchKey(scanner);
 						Integer pageNo;
-						try {
-							pageNo = Utility.getIntegerValue(scanner, 
-									"페이지 번호를 입력하세요.", "페이지 번호(기본=1)", 
-									true);
-						} catch (NoInputException e) {
-							pageNo = 1;
-						}
+						int rows = addressMan.getTotalRows(key);
+						pageNo = addressMan.getWantedPage(scanner, rows);
+
 						var result = addressMan.searchAddress(key, pageNo);
 						System.out.println("결과 행 수: " + 
-								result.getTotalRow());
+								result.getAddrCount());
 						
 					} catch (StopSearchingException sse) {
 						break;
@@ -91,6 +87,42 @@ public class AddressMan {
 		}
 	}
 
+	public int getWantedPage(Scanner scanner, int rows) {
+		String fmt = "주소 총 %d건, 총 %d페이지 채취가능."; 
+		int pages = (int)Math.ceil(rows/20.0);
+		int page = 1;
+		String msg = String.format(fmt, rows, pages);
+		System.out.println(msg);
+		try {
+			/**
+			 * 가능한 페이지 범위 제시
+			 */
+			fmt = "\t(1~%d, 기본:1)";
+			String pagePrompt = String.format(fmt, pages);
+			return Utility.getIntegerValue(scanner, 
+					"페이지 번호를 입력하세요.", pagePrompt, true);
+		} catch (NoInputException e) {
+		}
+		return page;
+	}
+
+	public int getTotalRows(AddrSearchKey key) {
+		String sqlCount = getAddressCountQuery();
+		String sKey = getSearchCondString(key); 
+		
+		sqlCount = String.format(sqlCount, sKey);
+		try (var stmt = conn.createStatement()){
+			var rs = stmt.executeQuery(sqlCount);
+			
+			if (rs.next()) {
+				return rs.getInt(1);
+			}
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		return -1;
+	}
+
 	/**
 	 * 고객에게 검색 키(들)을 입력받아 주소DB에서 유사한 주소 목록 채취하여 반환
 	 * 
@@ -107,25 +139,15 @@ public class AddressMan {
 		System.out.println(key + ", 한계: " 
 				+ maxRow + "행" + ", 채취 페이지: " + pageNo);
 		
-		String sqlCount = getAddressCountQuery();
 		String sKey = getSearchCondString(key); 
-		
-		sqlCount = String.format(sqlCount, sKey);
-		
 		String sqlList = getAddressSelectQuery();
 		sqlList = String.format(sqlList, sKey, maxRow, offset);
 		
 		SearchResult result = null;
 		
 		try (var stmt = conn.createStatement()){
-			var rs = stmt.executeQuery(sqlCount);
-			
 			result = new SearchResult();
-			if (rs.next()) {
-				result.setTotalRow(rs.getInt(1));
-			}
-			
-			rs = stmt.executeQuery(sqlList);
+			var rs = stmt.executeQuery(sqlList);
 			int idx = 0;
 			while (rs != null && rs.next()) {
 				var roadAddress = new RoadAddress(
