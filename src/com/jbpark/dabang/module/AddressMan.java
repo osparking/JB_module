@@ -101,11 +101,45 @@ public class AddressMan {
 	public SearchResult searchAddress(AddrSearchKey key, int pageNo) 
 			throws StopSearchingException {
 		int maxRow = 20;
-
+		int offset = maxRow * (pageNo - 1);
+		var addresses = new RoadAddress[20]; 
+		
 		System.out.println(key + ", 한계: " 
 				+ maxRow + "행" + ", 채취 페이지: " + pageNo);
-
-		return getRoadAddrList(key, maxRow, pageNo);
+		
+		String sqlCount = getAddressCountQuery();
+		String sKey = getSearchCondString(key); 
+		
+		sqlCount = String.format(sqlCount, sKey);
+		
+		String sqlList = getAddressSelectQuery();
+		sqlList = String.format(sqlList, sKey, maxRow, offset);
+		
+		SearchResult result = null;
+		
+		try (var stmt = conn.createStatement()){
+			var rs = stmt.executeQuery(sqlCount);
+			
+			result = new SearchResult();
+			if (rs.next()) {
+				result.setTotalRow(rs.getInt(1));
+			}
+			
+			rs = stmt.executeQuery(sqlList);
+			int idx = 0;
+			while (rs != null && rs.next()) {
+				var roadAddress = new RoadAddress(
+						rs.getString(1), 
+						rs.getString(2),
+						rs.getString(3));
+				addresses[idx++] = roadAddress;
+			}
+			result.setAddresses(addresses);
+			result.setAddressCount(idx);
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+		return result;
 	}
 
 	private String getSearchCondString(AddrSearchKey key) {
@@ -154,58 +188,6 @@ public class AddressMan {
 		}
 
 		return asKey;
-	}
-
-	public SearchResult callGetRoadAddrList(
-			AddrSearchKey key, int maxRow, int pageNo) {
-		return getRoadAddrList(key, maxRow, pageNo);
-	}
-	
-	/**
-	 * 관리번호 값 도로명주소 테이블 존재여부 판단
-	 * 
-	 * @param addrSearchKey
-	 * @param maxRow
-	 * @param totalRow
-	 * @return 존재 때 true, 비 존재 때 false
-	 */
-	private SearchResult getRoadAddrList(
-			AddrSearchKey addrSearchKey, int maxRow, int pageNo) {
-		int offset = maxRow * (pageNo - 1);
-		var addresses = new RoadAddress[20]; 
-		
-		String sqlCount = getAddressCountQuery();
-		String sKey = getSearchCondString(addrSearchKey); 
-		sqlCount = String.format(sqlCount, sKey);
-		
-		String sqlList = getAddressSelectQuery();
-		sqlList = String.format(sqlList, sKey, maxRow, offset);
-		
-		SearchResult result = null;
-		
-		try (var stmt = conn.createStatement()){
-			var rs = stmt.executeQuery(sqlCount);
-			
-			result = new SearchResult();
-			if (rs.next()) {
-				result.setTotalRow(rs.getInt(1));
-			}
-			
-			rs = stmt.executeQuery(sqlList);
-			int idx = 0;
-			while (rs != null && rs.next()) {
-				var roadAddress = new RoadAddress(
-						rs.getString(1), 
-						rs.getString(2),
-						rs.getString(3));
-				addresses[idx++] = roadAddress;
-			}
-			result.setAddresses(addresses);
-			result.setAddressCount(idx);
-		} catch (SQLException e1) {
-			e1.printStackTrace();
-		}
-		return result;
 	}
 
 	/**
