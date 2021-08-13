@@ -56,17 +56,31 @@ public class Utility {
 		return null;
 	}
 
+	/**
+	 * 키보드에서 정수를 입력받아 반환한다 - NoInputException 발생 불허.
+	 * @param scanner
+	 * @param qLong 질문 내용 긴 문장
+	 * @param qNoun 질문 프롬프트
+	 * @return 입력받은 정수
+	 * @throws NoInputException
+	 */
 	public static Integer getIntegerValue(Scanner scanner, 
-			String qLong, String qNoun) throws NoInputException {
-		return getIntegerValue(scanner, qLong, qNoun, false);
+			String qLong, String qNoun) {
+		Integer result = null;
+		try {
+			result = getIntegerValue(scanner, qLong, qNoun, false);
+		} catch (NoInputException e) {
+			e.printStackTrace();
+		}
+		return result; 
 	}
 
 	/**
-	 * 
+	 * 키보드에서 정수를 입력받아 반환한다. 호출 인자 값에 따라 예외를 던지기도 한다.
 	 * @param scanner
 	 * @param qLong
 	 * @param qNoun
-	 * @param allowNoInput 참이면, 예외 발생
+	 * @param allowNoInput 참이면, 예외 발생. 아니면 반드시 정수 반환.
 	 * @return
 	 * @throws NoInputException 참일때 발생시킴
 	 */
