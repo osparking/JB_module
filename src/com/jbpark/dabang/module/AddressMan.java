@@ -122,6 +122,24 @@ public class AddressMan {
 		}
 		return -1;
 	}
+	
+	public static int getCustAddrRows(int 고객sn) {
+		StringBuilder sb = new StringBuilder(
+				"select count(*) from 고객주소 주");
+		sb.append(" where 주.고객SN = ");
+		sb.append(고객sn);
+		
+		try (var stmt = conn.createStatement()){
+			var rs = stmt.executeQuery(sb.toString());
+			
+			if (rs.next()) {
+				return rs.getInt(1);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return -1;
+	}
 
 	/**
 	 * 고객에게 검색 키(들)을 입력받아 주소DB에서 유사한 주소 목록 채취하여 반환
