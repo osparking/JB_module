@@ -654,7 +654,7 @@ public class AddressMan {
 		return getDetailAddr(msgPrefix, custAddr, scanner);
 	}
 
-	private static String getDetailAddr(String msgPrefix, 
+	public static String getDetailAddr(String msgPrefix, 
 			CustomerAddress custAddr, Scanner scanner) {
 		var sb = new StringBuilder("다음 '" );
 		sb.append(msgPrefix);
