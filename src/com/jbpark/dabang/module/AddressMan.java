@@ -87,7 +87,7 @@ public class AddressMan {
 		}
 	}
 
-	public int getWantedPage(Scanner scanner, int rows) {
+	public static int getWantedPage(Scanner scanner, int rows) {
 		String fmt = "주소 총 %d건, 총 %d페이지 채취가능."; 
 		int pages = (int)Math.ceil(rows/20.0);
 		int page = 1;
