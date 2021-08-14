@@ -645,6 +645,14 @@ public class AddressMan {
 			e.printStackTrace();
 		}
 	}
+	
+	public static String getDetailAddr(String msgPrefix, 
+			RoadAddress roadAddr, Scanner scanner) {
+		var custAddr = new CustomerAddress("", 0, 0, 
+				roadAddr.getRoadName(), "");
+		
+		return getDetailAddr(msgPrefix, custAddr, scanner);
+	}
 
 	private static String getDetailAddr(String msgPrefix, 
 			CustomerAddress custAddr, Scanner scanner) {
