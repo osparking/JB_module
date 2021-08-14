@@ -14,6 +14,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -508,46 +509,57 @@ public class AddressMan {
 			e.printStackTrace();
 		}
 	}
+	
+	public static String getCustAddrSql(int 고객sn) {
+		StringBuilder sb = new StringBuilder("select 주.주소번호, ");
+		
+		sb.append("단.단지번호, 단.우편번호, 단.도로명주소, 주.상세주소 ");
+		sb.append("from 고객주소 주 ");
+		sb.append("	join 단지주소 단 on 단.단지번호 = 주.단지번호 ");
+		sb.append("where 주.고객SN = ");
+		sb.append(고객sn);
+		sb.append(" order by 주.주소번호 desc");
+		
+		return sb.toString();
+	}
 
-	public ArrayList<CustomerAddress> displayCustomerAddresses
-							(int 고객SN, Logger logger) {
-		AddressMan.logger = logger;
-		
-		String sql = "select 주.주소번호, 단.단지번호, 전.고객이름,"
-				+ " 단.우편번호, 단.도로명주소, 상세주소 "
-				+ "from 고객주소 주"
-				+ "	join 단지주소 단 on 단.단지번호 = 주.단지번호"
-				+ "	join 전통고객 전 on 전.고객SN = 주.고객SN "
-				+ "where 주.고객SN = " + 고객SN + " "
-				+ "order by 주.주소번호 desc;";
-		
-		var addresses = new ArrayList<CustomerAddress>();
+	public static List<CustomerAddress> getCustomerAddresses(
+			int 고객sn, int page) {
 		
 		try {
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery(sql);
+			ResultSet rs = stmt.executeQuery(
+					AddressMan.getCustAddrSql(고객sn));
+			var addresses = new ArrayList<CustomerAddress>();
 			
 			while (rs.next()) {
 				addresses.add(new CustomerAddress(
 						rs.getString(1), 
 						Integer.parseInt(rs.getString(2)),
-						rs.getString(3), rs.getInt(4),
-						rs.getString(5), rs.getString(6)));
-			}
-			// 고객 역대 입력 주소 표시
-			System.out.println("고객님 과거 입력 주소(들)");
-			if (addresses.size() == 0) {
-				System.out.println(": 없습니다.");
-			} else {
-				for (int i=0; i<addresses.size(); i++) {
-					System.out.println("\t" + (i+1) + "." 
-							+ addresses.get(i));
-				}
+						rs.getInt(3), rs.getString(4), 
+						rs.getString(5)));
 			}
 			return addresses;
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
+		}		
 		return null;
+	}	
+
+	public static void showCustomerAddresses(Logger logger,
+			List<CustomerAddress> addresses) {
+		AddressMan.logger = logger;
+		//var addresses = getCustomerAddresses(고객sn, page);
+	
+		// 고객 역대 입력 주소 표시
+		System.out.println("고객 주소 목록");
+		if (addresses.size() == 0) {
+			System.out.println(": 없습니다.");
+		} else {
+			for (int i=0; i<addresses.size(); i++) {
+				System.out.println("\t" + (i+1) + "." 
+						+ addresses.get(i));
+			}
+		}
 	}
 }
