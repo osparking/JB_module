@@ -101,7 +101,7 @@ public class Utility {
 			} catch (NumberFormatException e) {
 				if (allowNoInput) {
 					if (line.trim().length() == 0)
-						throw new NoInputException();
+						throw new NoInputException("공백 문자");
 				}
 				System.out.println("입력된 " + qNoun + " '" 
 						+ line.trim() + "'은 부적절합니다.");

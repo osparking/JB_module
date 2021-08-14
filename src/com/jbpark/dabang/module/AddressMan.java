@@ -595,4 +595,79 @@ public class AddressMan {
 			e.printStackTrace();
 		}
 	}
+
+	public static void updateAddress(List<CustomerAddress> addresses, 
+			Scanner scanner) {
+		int idx = -1;
+		
+		while (true) {
+			try {
+				int maxIdx = addresses.size();
+				idx = Utility.getIntegerValue(scanner, 
+						"갱신할 주소 번호를 입력하세요.", 
+						"주소 번호(1~" + maxIdx + ")",
+						true);
+				if (idx >= 1 && idx <= maxIdx) 
+					break;
+				else
+					throw new NoInputException(idx + "번");
+			} catch (NoInputException e) {
+				String msgSuffix = "은 부적절한 번호입니다.";
+				System.out.println(e.getMessage() + msgSuffix);
+			}
+		}
+		CustomerAddress custAddr = addresses.get(idx - 1);
+		String addrNo = custAddr.get주소번호();
+		String detailAddr = getDetailAddr("수정할 주소", 
+				custAddr, scanner); 
+		String sql = "update 고객주소 set 상세주소 = ? where 주소번호 = "
+				+ addrNo;
+		
+		try (var pstmt = conn.prepareStatement(sql)) {
+			pstmt.setString(1, detailAddr);
+			int count = pstmt.executeUpdate();
+			
+			var sb = new StringBuilder("'");
+			sb.append(custAddr.get상세주소());
+			sb.append("'을 '");
+			sb.append(detailAddr);
+			sb.append("'으로 변경 - ");
+			
+			String msg;
+			if (count == 1) {
+				msg = sb.toString() + "성공";
+			} else {
+				msg = sb.toString() + "실패";
+			}
+			System.out.println(msg);
+			logger.info(msg);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static String getDetailAddr(String msgPrefix, 
+			CustomerAddress custAddr, Scanner scanner) {
+		var sb = new StringBuilder("다음 '" );
+		sb.append(msgPrefix);
+		sb.append("'의 상세주소를 입력하세요.");
+		System.out.println(sb.toString());
+		
+		sb.setLength(0);
+		sb.append(msgPrefix);
+		sb.append(": ");
+		sb.append(custAddr.get도로명주소());
+		sb.append(", ");
+		sb.append(custAddr.get상세주소());
+		System.out.println(sb.toString());
+		System.out.print("상세주소: ");
+		
+		String 상세주소 = "";
+		
+		if (scanner.hasNextLine()) {
+			상세주소 = scanner.nextLine();
+			System.out.println("입력한 상세주소: " + 상세주소);
+		}
+		return 상세주소;
+	}
 }
