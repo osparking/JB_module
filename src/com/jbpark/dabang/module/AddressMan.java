@@ -523,6 +523,15 @@ public class AddressMan {
 		return sb.toString();
 	}
 
+	public static List<CustomerAddress> getNshowAddresses(
+			Logger logger, Scanner scanner, int 고객sn) {
+		int page = AddressMan.getShowPageNumber(scanner, 고객sn);
+		var addresses = AddressMan.getCustomerAddresses(고객sn, page);
+		System.out.println("채취된 페이지: " + page);
+		AddressMan.showCustomerAddresses(logger, addresses);	
+		return addresses;
+	}
+
 	public static List<CustomerAddress> getCustomerAddresses(
 			int 고객sn, int page) {
 		
@@ -596,6 +605,17 @@ public class AddressMan {
 		}
 	}
 
+	public static int getShowPageNumber(Scanner scanner, 
+			int 고객sn) {
+		int rows = getCustAddrRows(고객sn);
+		int page = 1;
+		if (rows > 20) {
+			// 원하는 페이지 번호 입력 요구
+			page = getWantedPage(scanner, rows);		
+		}
+		return page;
+	}	
+	
 	public static void updateAddress(List<CustomerAddress> addresses, 
 			Scanner scanner) {
 		int idx = -1;
