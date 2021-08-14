@@ -562,4 +562,37 @@ public class AddressMan {
 			}
 		}
 	}
+
+	public static void deleteAddress(
+			List<CustomerAddress> addresses, Scanner scanner) {
+		int idx = -1;
+		
+		while (true) {
+			try {
+				idx = Utility.getIntegerValue(scanner, 
+						"삭제할 주소 번호를 입력하세요.", 
+						"주소 번호(1~" + addresses.size() + ")",
+						true);
+				break;
+			} catch (NoInputException e) {
+				System.out.println("입력 내용은 부적절한 주소 번호입니다.");
+			}
+		}
+		String idxStr = addresses.get(--idx).get주소번호();
+		StringBuilder sb = new StringBuilder(
+				"delete from 고객주소 where 주소번호 = " + idxStr);
+		
+		try (Statement stmt = conn.createStatement()) {
+			int count = stmt.executeUpdate(sb.toString());
+			if (count == 1) {
+				logger.info("고객 주소 삭제. 주소번호: " + idxStr);
+				String detail = addresses.get(idx).get상세주소();
+				System.out.println("삭제된 주소: " + detail);
+			} else
+				logger.info("주소 삭제 실패. 주소번호: " + idxStr);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 }
