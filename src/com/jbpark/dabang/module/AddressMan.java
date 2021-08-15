@@ -43,7 +43,7 @@ public class AddressMan {
 	}
 
 	public static void main(String[] args) {
-		AddressMan addressMan = new AddressMan();
+//		AddressMan addressMan = new AddressMan();
 
 		if (args.length > 0) {
 			switch (args[0]) {
@@ -51,12 +51,12 @@ public class AddressMan {
 				Scanner scanner = new Scanner(System.in);
 				while (true) {
 					try {
-						var key = addressMan.getAddrSearchKey(scanner);
+						var key = getAddrSearchKey(scanner);
 						Integer pageNo;
-						int rows = addressMan.getTotalRows(key);
-						pageNo = addressMan.getWantedPage(scanner, rows);
+						int rows = getTotalRows(key);
+						pageNo = getWantedPage(scanner, rows);
 
-						var result = addressMan.searchAddress(key, pageNo);
+						var result = searchAddress(key, pageNo);
 						System.out.println("결과 행 수: " + 
 								result.getAddrCount());
 						
@@ -69,16 +69,16 @@ public class AddressMan {
 				break;
 
 			case "code":
-				addressMan.smallTxt2TableRoad();
+				smallTxt2TableRoad();
 				break;
 
 			case "address":
-				addressMan.largeAddressTxt2Table();
+				largeAddressTxt2Table();
 				break;
 
 			case "additional":
 				System.out.println(LocalDateTime.now());
-				addressMan.largeAdditionalText();
+				largeAdditionalText();
 				System.out.println(LocalDateTime.now());
 				break;
 
@@ -107,7 +107,7 @@ public class AddressMan {
 		return page;
 	}
 
-	public int getTotalRows(AddrSearchKey key) {
+	public static int getTotalRows(AddrSearchKey key) {
 		String sqlCount = getAddressCountQuery();
 		String sKey = getSearchCondString(key); 
 		
@@ -149,7 +149,7 @@ public class AddressMan {
 	 * @return 검색 결과 (제한된 주소 목록과 총 주소 건수)
 	 * @throws StopSearchingException
 	 */
-	public SearchResult searchAddress(AddrSearchKey key, int pageNo) 
+	public static SearchResult searchAddress(AddrSearchKey key, int pageNo) 
 			throws StopSearchingException {
 		int maxRow = 20;
 		int offset = maxRow * (pageNo - 1);
@@ -183,7 +183,7 @@ public class AddressMan {
 		return result;
 	}
 
-	private String getSearchCondString(AddrSearchKey key) {
+	private static String getSearchCondString(AddrSearchKey key) {
 		if (key.get건물본번() == null) {
 			// 건물명 혹은 (건물 본번 없는)도로명
 			return "(B.도로명 LIKE '%" + key.get도로_건물() + "%' or "
@@ -195,7 +195,7 @@ public class AddressMan {
 		}
 	}
 
-	public AddrSearchKey getAddrSearchKey(Scanner scanner) 
+	public static AddrSearchKey getAddrSearchKey(Scanner scanner) 
 			throws StopSearchingException {
 		var asKey = new AddrSearchKey();
 
@@ -235,7 +235,7 @@ public class AddressMan {
 	 * 
 	 * @return select 문 - 한 s 인자.
 	 */
-	private String getAddressCountQuery() {
+	private static String getAddressCountQuery() {
 		StringBuilder sb = new StringBuilder("SELECT count(*) ");
 		
 		sb.append("FROM 도로명주소 A, 도로명코드 B, 부가정보 D "); 
@@ -245,7 +245,7 @@ public class AddressMan {
 		return sb.toString();
 	}
 
-	private String getAddressSelectQuery() {
+	private static String getAddressSelectQuery() {
 		var sb = new StringBuilder();
 		
 		sb.append("SELECT A.관리번호, A.기초구역번호 AS 새우편번호, "); 
@@ -282,7 +282,7 @@ public class AddressMan {
 		return sb.toString();
 	}
 
-	private void largeAdditionalText() {
+	private static void largeAdditionalText() {
 		String file = "resources\\부가정보_경기도_utf_8.txt";
 		int lines = 0;
 
@@ -322,7 +322,7 @@ public class AddressMan {
 		}
 	}
 
-	private int insert2TableAdditional(
+	private static int insert2TableAdditional(
 			PreparedStatement iPs, String[] items) {
 		int insertionCount = 0;
 		// [4111112900100230002049701, 4111156000, 파장동,
@@ -348,7 +348,7 @@ public class AddressMan {
 	 * @param ps
 	 * @return 존재 때 true, 비 존재 때 false
 	 */
-	private boolean fKeyIn도로명주소(PreparedStatement ps) {
+	private static boolean fKeyIn도로명주소(PreparedStatement ps) {
 		// select count(*) from 도로명주소 도
 		// where 도.관리번호 = 4117310400112330000008128;
 		boolean fkExists = false;
@@ -368,7 +368,7 @@ public class AddressMan {
 	/**
 	 * 큰 경기도 주소 텍스트 파일을 읽어서 수원 팔달구 해당 행들을 테이블로 삽입한다.
 	 */
-	private void largeAddressTxt2Table() {
+	private static void largeAddressTxt2Table() {
 		String txtWhole = "resources\\주소_경기도.txt";
 		File addrFile = new File(txtWhole);
 		int lines = 0;
@@ -392,7 +392,7 @@ public class AddressMan {
 		}
 	}
 
-	private int insert2TableAddress(String[] items) {
+	private static int insert2TableAddress(String[] items) {
 		int insertionCount = 0;
 		String 관리번호 = items[0];
 		String 도로명코드 = items[1];
@@ -423,7 +423,8 @@ public class AddressMan {
 	 * @param 읍면동일련번호
 	 * @return 키가 테이블에 존재하면 참, 아니면 거짓
 	 */
-	private boolean fKeyInSmall(String 도로명코드, String 읍면동일련번호) {
+	private static boolean fKeyInSmall(String 도로명코드, 
+			String 읍면동일련번호) {
 		boolean fkExists = false;
 		try {
 			Statement insStmt = conn.createStatement();
@@ -444,7 +445,7 @@ public class AddressMan {
 		return fkExists;
 	}
 
-	private void smallTxt2TableRoad() {
+	private static void smallTxt2TableRoad() {
 		String txtSmall = "resources\\도로명코드_utf_8_small.txt";
 		File addrFile = new File(txtSmall);
 
