@@ -20,5 +20,4 @@ public class GetTotalRowsTest {
 		int rows = aMan.getTotalRows(key);
 		assertTrue(rows == 2045);
 	}
-
 }
