@@ -14,10 +14,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.logging.Logger;
+
+import com.google.gson.Gson;
 
 // @formatter:off
 public class AddressMan {
@@ -107,6 +111,15 @@ public class AddressMan {
 		return page;
 	}
 
+	public static Map<String, Integer> getTotalRowsMap
+		(AddrSearchKey key) {
+		Map<String, Integer> rowCountMap = new HashMap<>();
+		
+		rowCountMap.put("totalRows", getTotalRows(key));
+	
+		return rowCountMap;
+	}
+	
 	public static int getTotalRows(AddrSearchKey key) {
 		String sqlCount = getAddressCountQuery();
 		String sKey = getSearchCondString(key); 
