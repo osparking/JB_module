@@ -7,8 +7,36 @@ import org.junit.jupiter.api.Test;
 import com.google.gson.Gson;
 import com.jbpark.dabang.module.AddrSearchKey;
 import com.jbpark.dabang.module.AddressMan;
+import com.jbpark.dabang.module.StopSearchingException;
 
 class Test주소관리 {
+	
+@Test
+void testGetAddressListMap1() throws StopSearchingException {
+	AddrSearchKey searchKey = new AddrSearchKey();
+
+	searchKey.set도로_건물("덕영대로895");
+
+	var searchResultMap = AddressMan.getAddressListMap(
+			searchKey, 20, 3);
+
+	System.out.println(new Gson().toJson(searchResultMap));
+	assertEquals(searchResultMap.get("주소검색결과").size(), 2);		
+}
+	
+@Test
+void testGetAddressListMap2() throws StopSearchingException {
+	AddrSearchKey searchKey = new AddrSearchKey();
+	
+	searchKey.set도로_건물("덕영대로895");
+	
+	var searchResultMap = AddressMan.getAddressListMap(
+			searchKey, 20, 1);
+	
+	System.out.println(new Gson().toJson(searchResultMap));
+	assertEquals(searchResultMap.get("주소검색결과").size(), 20);		
+}
+	
 	@Test
 	void testGetTotalRowsMap1() {
 		AddrSearchKey searchKey = new AddrSearchKey();

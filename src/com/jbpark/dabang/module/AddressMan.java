@@ -160,7 +160,17 @@ public class AddressMan {
 					throws StopSearchingException {
 		return getAddressList(key, 20, pageNo);
 	}
-	
+
+	public static Map<String, List<RoadAddress>> getAddressListMap(
+			AddrSearchKey key, int pageSize, int pageNo) 
+					throws StopSearchingException {
+		var addrSearchMap = new HashMap<String, List<RoadAddress>>();
+		var addrList = getAddressList(key, pageSize, pageNo);
+		
+		addrSearchMap.put("주소검색결과", addrList);
+		
+		return addrSearchMap;
+	}
 	/**
 	 * 주소 검색 키를 충족하는 주소 목록 중 특정 페이지에 있는 주소 목록을 구성하여 반환한다.
 	 * @param key 주소 검색 키
@@ -181,7 +191,7 @@ public class AddressMan {
 		
 		try (var stmt = conn.createStatement()){
 			var rs = stmt.executeQuery(sqlList);
-
+	
 			while (rs != null && rs.next()) {
 				var roadAddress = new RoadAddress(
 						rs.getString(1), 
