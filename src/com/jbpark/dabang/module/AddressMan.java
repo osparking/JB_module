@@ -60,9 +60,9 @@ public class AddressMan {
 						int rows = getTotalRows(key);
 						pageNo = getWantedPage(scanner, rows);
 
-						var result = searchAddress(key, pageNo);
+						var result = getAddressList(key, 20, pageNo);
 						System.out.println("결과 행 수: " + 
-								result.getAddrCount());
+								result.size());
 						
 					} catch (StopSearchingException sse) {
 						break;
@@ -155,45 +155,44 @@ public class AddressMan {
 		return -1;
 	}
 
+	public static List<RoadAddress> get20AddressList(
+			AddrSearchKey key, int pageNo) 
+					throws StopSearchingException {
+		return getAddressList(key, 20, pageNo);
+	}
+	
 	/**
-	 * 고객에게 검색 키(들)을 입력받아 주소DB에서 유사한 주소 목록 채취하여 반환
-	 * 
-	 * @param scanner
-	 * @return 검색 결과 (제한된 주소 목록과 총 주소 건수)
+	 * 주소 검색 키를 충족하는 주소 목록 중 특정 페이지에 있는 주소 목록을 구성하여 반환한다.
+	 * @param key 주소 검색 키
+	 * @param pageSize 주소 페이지 크기
+	 * @param pageNo 페이지 번호
+	 * @return 페이지에 속하는 주소 목록
 	 * @throws StopSearchingException
 	 */
-	public static SearchResult searchAddress(AddrSearchKey key, int pageNo) 
+	public static List<RoadAddress> getAddressList(AddrSearchKey key, 
+			int pageSize, int pageNo) 
 			throws StopSearchingException {
-		int maxRow = 20;
-		int offset = maxRow * (pageNo - 1);
-		var addresses = new RoadAddress[20]; 
-		
-		System.out.println(key + ", 한계: " 
-				+ maxRow + "행" + ", 채취 페이지: " + pageNo);
-		
+		int offset = pageSize * (pageNo - 1);
+		var addresses = new ArrayList<RoadAddress>(); 
 		String sKey = getSearchCondString(key); 
 		String sqlList = getAddressSelectQuery();
-		sqlList = String.format(sqlList, sKey, maxRow, offset);
 		
-		SearchResult result = null;
+		sqlList = String.format(sqlList, sKey, pageSize, offset);
 		
 		try (var stmt = conn.createStatement()){
-			result = new SearchResult();
 			var rs = stmt.executeQuery(sqlList);
-			int idx = 0;
+
 			while (rs != null && rs.next()) {
 				var roadAddress = new RoadAddress(
 						rs.getString(1), 
 						rs.getString(2),
 						rs.getString(3));
-				addresses[idx++] = roadAddress;
+				addresses.add(roadAddress);
 			}
-			result.setAddresses(addresses);
-			result.setAddressCount(idx);
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
-		return result;
+		return addresses;
 	}
 
 	private static String getSearchCondString(AddrSearchKey key) {

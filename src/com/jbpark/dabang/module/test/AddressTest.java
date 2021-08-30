@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 
 import com.jbpark.dabang.module.AddrSearchKey;
 import com.jbpark.dabang.module.AddressMan;
-import com.jbpark.dabang.module.SearchResult;
 import com.jbpark.dabang.module.StopSearchingException;
 import com.jbpark.utility.JLogger;
 
@@ -22,11 +21,11 @@ public class AddressTest {
 		
 		key.set도로_건물("팔달");
 		try {
-			SearchResult result = AddressMan.searchAddress(key, 1);
 			int count = AddressMan.getTotalRows(key);
-			assertTrue(count == 2045 && result.getAddrCount() == 20);			
+			var result = AddressMan.getAddressList(key, 20, 1);
+			
+			assertTrue(count == 2045 && result.size() == 20);			
 		} catch (StopSearchingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
