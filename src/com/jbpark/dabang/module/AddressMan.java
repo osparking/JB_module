@@ -161,13 +161,17 @@ public class AddressMan {
 		return getAddressList(key, 20, pageNo);
 	}
 
-	public static Map<String, List<RoadAddress>> getAddressListMap(
+	public static Map<String, AddressSearchResult> getAddressListMap(
 			AddrSearchKey key, int pageSize, int pageNo) 
 					throws StopSearchingException {
-		var addrSearchMap = new HashMap<String, List<RoadAddress>>();
-		var addrList = getAddressList(key, pageSize, pageNo);
 		
-		addrSearchMap.put("주소검색결과", addrList);
+		var addrSearchMap = new HashMap<String, AddressSearchResult>();
+		var addrList = getAddressList(key, pageSize, pageNo);
+		var result = new AddressSearchResult();
+		
+		result.setKey(key);
+		result.setAddresses(addrList);
+		addrSearchMap.put("주소검색결과", result);
 		
 		return addrSearchMap;
 	}
