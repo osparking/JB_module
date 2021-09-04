@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.logging.Logger;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import com.jbpark.dabang.module.AddrSearchKey;
@@ -31,7 +30,7 @@ public class AddressTest {
 	}
 
 	@Test
-	@Disabled("9가 고객SN 인 것이 확실하지 않으므로...")
+//	@Disabled("4가 고객SN 인 것이 확실하지 않으므로...")
 	public void testDisplayCustomerAddress() {
 		Logger logger = JLogger.getLogger(true);
 		var addressList = AddressMan.getCustomerAddresses(4, 1);
