@@ -8,11 +8,26 @@ import com.google.gson.Gson;
 import com.jbpark.dabang.module.AddrSearchKey;
 import com.jbpark.dabang.module.AddressMan;
 import com.jbpark.dabang.module.StopSearchingException;
+import com.jbpark.dabang.module.주소관리;
 
 //@formatter:off
 class Test주소관리 {
+
+	/**
+	 * save고객주소의 기능을 시험한다. 
+	 */
+	@Test
+	void testSave고객주소() {
+		int myselfID = 6;
+		int 단지번호 = 6; // 덕영대로 899
+		String detail = "304호";
+		
+		int rc = 주소관리.save고객주소(myselfID, 단지번호, detail);
+		assertEquals(rc, 1);
+	}
 	
-	/** 도로명 주소 건수 검색(총 2 사례 중 1) - 검색키: 도로명/건물명
+	/** 
+	 * 도로명 주소 건수 검색(총 2 사례 중 1) - 검색키: 도로명/건물명
 	 * 
 	 * @throws StopSearchingException
 	 */

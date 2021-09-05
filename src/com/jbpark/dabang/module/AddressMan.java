@@ -27,24 +27,24 @@ import com.google.gson.Gson;
 public class AddressMan {
 	private static Logger logger = null; 
 
-	private static Connection conn = getConnection();
-
-	public static Connection getConnection() {
-		Connection conn = null;
-		String userName = "myself";
-		String password = "1234";
-		String url = "jdbc:mariadb://localhost:3306/jb_dabang";
-		String driver = "org.mariadb.jdbc.Driver";
-
-		try {
-			Class.forName(driver);
-			conn = DriverManager.getConnection(url, userName, password);
-			return conn;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
+//	private static Connection conn = getConnection();
+//
+//	public static Connection getConnection() {
+//		Connection conn = null;
+//		String userName = "myself";
+//		String password = "1234";
+//		String url = "jdbc:mariadb://localhost:3306/jb_dabang";
+//		String driver = "org.mariadb.jdbc.Driver";
+//
+//		try {
+//			Class.forName(driver);
+//			conn = DriverManager.getConnection(url, userName, password);
+//			return conn;
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		return null;
+//	}
 
 	public static void main(String[] args) {
 //		AddressMan addressMan = new AddressMan();
@@ -125,7 +125,7 @@ public class AddressMan {
 		String sKey = getSearchCondString(key); 
 		
 		sqlCount = String.format(sqlCount, sKey);
-		try (var stmt = conn.createStatement()){
+		try (var stmt = DBCPDataSource.getConnection().createStatement()){
 			var rs = stmt.executeQuery(sqlCount);
 			
 			if (rs.next()) {
@@ -143,7 +143,7 @@ public class AddressMan {
 		sb.append(" where 주.고객SN = ");
 		sb.append(고객sn);
 		
-		try (var stmt = conn.createStatement()){
+		try (var stmt = DBCPDataSource.getConnection().createStatement()){
 			var rs = stmt.executeQuery(sb.toString());
 			
 			if (rs.next()) {
@@ -193,7 +193,7 @@ public class AddressMan {
 		
 		sqlList = String.format(sqlList, sKey, pageSize, offset);
 		
-		try (var stmt = conn.createStatement()){
+		try (var stmt = DBCPDataSource.getConnection().createStatement()){
 			var rs = stmt.executeQuery(sqlList);
 	
 			while (rs != null && rs.next()) {
@@ -318,10 +318,10 @@ public class AddressMan {
 			int printUnit = 5000;
 			String sql = "select count(*) from 도로명주소 도 "
 					+ "where 도.관리번호= ?";
-			var ps = conn.prepareStatement(sql);
+			var ps = DBCPDataSource.getConnection().prepareStatement(sql);
 			String line = null;
 			String iSql = "insert into 부가정보 values (?,?,?)";
-			var iPs = conn.prepareStatement(iSql);
+			var iPs = DBCPDataSource.getConnection().prepareStatement(iSql);
 
 			while ((line = br.readLine()) != null) {
 				if (++lines % printUnit == 0) {
@@ -429,7 +429,7 @@ public class AddressMan {
 		String 기초구역번호 = items[6];
 
 		try {
-			Statement insStmt = conn.createStatement();
+			Statement insStmt = DBCPDataSource.getConnection().createStatement();
 			String sql = "insert into 도로명주소 "
 					+ "values (" + 관리번호 +"," +  도로명코드 
 					+ "," + 읍면동일련번호 + "," + 지하여부 
@@ -453,7 +453,7 @@ public class AddressMan {
 			String 읍면동일련번호) {
 		boolean fkExists = false;
 		try {
-			Statement insStmt = conn.createStatement();
+			Statement insStmt = DBCPDataSource.getConnection().createStatement();
 			String sql = "select count(*) row_count" 
 					+ " from 도로명코드 도" 
 					+ "	where 도.도로명코드 = " + 도로명코드
@@ -518,7 +518,7 @@ public class AddressMan {
 		}
 
 		try {
-			Statement insStmt = conn.createStatement();
+			Statement insStmt = DBCPDataSource.getConnection().createStatement();
 			// insert into 도로명코드(도로명코드,읍면동일련번호,
 			// 시도명,시군구,읍면동구분,도로명,읍면동,읍면동코드)
 			// values (411152012001,0,
@@ -563,7 +563,7 @@ public class AddressMan {
 			int 고객sn, int page) {
 		
 		try {
-			Statement stmt = conn.createStatement();
+			Statement stmt = DBCPDataSource.getConnection().createStatement();
 			ResultSet rs = stmt.executeQuery(
 					AddressMan.getCustAddrSql(고객sn));
 			var addresses = new ArrayList<CustomerAddress>();
@@ -618,7 +618,7 @@ public class AddressMan {
 		StringBuilder sb = new StringBuilder(
 				"delete from 고객주소 where 주소번호 = " + idxStr);
 		
-		try (Statement stmt = conn.createStatement()) {
+		try (Statement stmt = DBCPDataSource.getConnection().createStatement()) {
 			int count = stmt.executeUpdate(sb.toString());
 			if (count == 1) {
 				logger.info("고객 주소 삭제. 주소번호: " + idxStr);
@@ -670,7 +670,7 @@ public class AddressMan {
 		String sql = "update 고객주소 set 상세주소 = ? where 주소번호 = "
 				+ addrNo;
 		
-		try (var pstmt = conn.prepareStatement(sql)) {
+		try (var pstmt = DBCPDataSource.getConnection().prepareStatement(sql)) {
 			pstmt.setString(1, detailAddr);
 			int count = pstmt.executeUpdate();
 			
