@@ -14,11 +14,17 @@ import com.jbpark.dabang.module.주소관리;
 //@formatter:off
 class Test주소관리 {
 
+	/**
+	 * 한 고객의 역대 주소 중 특정 주소 번호 해당 상세주소를 
+	 * 새 상세주소로 갱신한다.
+	 */
 	@Test
 	void testUpdateCustAddress() {
-		int 고객SN = 6;
-		String new상세주소 = "304-3호";
-		주소관리.updateCustAddress(고객SN, new상세주소);	
+		int 주소번호 = 26; // 특정 주소 번호
+		String new상세주소 = "304-4호"; // 새 상세주소
+		
+		int rows = 주소관리.updateCustAddress(주소번호, new상세주소);
+		assertEquals(rows, 1);
 	}
 	
 	/**
