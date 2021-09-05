@@ -22,7 +22,7 @@ class Test주소관리 {
 	@Test
 	@Disabled
 	void testIsGoodCustAddress() {
-		boolean result = 주소관리.isGoodCustAddress(14);
+		boolean result = 주소관리.isGoodCustAddress(22);
 		assertTrue(result);
 	}
 	/**
@@ -30,8 +30,9 @@ class Test주소관리 {
 	 * 삭제한다.
 	 */
 	@Test
+	@Disabled
 	void testDeleteCustAddress() {
-		int 주소번호 = 20;
+		int 주소번호 = 14;
 		boolean exists = 주소관리.isGoodCustAddress(주소번호);
 		assertTrue(exists);
 		if (exists) {
@@ -44,13 +45,17 @@ class Test주소관리 {
 	 * 새 상세주소로 갱신한다.
 	 */
 	@Test
-	@Disabled
+//	@Disabled
 	void testUpdateCustAddress() {
-		int 주소번호 = 26; // 특정 주소 번호
+		int 주소번호 = 20; // 특정 주소 번호
 		String new상세주소 = "304-4호"; // 새 상세주소
-		
 		int rows = 주소관리.updateCustAddress(주소번호, new상세주소);
-		assertEquals(rows, 1);
+		
+		if (주소관리.isGoodCustAddress(주소번호)) {
+			assertEquals(rows, 1);
+		} else {
+			assertEquals(rows, 0);
+		}
 	}
 	
 	/**
