@@ -1,6 +1,5 @@
 package com.jbpark.dabang.module;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -51,60 +50,6 @@ public class 주소관리 {
 		return 0;
 	}
 
-	static private int get단지주소번호(String mgmtNumber) {
-		String sql = "select c.단지번호 from 단지주소 c where c.관리번호 = ?";
-		try {
-			var ps = DBCPDataSource.getConnection().prepareStatement(sql);
-			ps.setString(1, mgmtNumber);
-			ResultSet rs = ps.executeQuery();
-			if (rs != null && rs.next()) {
-				return rs.getInt(1);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return 0;
-	}
-
-	static private int save단지번호_주소(int 고객SN, String detailedAddr, 
-			RoadAddress address) {
-		// 관리번호 단지주소 등록 여부 판단
-		int 단지번호 = get단지주소번호(address.getMgmtNumber());
-
-		if (단지번호 < 1) {
-			// 비등록이면, 단지주소 등록(삽입)
-			단지번호 = save단지주소(address);
-		}
-		// 고객주소 행 삽입(단지주소자동번호 등 사용)
-		save고객주소(고객SN, 단지번호, detailedAddr);
-		return 단지번호;
-	}
-
-	static public int save단지주소Test(RoadAddress address) {
-		return save단지주소(address);
-	}
-
-	static private int save단지주소(RoadAddress address) {
-		String iSql = String.format("insert into 단지주소" + 
-				" (관리번호, 우편번호, 도로명주소) values ('%s', %s, '%s');",
-				address.getMgmtNumber(), address.getNewZipcode(), 
-				address.getRoadName());
-		ResultSet rs = null;
-
-		try (var stmt = DBCPDataSource.getConnection().
-				createStatement()) {
-			stmt.executeUpdate(iSql, 
-					Statement.RETURN_GENERATED_KEYS);
-			rs = stmt.getGeneratedKeys();
-			if (rs != null && rs.next()) {
-				return rs.getInt(1);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return 0;
-	}
-
 	/**
 	 * 한 고객의 역대 주소중 주소번호와 일치하는 주소 레코드 삭제
 	 * 
@@ -122,5 +67,30 @@ public class 주소관리 {
 			e.printStackTrace();
 		}
 		return 0;
+	}
+
+	/**
+	 * 고객주소 테이블에 특정 주소번호 일치 행이 존재 여부 검사
+	 * 
+	 * @param 주소번호 검색하려는 주소 레코드 키 값
+	 * @return 참 - 존재할 때, 거짓 - 존재하지 않을 때
+	 */
+	public static boolean isGoodCustAddress(int 주소번호) {
+		StringBuilder sb = new StringBuilder(
+				"select count(*) from 고객주소 주");
+		sb.append(" where 주.주소번호 = ");
+		sb.append(주소번호);
+		
+		try (var stmt = DBCPDataSource.getConnection().
+				createStatement()){
+			var rs = stmt.executeQuery(sb.toString());
+			
+			if (rs.next()) {
+				return rs.getInt(1) == 1;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 }

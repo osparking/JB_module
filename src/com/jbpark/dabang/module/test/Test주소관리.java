@@ -1,8 +1,10 @@
 package com.jbpark.dabang.module.test;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import com.google.gson.Gson;
@@ -14,11 +16,35 @@ import com.jbpark.dabang.module.주소관리;
 //@formatter:off
 class Test주소관리 {
 
+	/** 한 고객의 특정 주소 레코드가 존재하는지 검사
+	 * 
+	 */
+	@Test
+	@Disabled
+	void testIsGoodCustAddress() {
+		boolean result = 주소관리.isGoodCustAddress(14);
+		assertTrue(result);
+	}
+	/**
+	 * 한 고객의 역대 주소 목록 중 특정 주소 레코드를 키 값을 받아 
+	 * 삭제한다.
+	 */
+	@Test
+	void testDeleteCustAddress() {
+		int 주소번호 = 20;
+		boolean exists = 주소관리.isGoodCustAddress(주소번호);
+		assertTrue(exists);
+		if (exists) {
+			int rows = 주소관리.deleteCustAddress(주소번호);
+			assertEquals(rows, 1);
+		}
+	}
 	/**
 	 * 한 고객의 역대 주소 중 특정 주소 번호 해당 상세주소를 
 	 * 새 상세주소로 갱신한다.
 	 */
 	@Test
+	@Disabled
 	void testUpdateCustAddress() {
 		int 주소번호 = 26; // 특정 주소 번호
 		String new상세주소 = "304-4호"; // 새 상세주소
@@ -32,6 +58,7 @@ class Test주소관리 {
 	 * 페이지에 속하는 주소 목록을 반환받는지 시험하는 사례임.
 	 */
 	@Test
+	@Disabled
 	void testGetCustomerAddresses() {
 		int 고객SN = 6;
 		int pageNo = 1;
@@ -46,6 +73,7 @@ class Test주소관리 {
 	 * save고객주소의 기능을 시험한다. 
 	 */
 	@Test
+	@Disabled
 	void testSave고객주소() {
 		int myselfID = 6;
 		int 단지번호 = 6; // 덕영대로 899
@@ -61,6 +89,7 @@ class Test주소관리 {
 	 * @throws StopSearchingException
 	 */
 	@Test
+	@Disabled
 	void testGetTotalRowsMap1() {
 		AddrSearchKey searchKey = new AddrSearchKey();
 
@@ -77,6 +106,7 @@ class Test주소관리 {
 	 * @throws StopSearchingException
 	 */
 	@Test
+	@Disabled
 	void testGetTotalRowsMap2() {
 		AddrSearchKey key건물_본번 = new AddrSearchKey();
 		
@@ -95,6 +125,7 @@ class Test주소관리 {
 	 * @throws StopSearchingException
 	 */
 	@Test
+	@Disabled
 	void testGetAddressListMap1() throws StopSearchingException {
 		AddrSearchKey searchKey = new AddrSearchKey();
 	
@@ -113,6 +144,7 @@ class Test주소관리 {
 	 * @throws StopSearchingException
 	 */	
 	@Test
+	@Disabled
 	void testGetAddressListMap2() throws StopSearchingException {
 		AddrSearchKey searchKey = new AddrSearchKey();
 		
