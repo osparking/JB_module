@@ -612,21 +612,14 @@ public class AddressMan {
 				System.out.println("입력 내용은 부적절한 주소 번호입니다.");
 			}
 		}
-		idx = addresses.get(--idx).get주소번호();
-		StringBuilder sb = new StringBuilder(
-				"delete from 고객주소 where 주소번호 = " + idx);
+		int 주소번호 = addresses.get(--idx).get주소번호();
 		
-		try (Statement stmt = DBCPDataSource.getConnection().createStatement()) {
-			int count = stmt.executeUpdate(sb.toString());
-			if (count == 1) {
-				logger.info("고객 주소 삭제. 주소번호: " + idx);
-				String detail = addresses.get(idx).get상세주소();
-				System.out.println("삭제된 주소: " + detail);
-			} else
-				logger.info("주소 삭제 실패. 주소번호: " + idx);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		if (주소관리.deleteCustAddress(주소번호) == 1) {
+			logger.info("고객 주소 삭제. 주소번호: " + 주소번호);
+			String detail = addresses.get(idx).get상세주소();
+			System.out.println("삭제된 주소: " + detail);
+		} else {
+			logger.info("주소 삭제 실패. 주소번호: " + 주소번호);
 		}
 	}
 

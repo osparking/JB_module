@@ -91,12 +91,33 @@ public class 주소관리 {
 				address.getRoadName());
 		ResultSet rs = null;
 
-		try (var stmt = DBCPDataSource.getConnection().createStatement()) {
-			stmt.executeUpdate(iSql, Statement.RETURN_GENERATED_KEYS);
+		try (var stmt = DBCPDataSource.getConnection().
+				createStatement()) {
+			stmt.executeUpdate(iSql, 
+					Statement.RETURN_GENERATED_KEYS);
 			rs = stmt.getGeneratedKeys();
 			if (rs != null && rs.next()) {
 				return rs.getInt(1);
 			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+	/**
+	 * 한 고객의 역대 주소중 주소번호와 일치하는 주소 레코드 삭제
+	 * 
+	 * @param 주소번호 삭제될 주소번호
+	 * @return 삭제된 주소 레코드 건수
+	 */
+	public static int deleteCustAddress(int 주소번호) {
+		StringBuilder sb = new StringBuilder(
+				"delete from 고객주소 where 주소번호 = " + 주소번호);
+		
+		try (Statement stmt = DBCPDataSource.getConnection().
+				createStatement()) {
+			return stmt.executeUpdate(sb.toString());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
