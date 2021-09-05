@@ -6,8 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,8 +18,6 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.logging.Logger;
-
-import com.google.gson.Gson;
 
 // @formatter:off
 public class AddressMan {
@@ -572,7 +568,7 @@ public class AddressMan {
 			
 			while (rs.next()) {
 				addresses.add(new CustomerAddress(
-						rs.getString(1), 
+						rs.getInt(1),
 						Integer.parseInt(rs.getString(2)),
 						rs.getInt(3), rs.getString(4), 
 						rs.getString(5)));
@@ -616,18 +612,18 @@ public class AddressMan {
 				System.out.println("입력 내용은 부적절한 주소 번호입니다.");
 			}
 		}
-		String idxStr = addresses.get(--idx).get주소번호();
+		idx = addresses.get(--idx).get주소번호();
 		StringBuilder sb = new StringBuilder(
-				"delete from 고객주소 where 주소번호 = " + idxStr);
+				"delete from 고객주소 where 주소번호 = " + idx);
 		
 		try (Statement stmt = DBCPDataSource.getConnection().createStatement()) {
 			int count = stmt.executeUpdate(sb.toString());
 			if (count == 1) {
-				logger.info("고객 주소 삭제. 주소번호: " + idxStr);
+				logger.info("고객 주소 삭제. 주소번호: " + idx);
 				String detail = addresses.get(idx).get상세주소();
 				System.out.println("삭제된 주소: " + detail);
 			} else
-				logger.info("주소 삭제 실패. 주소번호: " + idxStr);
+				logger.info("주소 삭제 실패. 주소번호: " + idx);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -666,38 +662,28 @@ public class AddressMan {
 			}
 		}
 		CustomerAddress custAddr = addresses.get(idx - 1);
-		String addrNo = custAddr.get주소번호();
+		int addrNo = custAddr.get주소번호();
 		String detailAddr = getDetailAddr("수정할 주소", 
 				custAddr, scanner); 
-		String sql = "update 고객주소 set 상세주소 = ? where 주소번호 = "
-				+ addrNo;
 		
-		try (var pstmt = DBCPDataSource.getConnection().prepareStatement(sql)) {
-			pstmt.setString(1, detailAddr);
-			int count = pstmt.executeUpdate();
-			
-			var sb = new StringBuilder("'");
-			sb.append(custAddr.get상세주소());
-			sb.append("'을 '");
-			sb.append(detailAddr);
-			sb.append("'으로 변경 - ");
-			
-			String msg;
-			if (count == 1) {
-				msg = sb.toString() + "성공";
-			} else {
-				msg = sb.toString() + "실패";
-			}
-			System.out.println(msg);
-			logger.info(msg);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		int count = 주소관리.updateCustAddress(addrNo, detailAddr);
+		var sb = new StringBuilder("'");
+		
+		sb.append(custAddr.get상세주소());
+		sb.append("'을 '");
+		sb.append(detailAddr);
+		sb.append("'으로 변경 - ");
+		
+		Object o = (count == 1) ? 
+				sb.append("성공") : sb.append("실패");
+		
+		System.out.println(sb.toString());
+		logger.info(sb.toString());
 	}
-	
+
 	public static String getDetailAddr(String msgPrefix, 
 			RoadAddress roadAddr, Scanner scanner) {
-		var custAddr = new CustomerAddress("", 0, 0, 
+		var custAddr = new CustomerAddress(0, 0, 0, 
 				roadAddr.getRoadName(), "");
 		
 		return getDetailAddr(msgPrefix, custAddr, scanner);

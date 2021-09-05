@@ -6,14 +6,12 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.Arrays;
-import java.util.logging.Logger;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 
-import com.jbpark.dabang.module.AddressMan;
+import com.jbpark.dabang.module.DBCPDataSource;
 
 public class SecureMan {
 	/**
@@ -44,8 +42,6 @@ public class SecureMan {
 		return hash;
 	}
 	
-	private static Connection conn = AddressMan.getConnection();
-
 	/**
 	 * 암호를 해슁하고, 이 때 소금도 보관해 둔다. 나중에 같은 암호라고 
 	 * 주장되는 입력(entered)을 원래 암호와 같은지 비교할 때 소금이 

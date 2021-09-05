@@ -14,6 +14,13 @@ import com.jbpark.dabang.module.주소관리;
 //@formatter:off
 class Test주소관리 {
 
+	@Test
+	void testUpdateCustAddress() {
+		int 고객SN = 6;
+		String new상세주소 = "304-3호";
+		주소관리.updateCustAddress(고객SN, new상세주소);	
+	}
+	
 	/**
 	 * 특정 고갱의 역대 입력 주소 중에서 지정된 페이지 크기로 요구된
 	 * 페이지에 속하는 주소 목록을 반환받는지 시험하는 사례임.

@@ -8,6 +8,28 @@ import java.sql.Statement;
 public class 주소관리 {
 
 	/**
+	 * 고객의 역대 주소 중 한 주소의 상세 주소 부분을 갱신한다.
+	 * 
+	 * @param addrNo 역대 주소 번호
+	 * @param detailAddr 새 상세 주소
+	 * @return 갱신된 레코드 수
+	 */
+	public static int updateCustAddress(int addrNo, 
+			String detailAddr) {
+		String sql = "update 고객주소 set 상세주소 = ? where 주소번호 = "
+				+ addrNo;
+		
+		try (var pstmt = DBCPDataSource.getConnection().
+				prepareStatement(sql)) {
+			pstmt.setString(1, detailAddr);
+			return pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	
+	/**
 	 * 고객ID, 단지번호, 상세주소 입력받아 고객주소 행 저장 
 	 * 
 	 * @param 고객SN 고객일련번호(고객id와 다름)

@@ -15,7 +15,8 @@ public class AddressTest {
 	@Test
 	public void testDisplayCustomerAddress() {
 		Logger logger = JLogger.getLogger(true);
-		var addressList = AddressMan.getCustomerAddresses(4, 1);
+		var addressList = 
+				AddressMan.getCustomerAddresses(4, 10, 1);
 		AddressMan.showCustomerAddresses(logger, addressList);
 		assertTrue(addressList.size() > 0);
 	}
