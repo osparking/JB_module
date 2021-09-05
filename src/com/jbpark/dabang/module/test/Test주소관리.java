@@ -1,5 +1,6 @@
 package com.jbpark.dabang.module.test;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
@@ -13,6 +14,21 @@ import com.jbpark.dabang.module.주소관리;
 //@formatter:off
 class Test주소관리 {
 
+	/**
+	 * 특정 고갱의 역대 입력 주소 중에서 지정된 페이지 크기로 요구된
+	 * 페이지에 속하는 주소 목록을 반환받는지 시험하는 사례임.
+	 */
+	@Test
+	void testGetCustomerAddresses() {
+		int 고객SN = 6;
+		int pageNo = 1;
+		var custAddrs = AddressMan.getCustomerAddresses(
+				고객SN, 10, pageNo);
+		
+		custAddrs.stream().forEach(System.out::println);
+		assertNotNull(custAddrs);
+	}
+	
 	/**
 	 * save고객주소의 기능을 시험한다. 
 	 */

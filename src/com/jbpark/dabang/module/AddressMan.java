@@ -537,15 +537,15 @@ public class AddressMan {
 		}
 	}
 	
-	public static String getCustAddrSql(int 고객sn) {
+	public static String getCustAddrSql() {
 		StringBuilder sb = new StringBuilder("select 주.주소번호, ");
 		
 		sb.append("단.단지번호, 단.우편번호, 단.도로명주소, 주.상세주소 ");
 		sb.append("from 고객주소 주 ");
 		sb.append("	join 단지주소 단 on 단.단지번호 = 주.단지번호 ");
-		sb.append("where 주.고객SN = ");
-		sb.append(고객sn);
-		sb.append(" order by 주.주소번호 desc");
+		sb.append("where 주.고객SN = %d ");
+		sb.append(" order by 주.주소번호 desc ");
+		sb.append("limit %d Offset %d");
 		
 		return sb.toString();
 	}
@@ -553,20 +553,22 @@ public class AddressMan {
 	public static List<CustomerAddress> getNshowAddresses(
 			Logger logger, Scanner scanner, int 고객sn) {
 		int page = AddressMan.getShowPageNumber(scanner, 고객sn);
-		var addresses = AddressMan.getCustomerAddresses(고객sn, page);
+		var addresses = AddressMan.getCustomerAddresses(고객sn, 10, page);
 		System.out.println("채취된 페이지: " + page);
 		AddressMan.showCustomerAddresses(logger, addresses);	
 		return addresses;
 	}
 
 	public static List<CustomerAddress> getCustomerAddresses(
-			int 고객sn, int page) {
-		
+			int 고객sn, int pageSize, int pageNo) {
+		int offset = pageSize * (pageNo - 1);
+		var addresses = new ArrayList<CustomerAddress>();
+		var sqlList = String.format(getCustAddrSql(), 
+				고객sn, pageSize, offset);
 		try {
-			Statement stmt = DBCPDataSource.getConnection().createStatement();
-			ResultSet rs = stmt.executeQuery(
-					AddressMan.getCustAddrSql(고객sn));
-			var addresses = new ArrayList<CustomerAddress>();
+			Statement stmt = DBCPDataSource.getConnection().
+					createStatement();
+			ResultSet rs = stmt.executeQuery(sqlList);
 			
 			while (rs.next()) {
 				addresses.add(new CustomerAddress(

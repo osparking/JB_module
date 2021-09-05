@@ -3,16 +3,6 @@ package com.jbpark.dabang.module;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
-import java.util.Scanner;
-
-import com.jbpark.dabang.module.AddrSearchKey;
-import com.jbpark.dabang.module.AddressMan;
-import com.jbpark.dabang.module.CustomerAddress;
-import com.jbpark.dabang.module.NoInputException;
-import com.jbpark.dabang.module.RoadAddress;
-import com.jbpark.dabang.module.StopSearchingException;
-import com.jbpark.dabang.module.Utility;
 
 //@formatter:off
 public class 주소관리 {
