@@ -5,12 +5,21 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import com.jbpark.dabang.module.고객계정;
 
 class Test고객계정 {
-
+	
+	@Test
+//	@Disabled
+	void testRegisterUser_good() {
+		String userId = "myself3";
+		var reasons = new LinkedList<String>();
+		assertTrue(고객계정.registerUser(userId, "qQ1!", reasons));
+	}
+	
 	@Test
 	void testIsGoodNewUserId_taken() {
 		String userId = "myself";

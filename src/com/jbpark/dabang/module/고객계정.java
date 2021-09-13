@@ -5,7 +5,35 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
+import com.jbpark.utility.SecureMan;
+
 public class 고객계정 {
+	
+	/**
+	 * 주어진 고객 정보를 사용하여 고객을 등록한다. 
+	 * @param userId 고객 사용자 ID
+	 * @param passwd 비밀번호
+	 * @param reasons 등록에 실패한 이유
+	 * @return 등록 성공의 경우 참, 아니면 거짓
+	 */
+	public static boolean registerUser(String userId,
+			String passwd, List<String> reasons) {
+		
+		boolean result = false;
+		
+		if (isGoodNewUserId(userId, reasons)) {
+			if (Utility.isValidPassword(passwd)) {
+				byte[] salt = SecureMan.getSalt();
+				byte[] pwdEncd = SecureMan.encryptPassword(passwd, 
+						salt);		
+				result = (1 == save전통고객(userId, salt, pwdEncd));
+			} else {
+				reasons.add("고객 비밀번호 구문 오류입니다.");
+			}
+		} 
+		return result;
+	}
+	
 	/**
 	 * 새 고객 아이디가 구문이 바른지, 이미 사용 중인 것은 아닌지 검사
 	 * 
@@ -30,6 +58,26 @@ public class 고객계정 {
 		return usable;
 	}
 
+	public static int save전통고객(String 고객Id, byte[] salt, 
+			byte[] pwdEncd) {
+		String iSql = "insert into 전통고객" + "(고객ID, "
+				+ "고객이름, salt, password) " + "values (?, ?, ?, ?);";
+		try {
+			var iPs = DBCPDataSource.getConnection().
+					prepareStatement(iSql);
+
+			iPs.setString(1, 고객Id);
+			iPs.setString(2, "아무개");
+			iPs.setBytes(3, salt);
+			iPs.setBytes(4, pwdEncd);
+
+			return iPs.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+	
 	public static int get고객SN(String 고객Id) 
 			throws NoSuch고객Exception {
 		
