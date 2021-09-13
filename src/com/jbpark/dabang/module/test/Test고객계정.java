@@ -13,6 +13,14 @@ import com.jbpark.dabang.module.고객계정;
 class Test고객계정 {
 	
 	@Test
+	void testUpdatePasswd_good() {
+		String userId = "myself3";
+		var reasons = new LinkedList<String>();
+		assertTrue(고객계정.updatePasswd(
+				userId, "qQ1!", "qQ1!", reasons));
+	}
+	
+	@Test
 	void testProcessLogin_passwd() {
 		String userId = "myself";
 		var reasons = new LinkedList<String>();
@@ -60,7 +68,7 @@ class Test고객계정 {
 	}
 	
 	@Test
-	@Disabled
+//	@Disabled
 	void testRegisterUser_good() {
 		String userId = "myself3";
 		var reasons = new LinkedList<String>();

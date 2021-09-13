@@ -10,6 +10,53 @@ import com.jbpark.utility.SecureMan;
 public class 고객계정 {
 	
 	/**
+	 * 전통 고객이 요구한 비밀번호 갱신 작업을 수행한다.
+	 * @param userId 전통 고객 ID
+	 * @param oldPasswd 기존 비밀번호
+	 * @param newPasswd 신규 비밀번호
+	 * @param reasons 갱신 작업 실패 사유
+	 * @return 갱신 성공의 경우, 참; 실패의 경우 거짓
+	 */
+	public static boolean updatePasswd(String userId,
+			String oldPasswd, String newPasswd,
+			List<String> reasons) {
+		boolean result = false;
+		
+		if (processLogin(userId, oldPasswd, reasons)) {
+			if (Utility.isValidPassword(newPasswd)) {
+				byte[] salt = SecureMan.getSalt();
+				byte[] pwdEncd = SecureMan.encryptPassword(
+						newPasswd, salt);		
+				result = (1 == updatePasswd(userId, salt, pwdEncd));
+			} else {
+				reasons.add("고객 비밀번호 구문 오류입니다.");
+			}			
+			
+		}
+		return result;
+	}
+	
+	private static int updatePasswd(String userId, 
+			byte[] salt, byte[] pwdEncd) {
+		
+		String sql = "update 전통고객 set salt=?, password=?" +
+				" where 고객ID = ?";
+		
+		try (var iPs = DBCPDataSource.getConnection().
+					prepareStatement(sql)) {
+
+			iPs.setBytes(1, salt);
+			iPs.setBytes(2, pwdEncd);
+			iPs.setString(3, userId);
+
+			return iPs.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
+	/**
 	 * 고객정보를 사용하여 바른 사용자 여부를 판단한다.
 	 * @param userId 사용자 아이디
 	 * @param passwd 비밀번호
