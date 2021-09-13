@@ -11,6 +11,22 @@ import org.junit.jupiter.api.Test;
 import com.jbpark.dabang.module.고객계정;
 
 class Test고객계정 {
+	
+	@Test
+	void testDeleteCustomer_passwd() {
+		String userId = "nobody";
+		var reasons = new LinkedList<String>();
+		고객계정.deleteCustomer(userId, "qQ1!", reasons);
+		assertTrue(containsString(reasons, "고객ID 오류"));
+	}
+	
+	@Test
+	void testDeleteCustomer_userId() {
+		String userId = "myself3";
+		var reasons = new LinkedList<String>();
+		고객계정.deleteCustomer(userId, "1234", reasons);
+		assertTrue(containsString(reasons, "비밀번호 오류"));
+	}
 
 	@Test
 	void testDeleteCustomer_deleted() {
