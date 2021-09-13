@@ -8,7 +8,57 @@ import java.util.List;
 import com.jbpark.utility.SecureMan;
 
 public class 고객계정 {
+	/**
+	 * 고객 로그인 정보를 검증한 뒤 고객 계정을 삭제된 것으로 표시한다.
+	 * @param userId 고객 ID
+	 * @param passwd 비밀번호
+	 * @param reasons 삭제에 실패한 원인
+	 * @return 삭제 표시를 한 경우, 참; 표시 변경 못한 경우, 거짓
+	 */
+	public static boolean deleteCustomer(String userId,
+			String passwd, List<String> reasons) {
+		boolean result = false;
+		var customer = read전통고객(userId);	
+		
+		if (customer == null) {
+			reasons.add("고객ID 오류입니다.");
+		} else {
+			boolean goodPwd = SecureMan.passwordVerified(
+					passwd, customer.getSalt(),
+					customer.getPassword());
+			if (goodPwd) {
+				int rcnt = deleteCustomer(userId);
+				if (rcnt == 0)
+					reasons.add("실패한 삭제입니다.");
+				result = (1 == rcnt);
+			} else {
+				reasons.add("비밀번호 오류입니다.");
+			}
+		}
+		return result;		
+	}
 	
+	/**
+	 * 아직 삭제되지 않은 고객의 계정을 삭제되었다고 표시한다.
+	 * @param userId 고객의 ID
+	 * @return 삭제된(사실은 갱신된) 고객 수(통상 1, 0)
+	 */
+	private static int deleteCustomer(String userId) {
+		String sql = "update 전통고객 set deleted = true, del_datetm = now()"
+				+ " where !deleted and 고객ID =?";
+		
+		try (var ps = DBCPDataSource.getConnection().
+					prepareStatement(sql)) {
+
+			ps.setString(1, userId);
+
+			return ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
 	/**
 	 * 전통 고객이 요구한 비밀번호 갱신 작업을 수행한다.
 	 * @param userId 전통 고객 ID

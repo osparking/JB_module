@@ -73,11 +73,11 @@ public class SecureMan {
 	}
 
     /**
-     * 
-     * @param entered
-     * @param securedPassword
-     * @param salt
-     * @return
+     * 입력된 비밀번호를 DB에 저장된 비밀번호와 비교한다.
+     * @param entered 입력된 비밀번호
+     * @param salt 소금
+     * @param password 암호화된 비밀번호
+     * @return 비밀번호가 일치하는 경우, 참; 아니면, 거짓
      * @see <a href="https://www.appsdeveloperblog.com/encrypt-user-password-example-java/">
      * Validate User Password Code Example in Java</a>
      */
