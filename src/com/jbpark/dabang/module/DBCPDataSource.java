@@ -13,6 +13,7 @@ public class DBCPDataSource {
 		ds.setPassword("1234");
 		ds.setMinIdle(5); // pool 에 유지할 최소 유휴 connection 수
 		ds.setMaxIdle(10); // pool 에 유지할 최대 유휴 connection 수
+		ds.setMaxTotal(30);
 		ds.setMaxOpenPreparedStatements(100); // 최대 pstmt 수
 	}
 

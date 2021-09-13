@@ -45,7 +45,7 @@ class Test고객계정 {
 	
 	@Test
 	void testRegisterUser_pw_syntax() {
-		String userId = "myself3";
+		String userId = "myself99";
 		var reasons = new LinkedList<String>();
 		고객계정.registerUser(userId, "1234", reasons);
 		assertTrue(containsString(reasons, "구문 오류"));
@@ -68,7 +68,6 @@ class Test고객계정 {
 	}
 	
 	@Test
-//	@Disabled
 	void testRegisterUser_good() {
 		String userId = "myself3";
 		var reasons = new LinkedList<String>();
@@ -116,7 +115,7 @@ class Test고객계정 {
 
 	@Test
 	void testIsGoodNewUserId_good() {
-		String userId = "myself3";
+		String userId = "myself4";
 		
 		var reasons = new LinkedList<String>();
 		assertTrue(고객계정.isGoodNewUserId(userId, reasons));
