@@ -25,7 +25,7 @@ public class 고객계정 {
 				usable = true;
 			}
 		} else { 
-			reasons.add("아이디가 바른 형식이 아닙니다.");
+			reasons.add("고객 아이디 구문 오류입니다.");
 		}
 		return usable;
 	}
