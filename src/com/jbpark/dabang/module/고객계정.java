@@ -9,6 +9,24 @@ import com.jbpark.utility.SecureMan;
 
 public class 고객계정 {
 	
+	public static boolean processLogin(String userId,
+			String passwd, List<String> reasons) {
+		boolean result = false;
+		var customer = read전통고객(userId);
+
+		if (customer == null) {
+			reasons.add("고객ID 혹은 비밀번호 오류입니다.");
+		} else {
+			boolean goodPwd = SecureMan.passwordVerified(
+					passwd, customer.getSalt(),
+					customer.getPassword());
+			if (goodPwd) {
+				result = true;
+			}
+		}
+		return result;
+	}
+	
 	/**
 	 * 주어진 고객 정보를 사용하여 고객을 등록한다. 
 	 * @param userId 고객 사용자 ID
@@ -58,6 +76,31 @@ public class 고객계정 {
 		return usable;
 	}
 
+	public static CustomerInfo read전통고객(String 고객ID) {
+		String getCustInfo = "select 고객SN, 고객이름, salt, password" 
+				+ " from 전통고객 where 고객ID = '" + 고객ID + "'";
+		try {
+			Statement getStmt = DBCPDataSource.getConnection().
+					createStatement();
+			ResultSet rs = getStmt.executeQuery(getCustInfo);
+
+			if (rs.next()) {
+				var customer = new CustomerInfo();
+				customer.set고객ID(고객ID);
+
+				customer.set고객SN(rs.getInt(1));
+				customer.set고객이름(rs.getString(2));
+				customer.setSalt(rs.getBytes(3));
+				;
+				customer.setPassword(rs.getBytes(4));
+
+				return customer;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}	
 	public static int save전통고객(String 고객Id, byte[] salt, 
 			byte[] pwdEncd) {
 		String iSql = "insert into 전통고객" + "(고객ID, "
