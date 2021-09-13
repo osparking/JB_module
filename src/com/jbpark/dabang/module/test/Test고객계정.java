@@ -13,6 +13,30 @@ import com.jbpark.dabang.module.고객계정;
 class Test고객계정 {
 	
 	@Test
+	void testUpdatePasswd_id() {
+		String userId = "3myself";
+		var reasons = new LinkedList<String>();
+		고객계정.updatePasswd(userId, "qQ1!", "qQ1!", reasons);
+		assertTrue(containsString(reasons, "ID 오류"));
+	}
+
+	@Test
+	void testUpdatePasswd_oldPW() {
+		String userId = "myself3";
+		var reasons = new LinkedList<String>();
+		고객계정.updatePasswd(userId, "1234", "qQ1!", reasons);
+		assertTrue(containsString(reasons, "비밀번호 오류"));
+	}
+
+	@Test
+	void testUpdatePasswd_newPW() {
+		String userId = "myself3";
+		var reasons = new LinkedList<String>();
+		고객계정.updatePasswd(userId, "qQ1!", "1234", reasons);
+		assertTrue(containsString(reasons, "비밀번호 구문 오류"));
+	}
+	
+	@Test
 	void testUpdatePasswd_good() {
 		String userId = "myself3";
 		var reasons = new LinkedList<String>();

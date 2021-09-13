@@ -28,10 +28,12 @@ public class 고객계정 {
 				byte[] pwdEncd = SecureMan.encryptPassword(
 						newPasswd, salt);		
 				result = (1 == updatePasswd(userId, salt, pwdEncd));
+				if (!result) {
+					reasons.add("알려지지 않은 비밀번호 갱신 오류입니다.");
+				}
 			} else {
 				reasons.add("고객 비밀번호 구문 오류입니다.");
 			}			
-			
 		}
 		return result;
 	}
