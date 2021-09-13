@@ -9,19 +9,28 @@ import com.jbpark.utility.SecureMan;
 
 public class 고객계정 {
 	
+	/**
+	 * 고객정보를 사용하여 바른 사용자 여부를 판단한다.
+	 * @param userId 사용자 아이디
+	 * @param passwd 비밀번호
+	 * @param reasons 로그인 정보가 바르지 않은 원인
+	 * @return 바른 사용자인 경우, 참; 아닌 경우, 거짓
+	 */
 	public static boolean processLogin(String userId,
 			String passwd, List<String> reasons) {
 		boolean result = false;
 		var customer = read전통고객(userId);
 
 		if (customer == null) {
-			reasons.add("고객ID 혹은 비밀번호 오류입니다.");
+			reasons.add("고객ID 오류입니다.");
 		} else {
 			boolean goodPwd = SecureMan.passwordVerified(
 					passwd, customer.getSalt(),
 					customer.getPassword());
 			if (goodPwd) {
 				result = true;
+			} else {
+				reasons.add("비밀번호 오류입니다.");
 			}
 		}
 		return result;

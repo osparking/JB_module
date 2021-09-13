@@ -11,7 +11,30 @@ import org.junit.jupiter.api.Test;
 import com.jbpark.dabang.module.고객계정;
 
 class Test고객계정 {
+	
+	@Test
+	void testProcessLogin_passwd() {
+		String userId = "myself";
+		var reasons = new LinkedList<String>();
+		고객계정.processLogin(userId, "1234", reasons);
+		assertTrue(containsString(reasons, "비밀번호 오류"));
+	}
 
+	@Test
+	void testProcessLogin_userId() {
+		String userId = "nobody";
+		var reasons = new LinkedList<String>();
+		고객계정.processLogin(userId, "qQ1!", reasons);
+		assertTrue(containsString(reasons, "ID 오류"));
+	}
+	
+	@Test
+	void testProcessLogin_good() {
+		String userId = "myself";
+		var reasons = new LinkedList<String>();
+		assertTrue(고객계정.processLogin(userId, "qQ1!", reasons));
+	}
+	
 	@Test
 	void testRegisterUser_pw_syntax() {
 		String userId = "myself3";
