@@ -5,11 +5,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import com.jbpark.dabang.module.고객계정;
 
+@TestMethodOrder(OrderAnnotation.class)
 class Test고객계정 {
 	
 	@Test
@@ -29,6 +32,7 @@ class Test고객계정 {
 	}
 
 	@Test
+	@Order(4)
 	void testDeleteCustomer_deleted() {
 		String userId = "myself3";
 		var reasons = new LinkedList<String>();
@@ -37,6 +41,7 @@ class Test고객계정 {
 	}
 
 	@Test
+	@Order(3)
 	void testDeleteCustomer_good() {
 		String userId = "myself3";
 		var reasons = new LinkedList<String>();
@@ -68,6 +73,7 @@ class Test고객계정 {
 	}
 
 	@Test
+	@Order(2)
 	void testUpdatePasswd_good() {
 		String userId = "myself3";
 		var reasons = new LinkedList<String>();
@@ -122,6 +128,7 @@ class Test고객계정 {
 	}
 
 	@Test
+	@Order(1)
 	void testRegisterUser_good() {
 		String userId = "myself3";
 		var reasons = new LinkedList<String>();
