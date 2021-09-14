@@ -10,22 +10,20 @@ import com.jbpark.utility.SecureMan;
 public class 고객계정 {
 	/**
 	 * 고객 로그인 정보를 검증한 뒤 고객 계정을 삭제된 것으로 표시한다.
-	 * @param userId 고객 ID
-	 * @param passwd 비밀번호
+	 * 
+	 * @param userId  고객 ID
+	 * @param passwd  비밀번호
 	 * @param reasons 삭제에 실패한 원인
 	 * @return 삭제 표시를 한 경우, 참; 표시 변경 못한 경우, 거짓
 	 */
-	public static boolean deleteCustomer(String userId,
-			String passwd, List<String> reasons) {
+	public static boolean deleteCustomer(String userId, String passwd, List<String> reasons) {
 		boolean result = false;
-		var customer = read전통고객(userId);	
-		
+		var customer = read전통고객(userId);
+
 		if (customer == null) {
 			reasons.add("고객ID 오류입니다.");
 		} else {
-			boolean goodPwd = SecureMan.passwordVerified(
-					passwd, customer.getSalt(),
-					customer.getPassword());
+			boolean goodPwd = SecureMan.passwordVerified(passwd, customer.getSalt(), customer.getPassword());
 			if (goodPwd) {
 				int rcnt = deleteCustomer(userId);
 				if (rcnt == 0)
@@ -35,20 +33,19 @@ public class 고객계정 {
 				reasons.add("비밀번호 오류입니다.");
 			}
 		}
-		return result;		
+		return result;
 	}
-	
+
 	/**
 	 * 아직 삭제되지 않은 고객의 계정을 삭제되었다고 표시한다.
+	 * 
 	 * @param userId 고객의 ID
 	 * @return 삭제된(사실은 갱신된) 고객 수(통상 1, 0)
 	 */
 	private static int deleteCustomer(String userId) {
-		String sql = "update 전통고객 set deleted = true, del_datetm = now()"
-				+ " where !deleted and 고객ID =?";
-		
-		try (var ps = DBCPDataSource.getConnection().
-					prepareStatement(sql)) {
+		String sql = "update 전통고객 set deleted = true, del_datetm = now()" + " where !deleted and 고객ID =?";
+
+		try (var ps = DBCPDataSource.getConnection().prepareStatement(sql)) {
 
 			ps.setString(1, userId);
 
@@ -61,41 +58,36 @@ public class 고객계정 {
 
 	/**
 	 * 전통 고객이 요구한 비밀번호 갱신 작업을 수행한다.
-	 * @param userId 전통 고객 ID
+	 * 
+	 * @param userId    전통 고객 ID
 	 * @param oldPasswd 기존 비밀번호
 	 * @param newPasswd 신규 비밀번호
-	 * @param reasons 갱신 작업 실패 사유
+	 * @param reasons   갱신 작업 실패 사유
 	 * @return 갱신 성공의 경우, 참; 실패의 경우 거짓
 	 */
-	public static boolean updatePasswd(String userId,
-			String oldPasswd, String newPasswd,
-			List<String> reasons) {
+	public static boolean updatePasswd(String userId, String oldPasswd, String newPasswd, List<String> reasons) {
 		boolean result = false;
-		
+
 		if (processLogin(userId, oldPasswd, reasons)) {
 			if (Utility.isValidPassword(newPasswd)) {
 				byte[] salt = SecureMan.getSalt();
-				byte[] pwdEncd = SecureMan.encryptPassword(
-						newPasswd, salt);		
+				byte[] pwdEncd = SecureMan.encryptPassword(newPasswd, salt);
 				result = (1 == updatePasswd(userId, salt, pwdEncd));
 				if (!result) {
 					reasons.add("알려지지 않은 비밀번호 갱신 오류입니다.");
 				}
 			} else {
 				reasons.add("고객 비밀번호 구문 오류입니다.");
-			}			
+			}
 		}
 		return result;
 	}
-	
-	private static int updatePasswd(String userId, 
-			byte[] salt, byte[] pwdEncd) {
-		
-		String sql = "update 전통고객 set salt=?, password=?" +
-				" where 고객ID = ?";
-		
-		try (var iPs = DBCPDataSource.getConnection().
-					prepareStatement(sql)) {
+
+	private static int updatePasswd(String userId, byte[] salt, byte[] pwdEncd) {
+
+		String sql = "update 전통고객 set salt=?, password=?" + " where 고객ID = ?";
+
+		try (var iPs = DBCPDataSource.getConnection().prepareStatement(sql)) {
 
 			iPs.setBytes(1, salt);
 			iPs.setBytes(2, pwdEncd);
@@ -110,12 +102,14 @@ public class 고객계정 {
 
 	/**
 	 * 고객정보를 사용하여 바른 사용자 여부를 판단한다.
-	 * @param userId 사용자 아이디
-	 * @param passwd 비밀번호
+	 * 
+	 * @param userId  사용자 아이디
+	 * @param passwd  비밀번호
 	 * @param reasons 로그인 정보가 바르지 않은 원인
 	 * @return 바른 사용자인 경우, 참; 아닌 경우, 거짓
 	 */
-	public static boolean processLogin(String userId,
+	//@formatter:off
+	public static boolean processLogin(String userId, 
 			String passwd, List<String> reasons) {
 		boolean result = false;
 		var customer = read전통고객(userId);
@@ -123,54 +117,55 @@ public class 고객계정 {
 		if (customer == null) {
 			reasons.add("고객ID 오류입니다.");
 		} else {
-			boolean goodPwd = SecureMan.passwordVerified(
-					passwd, customer.getSalt(),
-					customer.getPassword());
-			if (goodPwd) {
-				result = true;
+			if (customer.isDeleted()) {
+				reasons.add("이미 삭제된 계정입니다.");
 			} else {
-				reasons.add("비밀번호 오류입니다.");
+				boolean goodPwd = SecureMan.passwordVerified(
+						passwd, customer.getSalt(), customer.getPassword());
+				if (goodPwd) {
+					result = true;
+				} else {
+					reasons.add("비밀번호 오류입니다.");
+				}
 			}
 		}
 		return result;
 	}
-	
+
 	/**
-	 * 주어진 고객 정보를 사용하여 고객을 등록한다. 
-	 * @param userId 고객 사용자 ID
-	 * @param passwd 비밀번호
+	 * 주어진 고객 정보를 사용하여 고객을 등록한다.
+	 * 
+	 * @param userId  고객 사용자 ID
+	 * @param passwd  비밀번호
 	 * @param reasons 등록에 실패한 이유
 	 * @return 등록 성공의 경우 참, 아니면 거짓
 	 */
-	public static boolean registerUser(String userId,
-			String passwd, List<String> reasons) {
-		
+	public static boolean registerUser(String userId, String passwd, List<String> reasons) {
+
 		boolean result = false;
-		
+
 		if (isGoodNewUserId(userId, reasons)) {
 			if (Utility.isValidPassword(passwd)) {
 				byte[] salt = SecureMan.getSalt();
-				byte[] pwdEncd = SecureMan.encryptPassword(passwd, 
-						salt);		
+				byte[] pwdEncd = SecureMan.encryptPassword(passwd, salt);
 				result = (1 == save전통고객(userId, salt, pwdEncd));
 			} else {
 				reasons.add("고객 비밀번호 구문 오류입니다.");
 			}
-		} 
+		}
 		return result;
 	}
-	
+
 	/**
 	 * 새 고객 아이디가 구문이 바른지, 이미 사용 중인 것은 아닌지 검사
 	 * 
-	 * @param userId 새 고객 아이디
+	 * @param userId  새 고객 아이디
 	 * @param reasons 아이디가 부적절한 이유 목록
 	 * @return 아이디 사용 가능 여부(참: 사용 가능)
 	 */
-	public static boolean isGoodNewUserId(String userId,
-			List<String> reasons) {
+	public static boolean isGoodNewUserId(String userId, List<String> reasons) {
 		boolean usable = false;
-		
+
 		if (Utility.isValidID(userId)) {
 			try {
 				get고객SN(userId);
@@ -178,18 +173,17 @@ public class 고객계정 {
 			} catch (NoSuch고객Exception e) {
 				usable = true;
 			}
-		} else { 
+		} else {
 			reasons.add("고객 아이디 구문 오류입니다.");
 		}
 		return usable;
 	}
 
 	public static CustomerInfo read전통고객(String 고객ID) {
-		String getCustInfo = "select 고객SN, 고객이름, salt, password" 
-				+ " from 전통고객 where 고객ID = '" + 고객ID + "'";
+		String getCustInfo = "select 고객SN, 고객이름, salt, password" +
+				", deleted from 전통고객 where 고객ID = '" + 고객ID + "'";
 		try {
-			Statement getStmt = DBCPDataSource.getConnection().
-					createStatement();
+			Statement getStmt = DBCPDataSource.getConnection().createStatement();
 			ResultSet rs = getStmt.executeQuery(getCustInfo);
 
 			if (rs.next()) {
@@ -199,8 +193,8 @@ public class 고객계정 {
 				customer.set고객SN(rs.getInt(1));
 				customer.set고객이름(rs.getString(2));
 				customer.setSalt(rs.getBytes(3));
-				;
 				customer.setPassword(rs.getBytes(4));
+				customer.setDeleted(rs.getBoolean(5));
 
 				return customer;
 			}
@@ -208,14 +202,12 @@ public class 고객계정 {
 			e.printStackTrace();
 		}
 		return null;
-	}	
-	public static int save전통고객(String 고객Id, byte[] salt, 
-			byte[] pwdEncd) {
-		String iSql = "insert into 전통고객" + "(고객ID, "
-				+ "고객이름, salt, password) " + "values (?, ?, ?, ?);";
+	}
+
+	public static int save전통고객(String 고객Id, byte[] salt, byte[] pwdEncd) {
+		String iSql = "insert into 전통고객" + "(고객ID, " + "고객이름, salt, password) " + "values (?, ?, ?, ?);";
 		try {
-			var iPs = DBCPDataSource.getConnection().
-					prepareStatement(iSql);
+			var iPs = DBCPDataSource.getConnection().prepareStatement(iSql);
 
 			iPs.setString(1, 고객Id);
 			iPs.setString(2, "아무개");
@@ -228,15 +220,12 @@ public class 고객계정 {
 		}
 		return 0;
 	}
-	
-	public static int get고객SN(String 고객Id) 
-			throws NoSuch고객Exception {
-		
-		String getSNsql = "select 고객SN from 전통고객 " 
-				+ "where 고객ID = '" + 고객Id + "'";
+
+	public static int get고객SN(String 고객Id) throws NoSuch고객Exception {
+
+		String getSNsql = "select 고객SN from 전통고객 " + "where 고객ID = '" + 고객Id + "'";
 		try {
-			Statement getStmt = DBCPDataSource.getConnection().
-					createStatement();
+			Statement getStmt = DBCPDataSource.getConnection().createStatement();
 			ResultSet rs = getStmt.executeQuery(getSNsql);
 
 			if (rs.next()) {
@@ -249,5 +238,5 @@ public class 고객계정 {
 			e.printStackTrace();
 		}
 		return 0;
-	}	
+	}
 }

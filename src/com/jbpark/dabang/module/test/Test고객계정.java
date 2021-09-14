@@ -32,7 +32,7 @@ class Test고객계정 {
 	}
 
 	@Test
-	@Order(4)
+	@Order(5)
 	void testDeleteCustomer_deleted() {
 		String userId = "myself3";
 		var reasons = new LinkedList<String>();
@@ -49,6 +49,16 @@ class Test고객계정 {
 	}
 
 	@Test
+	@Order(4)
+	void testProcessLogin_deleted() {
+		String userId = "myself3";
+		var reasons = new LinkedList<String>();
+		고객계정.processLogin(userId, "qQ1!", reasons);
+		assertTrue(containsString(reasons,"이미 삭제된"));
+	}
+	
+	@Test
+	@Order(2)
 	void testUpdatePasswd_id() {
 		String userId = "3myself";
 		var reasons = new LinkedList<String>();
@@ -57,6 +67,7 @@ class Test고객계정 {
 	}
 
 	@Test
+	@Order(2)
 	void testUpdatePasswd_oldPW() {
 		String userId = "myself3";
 		var reasons = new LinkedList<String>();
@@ -65,6 +76,7 @@ class Test고객계정 {
 	}
 
 	@Test
+	@Order(2)
 	void testUpdatePasswd_newPW() {
 		String userId = "myself3";
 		var reasons = new LinkedList<String>();
