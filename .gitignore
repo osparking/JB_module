@@ -1,8 +1,9 @@
 #
 # Project specific excludes
 #
-!.classpath
-!.project
+.classpath
+.project
+.factorypath
 
 # LOG folder for debugging messages
 LOG/
